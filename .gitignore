@@ -5,8 +5,7 @@ node_modules/
 .env
 .env.local
 .env.*.local
-# But allow .env.example files to be committed
-!.env.example
+.env.example
 
 # Build outputs
 dist/

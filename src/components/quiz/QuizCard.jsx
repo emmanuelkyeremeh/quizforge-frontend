@@ -1,115 +1,93 @@
-import { Link } from 'react-router-dom';
-import { MoreVertical, Edit, Copy, Trash2, FileText } from 'lucide-react';
+import { forwardRef } from 'react';
 import { format } from 'date-fns';
-import Card from '../ui/Card.jsx';
-import Badge from '../ui/Badge.jsx';
+import { FileText, MoreVertical, Trash2, Edit3, Share2, Copy, FileQuestion } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Dropdown, DropdownItem, DropdownDivider } from '../ui/Dropdown.jsx';
+import Badge from '../ui/Badge.jsx';
 
 export default function QuizCard({ quiz, onDelete, onDuplicate }) {
-  const questionCount = quiz.questions?.length || quiz.metadata?.questionCount || 0;
+  const { id, title, metadata, createdAt, questions, localId } = quiz;
+  const questionCount = questions?.length || metadata?.questionCount || 0;
+  const difficulty = metadata?.difficulty || 'medium';
   
-  // Safely parse date with validation
-  let createdDate = null;
-  try {
-    if (quiz.createdAt) {
-      if (quiz.createdAt.toDate && typeof quiz.createdAt.toDate === 'function') {
-        // Firestore timestamp
-        createdDate = quiz.createdAt.toDate();
-      } else if (quiz.createdAt instanceof Date) {
-        // Already a Date object
-        createdDate = quiz.createdAt;
-      } else if (typeof quiz.createdAt === 'string' || typeof quiz.createdAt === 'number') {
-        // String or timestamp
-        createdDate = new Date(quiz.createdAt);
-      }
-    } else if (quiz.timestamp) {
-      createdDate = new Date(quiz.timestamp);
+  // Format date safely
+  const formattedDate = createdAt ? (() => {
+    try {
+      const date = createdAt?.toDate ? createdAt.toDate() : new Date(createdAt);
+      return format(date, 'MMM d, yyyy');
+    } catch (e) {
+      return 'Recently';
     }
-    
-    // Validate the date
-    if (createdDate && (isNaN(createdDate.getTime()) || !createdDate.getTime())) {
-      createdDate = null;
-    }
-  } catch (error) {
-    console.error('Error parsing date:', error);
-    createdDate = null;
-  }
-  
-  // Fallback to current date if invalid
-  if (!createdDate) {
-    createdDate = new Date();
-  }
+  })() : 'Recently';
 
-  const difficultyColors = {
-    easy: 'success',
-    medium: 'warning',
-    hard: 'error',
-  };
+  const quizId = id || localId;
 
   return (
-    <Card hoverable className="p-5 group">
-      <div className="flex items-start justify-between">
-        <Link
-          to={`/quiz/${quiz.id || quiz.localId}/edit`}
-          className="flex-1 min-w-0"
-        >
-          <h3 className="text-lg font-semibold text-text-primary mb-3 group-hover:text-primary-light transition-colors truncate">
-            {quiz.title}
-          </h3>
-          
-          <div className="flex items-center gap-3 mb-3">
-            <div className="flex items-center gap-1.5 text-text-secondary">
-              <FileText className="w-4 h-4" />
-              <span className="text-sm">{questionCount} questions</span>
-            </div>
-            {quiz.metadata?.difficulty && (
-              <Badge variant={difficultyColors[quiz.metadata.difficulty] || 'neutral'} size="sm">
-                {quiz.metadata.difficulty}
-              </Badge>
-            )}
+    <div className="group relative bg-bg-secondary border border-border rounded-lg p-4 hover:border-border-hover transition-colors">
+      <div className="flex flex-col h-full">
+        {/* Header */}
+        <div className="flex items-start justify-between mb-3">
+          <div className="p-1.5 rounded bg-bg-primary border border-border">
+            <FileQuestion className="w-3.5 h-3.5 text-text-tertiary" />
           </div>
           
-          <p className="text-xs text-text-tertiary">
-            {createdDate ? format(createdDate, 'MMM d, yyyy') : 'Date unavailable'}
-          </p>
+          <Dropdown
+            trigger={
+              <button className="p-1 rounded opacity-0 group-hover:opacity-100 hover:bg-bg-tertiary transition-all text-text-tertiary">
+                <MoreVertical className="w-3.5 h-3.5" />
+              </button>
+            }
+          >
+            <DropdownItem icon={Edit3} as={Link} to={`/quiz/${quizId}/edit`}>
+              Edit Quiz
+            </DropdownItem>
+            {onDuplicate && (
+              <DropdownItem icon={Copy} onClick={() => onDuplicate(quiz)}>
+                Duplicate
+              </DropdownItem>
+            )}
+            <DropdownDivider />
+            <DropdownItem 
+              icon={Trash2} 
+              onClick={() => onDelete(quizId)}
+              className="text-error hover:bg-error/10 hover:text-error"
+            >
+              Delete
+            </DropdownItem>
+          </Dropdown>
+        </div>
+
+        {/* Content */}
+        <Link to={`/quiz/${quizId}/edit`} className="flex-1">
+          <h3 className="text-sm font-semibold text-white mb-2 line-clamp-2 leading-snug group-hover:text-primary transition-colors">
+            {title || 'Untitled Quiz'}
+          </h3>
+          
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="flex items-center gap-1.5 text-[11px] text-text-tertiary font-medium">
+              <FileText className="w-3 h-3" />
+              {questionCount} {questionCount === 1 ? 'question' : 'questions'}
+            </div>
+            <span className="w-0.5 h-0.5 rounded-full bg-border" />
+            <span className="text-[11px] text-text-tertiary font-medium capitalize">
+              {difficulty}
+            </span>
+          </div>
         </Link>
 
-        <Dropdown
-          trigger={
-            <button className="p-1.5 rounded-md hover:bg-surface transition-colors opacity-0 group-hover:opacity-100">
-              <MoreVertical className="w-4 h-4 text-text-tertiary" />
-            </button>
-          }
-        >
-          <DropdownItem 
-            icon={Edit} 
-            onClick={() => window.location.href = `/quiz/${quiz.id || quiz.localId}/edit`}
+        {/* Footer */}
+        <div className="mt-4 pt-3 border-t border-border flex items-center justify-between">
+          <span className="text-[10px] font-semibold text-text-tertiary uppercase tracking-wider">
+            {formattedDate}
+          </span>
+          <Link 
+            to={`/quiz/${quizId}/edit`}
+            className="text-[10px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-wider"
           >
-            Edit
-          </DropdownItem>
-          {onDuplicate && (
-            <DropdownItem icon={Copy} onClick={() => onDuplicate(quiz)}>
-              Duplicate
-            </DropdownItem>
-          )}
-          {onDelete && (
-            <>
-              <DropdownDivider />
-              <DropdownItem 
-                icon={Trash2} 
-                danger
-                onClick={() => {
-                  if (confirm('Are you sure you want to delete this quiz?')) {
-                    onDelete(quiz.id || quiz.localId);
-                  }
-                }}
-              >
-                Delete
-              </DropdownItem>
-            </>
-          )}
-        </Dropdown>
+            Open →
+          </Link>
+        </div>
       </div>
-    </Card>
+    </div>
   );
 }

@@ -1,8 +1,9 @@
 import { forwardRef } from 'react';
+import { cn } from '../../lib/utils.js';
 
 const Button = forwardRef(({ 
   children, 
-  variant = 'primary', 
+  variant = 'default', 
   size = 'default',
   className = '',
   disabled = false,
@@ -13,57 +14,61 @@ const Button = forwardRef(({
 }, ref) => {
   const baseClasses = `
     inline-flex items-center justify-center font-medium rounded-md
-    transition-all duration-150 ease-out
+    transition-colors duration-150
     disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none
     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary
   `;
   
   const variants = {
+    default: `
+      bg-white text-black border border-transparent
+      hover:bg-white/90
+    `,
     primary: `
-      bg-primary text-white
-      hover:bg-primary-light hover:shadow-glow-primary
-      active:bg-primary-dark
+      bg-primary text-white border border-transparent
+      hover:bg-primary/90
     `,
     secondary: `
-      bg-surface text-text-primary border border-border
-      hover:bg-surface-hover hover:border-border-hover
-      active:bg-surface-active
+      bg-bg-secondary text-text-primary border border-border
+      hover:bg-bg-tertiary
     `,
     ghost: `
       bg-transparent text-text-secondary
-      hover:bg-surface hover:text-text-primary
-      active:bg-surface-active
+      hover:bg-bg-secondary hover:text-text-primary
+    `,
+    outline: `
+      bg-transparent text-text-primary border border-border
+      hover:bg-bg-secondary
     `,
     danger: `
-      bg-error-subtle text-error-text
+      bg-error/10 text-error border border-error/20
       hover:bg-error/20
-      active:bg-error/30
     `,
   };
   
   const sizes = {
-    sm: 'h-7 px-3 text-sm gap-1.5',
+    sm: 'h-8 px-3 text-xs gap-1.5',
     default: 'h-9 px-4 text-sm gap-2',
-    lg: 'h-11 px-6 text-base gap-2.5',
+    lg: 'h-11 px-6 text-sm gap-2.5',
     icon: 'w-9 h-9 p-0',
   };
 
   const iconSizes = {
     sm: 'w-3.5 h-3.5',
     default: 'w-4 h-4',
-    lg: 'w-5 h-5',
+    lg: 'w-4 h-4',
     icon: 'w-4 h-4',
   };
 
   return (
     <button
       ref={ref}
-      className={`${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`}
+      className={cn(baseClasses, variants[variant], sizes[size], className)}
       disabled={disabled || loading}
       {...props}
     >
       {loading ? (
-        <span className="spinner w-4 h-4" />
+        <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
       ) : (
         <>
           {Icon && iconPosition === 'left' && <Icon className={iconSizes[size]} />}

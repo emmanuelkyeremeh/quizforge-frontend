@@ -6,7 +6,7 @@ import Spinner from './ui/Spinner.jsx';
  * Protected route that requires admin access
  */
 export default function AdminRoute({ children }) {
-  const { user, usage, loading } = useAuth();
+  const { user, usage, userData, loading } = useAuth();
 
   if (loading) {
     return (
@@ -20,7 +20,10 @@ export default function AdminRoute({ children }) {
     return <Navigate to="/login" replace />;
   }
 
-  if (!usage?.isAdmin) {
+  // Check both usage and userData for admin status
+  const isAdmin = usage?.isAdmin || userData?.isAdmin;
+  
+  if (!isAdmin) {
     return <Navigate to="/dashboard" replace />;
   }
 

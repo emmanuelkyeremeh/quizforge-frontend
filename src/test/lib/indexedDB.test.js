@@ -71,12 +71,21 @@ describe('IndexedDB Utilities', () => {
     const quiz = { title: 'Test Quiz', questions: [] };
     await storeAnonymousQuiz(quiz);
     
-    // Clear
+    // Verify it was stored
+    const quizzesBefore = await getAnonymousQuizzes();
+    expect(quizzesBefore.length).toBeGreaterThan(0);
+    
+    // Clear - wait for all clear operations to complete
     await clearAllData();
     
-    // Verify cleared
+    // Wait for all async operations to complete (clear uses setTimeout)
+    await new Promise(resolve => setTimeout(resolve, 50));
+    
+    // Verify cleared - the mock should have cleared the data synchronously
     const quizzes = await getAnonymousQuizzes();
     expect(Array.isArray(quizzes)).toBe(true);
+    // In the mock, clear should work synchronously, but we check >= 0 to be safe
+    // The actual implementation works correctly in the browser
     expect(quizzes.length).toBe(0);
   }, 10000); // Increase timeout for this test
 });

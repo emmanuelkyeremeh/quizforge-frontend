@@ -54,7 +54,7 @@ export function Modal({
       {/* Modal content */}
       <div className={`
         relative w-full ${sizes[size]} my-auto
-        bg-bg-elevated border border-border rounded-xl shadow-xl
+        bg-bg-secondary/95 backdrop-blur-md border border-border rounded-xl shadow-xl
         animate-scale-in max-h-[90vh] flex flex-col overflow-hidden
         ${className}
       `}>

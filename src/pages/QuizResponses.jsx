@@ -18,15 +18,20 @@ export default function QuizResponses() {
     const loadResponses = async () => {
       try {
         const data = await api.getQuizResponses(quizId);
-        setResponses(data);
+        setResponses(Array.isArray(data) ? data : []);
       } catch (error) {
         console.error('Failed to load responses:', error);
+        setResponses([]); // Set to empty array on error
       } finally {
         setLoading(false);
       }
     };
 
-    loadResponses();
+    if (quizId) {
+      loadResponses();
+    } else {
+      setLoading(false);
+    }
   }, [quizId]);
 
   if (loading) {
@@ -38,15 +43,19 @@ export default function QuizResponses() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="flex items-center gap-4 mb-8">
-        <Link to={`/quiz/${quizId}/edit`}>
-          <Button variant="ghost" size="icon">
-            <ArrowLeft className="w-4 h-4" />
-          </Button>
-        </Link>
+    <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
+      <div className="flex items-center gap-4">
+        <Button 
+          variant="ghost" 
+          size="sm"
+          icon={ArrowLeft}
+          onClick={() => navigate(`/quiz/${quizId}/edit`)}
+          className="w-fit -ml-2"
+        >
+          Back
+        </Button>
         <div className="flex-1">
-          <h1 className="text-2xl font-bold text-text-primary mb-2">Quiz Responses</h1>
+          <h1 className="text-2xl font-bold text-white tracking-tight mb-2">Quiz Responses</h1>
           <p className="text-sm text-text-secondary">
             {responses.length} {responses.length === 1 ? 'response' : 'responses'}
           </p>
@@ -54,21 +63,23 @@ export default function QuizResponses() {
       </div>
 
       {responses.length === 0 ? (
-        <Card className="p-12 text-center">
-          <Users className="w-12 h-12 text-text-tertiary mx-auto mb-4" />
-          <p className="text-text-secondary">No responses yet</p>
-          <p className="text-sm text-text-tertiary mt-2">
+        <Card className="p-12 text-center border border-dashed border-border">
+          <div className="w-12 h-12 rounded-full bg-bg-secondary flex items-center justify-center mb-4 border border-border mx-auto">
+            <Users className="w-6 h-6 text-text-tertiary" />
+          </div>
+          <h3 className="text-lg font-semibold text-white mb-2">No responses yet</h3>
+          <p className="text-sm text-text-tertiary max-w-[240px] mx-auto">
             Share your quiz link to start receiving responses.
           </p>
         </Card>
       ) : (
         <div className="space-y-4">
           {responses.map((response) => (
-            <Card key={response.id} className="p-6">
+            <Card key={response.id} className="p-6 border border-border">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-lg font-semibold text-text-primary">
+                    <h3 className="text-lg font-semibold text-white">
                       {response.studentInfo?.name || 'Anonymous'}
                     </h3>
                     <Badge 
@@ -112,13 +123,13 @@ export default function QuizResponses() {
 
               {/* Student Info */}
               {Object.keys(response.studentInfo || {}).length > 0 && (
-                <div className="mb-4 p-3 bg-surface rounded-lg">
+                <div className="mb-4 p-3 bg-bg-secondary rounded-lg border border-border">
                   <p className="text-xs font-medium text-text-tertiary mb-2 uppercase tracking-wider">Student Information</p>
                   <div className="grid grid-cols-2 gap-2 text-sm">
                     {Object.entries(response.studentInfo).map(([key, value]) => (
                       <div key={key}>
                         <span className="text-text-tertiary capitalize">{key}:</span>{' '}
-                        <span className="text-text-primary">{value}</span>
+                        <span className="text-white">{value}</span>
                       </div>
                     ))}
                   </div>

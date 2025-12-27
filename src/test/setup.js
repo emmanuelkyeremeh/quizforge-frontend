@@ -27,6 +27,7 @@ afterEach(() => {
     });
   }
   // Clear IndexedDB mock data between tests
+  // Reset to new arrays to ensure clean state
   mockStoreData = {
     content: [],
     anonymousQuizzes: [],
@@ -133,8 +134,19 @@ const createMockStore = (storeName = 'content') => {
       return createMockRequest();
     }),
     clear: vi.fn(() => {
-      store.length = 0;
-      return createMockRequest();
+      // Clear the array properly
+      while (store.length > 0) {
+        store.pop();
+      }
+      const request = createMockRequest();
+      // Trigger onsuccess immediately for clear operations
+      setTimeout(() => {
+        if (request.onsuccess && !request._triggered) {
+          request._triggered = true;
+          request.onsuccess({ target: request });
+        }
+      }, 0);
+      return request;
     }),
   };
 };
@@ -149,9 +161,12 @@ const createMockDB = () => {
     },
     createObjectStore: vi.fn((name) => createMockStore(name)),
     transaction: vi.fn((stores, mode) => {
-      const storeName = Array.isArray(stores) ? stores[0] : stores;
+      const storeNames = Array.isArray(stores) ? stores : [stores];
       return {
-        objectStore: vi.fn(() => createMockStore(storeName)),
+        objectStore: vi.fn((name) => {
+          // Return the correct store for the given name
+          return createMockStore(name);
+        }),
         onerror: null,
         oncomplete: null,
       };

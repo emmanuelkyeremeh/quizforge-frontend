@@ -177,5 +177,11 @@ export const api = {
   // Admin
   getAdminMetrics: () => apiRequest('/api/admin/metrics'),
   getAllUsers: (limit = 50, offset = 0) => apiRequest(`/api/admin/users?limit=${limit}&offset=${offset}`),
+
+  // Subscription
+  createCheckout: () => apiRequest('/api/subscription/checkout', {
+    method: 'POST',
+  }),
+  getSubscriptionStatus: () => apiRequest('/api/subscription/status'),
 };
 

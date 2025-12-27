@@ -38,7 +38,7 @@ export function Dropdown({
           <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
           <div className={`
             absolute z-50 mt-2 min-w-[180px]
-            bg-bg-elevated border border-border rounded-lg shadow-lg
+            bg-bg-secondary/95 backdrop-blur-md border border-border rounded-lg shadow-lg
             animate-scale-in origin-top-right
             ${alignClasses[align]}
             ${className}

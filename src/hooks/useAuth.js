@@ -37,10 +37,20 @@ export const useAuth = () => {
                   displayName: firebaseUser.displayName || '',
                   photoURL: firebaseUser.photoURL || '',
                 });
-                // Retry fetching profile
+                // Retry fetching profile after a short delay
+                await new Promise(resolve => setTimeout(resolve, 500));
                 profile = await api.getUserProfile();
               } catch (createError) {
                 console.error('Error creating user document:', createError);
+              }
+            } else if (error.message?.includes('429') || error.message?.includes('Too Many Requests')) {
+              // Rate limit error - retry after a delay
+              console.warn('Rate limit hit for user profile, retrying...');
+              await new Promise(resolve => setTimeout(resolve, 2000));
+              try {
+                profile = await api.getUserProfile();
+              } catch (retryError) {
+                console.error('Error fetching user profile after retry:', retryError);
               }
             } else {
               console.error('Error fetching user profile:', error);
@@ -50,8 +60,19 @@ export const useAuth = () => {
           try {
             usageData = await api.getUserUsage();
           } catch (error) {
-            // Usage might fail if user document doesn't exist, that's okay
-            console.error('Error fetching user usage:', error);
+            // Handle rate limit errors for usage endpoint
+            if (error.message?.includes('429') || error.message?.includes('Too Many Requests')) {
+              console.warn('Rate limit hit for user usage, retrying...');
+              await new Promise(resolve => setTimeout(resolve, 2000));
+              try {
+                usageData = await api.getUserUsage();
+              } catch (retryError) {
+                console.error('Error fetching user usage after retry:', retryError);
+              }
+            } else {
+              // Usage might fail if user document doesn't exist, that's okay
+              console.error('Error fetching user usage:', error);
+            }
           }
           
           setUserData(profile);

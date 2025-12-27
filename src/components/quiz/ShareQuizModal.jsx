@@ -3,7 +3,7 @@ import { Modal, ModalHeader, ModalBody, ModalFooter } from '../ui/Modal.jsx';
 import Button from '../ui/Button.jsx';
 import Input from '../ui/Input.jsx';
 import Card from '../ui/Card.jsx';
-import { Share2, Copy, Check, Plus, X, Settings } from 'lucide-react';
+import { Share2, Copy, Check, Plus, X, Settings, ChevronUp, ChevronDown } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 export default function ShareQuizModal({ isOpen, onClose, quiz, onUpdate }) {
@@ -215,7 +215,7 @@ export default function ShareQuizModal({ isOpen, onClose, quiz, onUpdate }) {
                       <select
                         value={field.type}
                         onChange={(e) => handleFieldChange(index, 'type', e.target.value)}
-                        className="input"
+                        className="w-full h-10 px-3 text-sm border rounded-md transition-colors hover:border-border-hover focus:outline-none"
                       >
                         <option value="text">Text</option>
                         <option value="email">Email</option>
@@ -321,20 +321,72 @@ export default function ShareQuizModal({ isOpen, onClose, quiz, onUpdate }) {
                 {settings.isTimed && (
                   <div className="mt-3">
                     <label htmlFor="time-limit" className="label">Time Limit (minutes)</label>
-                    <Input
-                      id="time-limit"
-                      type="number"
-                      min="1"
-                      max="300"
-                      value={settings.timeLimit}
-                      onChange={(e) => {
-                        const value = parseInt(e.target.value, 10);
-                        // Validate: ensure value is between 1 and 300
-                        const validValue = (!isNaN(value) && value >= 1 && value <= 300) ? value : 30;
-                        setSettings({ ...settings, timeLimit: validValue });
-                      }}
-                      className="w-full"
-                    />
+                    <div className="flex items-center gap-2">
+                      <div className="relative flex-1">
+                        <Input
+                          id="time-limit"
+                          type="text"
+                          inputMode="numeric"
+                          value={settings.timeLimit === '' ? '' : settings.timeLimit}
+                          onChange={(e) => {
+                            const value = e.target.value;
+                            // Allow empty string for deletion
+                            if (value === '') {
+                              setSettings({ ...settings, timeLimit: '' });
+                              return;
+                            }
+                            // Only allow numbers
+                            if (/^\d+$/.test(value)) {
+                              const numValue = parseInt(value, 10);
+                              // Validate: ensure value is between 1 and 300
+                              if (numValue >= 1 && numValue <= 300) {
+                                setSettings({ ...settings, timeLimit: numValue });
+                              }
+                            }
+                          }}
+                          onBlur={(e) => {
+                            // Validate on blur - set to default if empty or invalid
+                            const value = e.target.value;
+                            if (value === '' || isNaN(parseInt(value, 10))) {
+                              setSettings({ ...settings, timeLimit: 30 });
+                            } else {
+                              const numValue = parseInt(value, 10);
+                              if (numValue < 1) {
+                                setSettings({ ...settings, timeLimit: 1 });
+                              } else if (numValue > 300) {
+                                setSettings({ ...settings, timeLimit: 300 });
+                              }
+                            }
+                          }}
+                          className="w-full"
+                          placeholder="30"
+                        />
+                      </div>
+                      <div className="flex flex-col gap-0.5">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const current = settings.timeLimit || 30;
+                            const newValue = Math.min(current + 1, 300);
+                            setSettings({ ...settings, timeLimit: newValue });
+                          }}
+                          className="h-5 w-7 flex items-center justify-center rounded-t border border-border bg-bg-secondary hover:bg-bg-tertiary transition-colors"
+                        >
+                          <ChevronUp className="w-3 h-3 text-text-secondary" />
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const current = settings.timeLimit || 30;
+                            const newValue = Math.max(current - 1, 1);
+                            setSettings({ ...settings, timeLimit: newValue });
+                          }}
+                          className="h-5 w-7 flex items-center justify-center rounded-b border border-border bg-bg-secondary hover:bg-bg-tertiary transition-colors"
+                        >
+                          <ChevronDown className="w-3 h-3 text-text-secondary" />
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 )}
               </Card>

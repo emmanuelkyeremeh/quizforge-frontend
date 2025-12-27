@@ -52,11 +52,11 @@ describe('Quiz Generation Flow', () => {
     renderWithRouter(<CreateQuiz />);
 
     // Enter content
-    const textarea = screen.getByPlaceholderText('Paste your content here...');
+    const textarea = screen.getByPlaceholderText('Paste your source text, transcript, or notes here...');
     fireEvent.change(textarea, { target: { value: 'Test content for quiz' } });
 
     // Set question count
-    const slider = screen.getByLabelText(/Number of Questions/i).parentElement.querySelector('input[type="range"]');
+    const slider = screen.getByLabelText(/Number of Questions/i);
     fireEvent.change(slider, { target: { value: '10' } });
 
     // Submit form
@@ -68,8 +68,10 @@ describe('Quiz Generation Flow', () => {
         'Test content for quiz',
         expect.objectContaining({
           questionCount: 10,
+          types: expect.any(Array),
+          difficulty: expect.any(String),
         }),
-        null
+        expect.any(Array) // files array (empty when no files uploaded)
       );
     });
   });

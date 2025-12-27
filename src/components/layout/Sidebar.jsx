@@ -1,24 +1,27 @@
-import { Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Plus, Settings, Zap } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { LayoutDashboard, Plus, Settings, Zap, Shield, FileText, CreditCard } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth.js';
 import Button from '../ui/Button.jsx';
 
 export default function Sidebar() {
   const location = useLocation();
-  const { usage } = useAuth();
+  const navigate = useNavigate();
+  const { usage, userData } = useAuth();
 
   const isActive = (path) => location.pathname === path;
+  const isAdmin = usage?.isAdmin || userData?.isAdmin;
 
   const navItems = [
     { path: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
+    ...(isAdmin ? [{ path: '/admin', icon: Shield, label: 'Admin Dashboard' }] : []),
     { path: '/create', icon: Plus, label: 'Create Quiz' },
+    { path: '/pricing', icon: CreditCard, label: 'Pricing' },
     { path: '/settings', icon: Settings, label: 'Settings' },
   ];
 
   return (
-    <aside className="w-60 h-[calc(100vh-56px)] bg-bg-secondary border-r border-border flex flex-col">
-      {/* Navigation */}
-      <nav className="p-3 flex-1">
+    <aside className="w-60 hidden md:flex flex-col h-[calc(100vh-56px)] bg-bg-primary border-r border-border sticky top-14">
+      <div className="flex-1 py-2 px-2 flex flex-col gap-0.5">
         {navItems.map((item) => {
           const Icon = item.icon;
           const active = isActive(item.path);
@@ -28,55 +31,60 @@ export default function Sidebar() {
               key={item.path}
               to={item.path}
               className={`
-                flex items-center gap-3 px-3 py-2 rounded-md text-sm font-medium
-                transition-all duration-150 mb-0.5
+                flex items-center gap-2.5 px-2.5 py-1.5 rounded text-sm font-medium
+                transition-colors duration-100
                 ${active
-                  ? 'bg-primary-subtle text-primary-light'
-                  : 'text-text-secondary hover:bg-surface hover:text-text-primary'
+                  ? 'bg-bg-secondary text-white'
+                  : 'text-text-secondary hover:bg-bg-secondary hover:text-white'
                 }
               `}
             >
-              <Icon className={`w-4 h-4 ${active ? 'text-primary' : ''}`} />
+              <Icon className={`w-4 h-4 ${active ? 'text-primary' : 'text-text-tertiary'}`} />
               {item.label}
             </Link>
           );
         })}
-      </nav>
+      </div>
 
       {/* Usage widget */}
       {usage && (
-        <div className="p-4 border-t border-border">
-          <div className="p-3 rounded-lg bg-surface">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-medium text-text-tertiary uppercase tracking-wider">Plan</span>
-              <span className={`text-xs font-semibold uppercase ${
-                usage.plan === 'developer' ? 'text-primary-light' : 'text-text-secondary'
+        <div className="p-3 mt-auto border-t border-border">
+          <div className="p-3 rounded-md bg-bg-secondary border border-border">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-[10px] font-bold text-text-tertiary uppercase tracking-wider">Plan</span>
+              <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded border border-border ${
+                isAdmin ? 'bg-primary/20 text-primary border-primary/30' : 'bg-bg-primary text-text-secondary'
               }`}>
-                {usage.plan === 'developer' ? 'Dev' : usage.plan}
+                {isAdmin ? 'ADMIN' : (usage.plan || 'FREE').toUpperCase()}
               </span>
             </div>
             
-            {usage.plan === 'free' && (
-              <div className="mt-3">
-                <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-xs text-text-tertiary">Quizzes</span>
-                  <span className="text-xs font-medium text-text-secondary">
-                    {usage.quizzesCreatedThisMonth} / {usage.limit}
-                  </span>
+            {usage.plan === 'free' && !isAdmin && (
+              <div className="space-y-2.5">
+                <div className="space-y-1">
+                  <div className="flex items-center justify-between text-[10px]">
+                    <span className="text-text-tertiary font-medium">Quizzes used</span>
+                    <span className="text-white font-semibold">
+                      {usage.quizzesCreatedThisMonth} / {usage.limit}
+                    </span>
+                  </div>
+                  <div className="w-full h-0.5 bg-bg-primary rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-primary rounded-full transition-all duration-500"
+                      style={{ width: `${Math.min((usage.quizzesCreatedThisMonth / usage.limit) * 100, 100)}%` }}
+                    />
+                  </div>
                 </div>
-                <div className="w-full h-1.5 bg-bg-tertiary rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-primary to-accent-violet rounded-full transition-all duration-500"
-                    style={{ width: `${Math.min((usage.quizzesCreatedThisMonth / usage.limit) * 100, 100)}%` }}
-                  />
-                </div>
+                <Button 
+                  variant="secondary" 
+                  size="sm" 
+                  className="w-full h-7 text-xs font-semibold" 
+                  icon={Zap}
+                  onClick={() => navigate('/pricing')}
+                >
+                  Upgrade to Pro
+                </Button>
               </div>
-            )}
-
-            {usage.plan === 'free' && (
-              <Button variant="secondary" size="sm" className="w-full mt-3" icon={Zap}>
-                Upgrade to Pro
-              </Button>
             )}
           </div>
         </div>

@@ -1,11 +1,40 @@
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth.js';
 import Card from '../components/ui/Card.jsx';
 import Badge from '../components/ui/Badge.jsx';
 import Button from '../components/ui/Button.jsx';
-import { Zap, User, CreditCard, BarChart3 } from 'lucide-react';
+import { api } from '../lib/api.js';
+import toast from 'react-hot-toast';
+import { Zap, User, CreditCard, BarChart3, CheckCircle2, XCircle, AlertCircle } from 'lucide-react';
 
 export default function Settings() {
-  const { user, userData, usage } = useAuth();
+  const { user, userData, usage, refreshUsage } = useAuth();
+  const navigate = useNavigate();
+  const [subscription, setSubscription] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [loadingSubscription, setLoadingSubscription] = useState(true);
+
+  useEffect(() => {
+    loadSubscriptionStatus();
+  }, []);
+
+  const loadSubscriptionStatus = async () => {
+    try {
+      setLoadingSubscription(true);
+      const status = await api.getSubscriptionStatus();
+      setSubscription(status);
+    } catch (error) {
+      console.error('Failed to load subscription status:', error);
+    } finally {
+      setLoadingSubscription(false);
+    }
+  };
+
+  const handleUpgrade = () => {
+    // Navigate to pricing page instead of directly to checkout
+    navigate('/pricing');
+  };
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -59,35 +88,81 @@ export default function Settings() {
             </Badge>
           </div>
 
-          {usage.plan === 'free' && (
+          {/* Usage display for all plans */}
+          <div className="p-4 rounded-lg bg-surface border border-border mb-6">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm text-text-secondary">Quizzes this month</span>
+              <span className="text-sm font-semibold text-text-primary">
+                {usage.quizzesCreatedThisMonth} / {usage.limit === Infinity ? '∞' : usage.limit}
+              </span>
+            </div>
+            {usage.limit !== Infinity && (
+              <>
+                <div className="w-full h-2 bg-bg-tertiary rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-primary rounded-full transition-all duration-500"
+                    style={{ width: `${Math.min((usage.quizzesCreatedThisMonth / usage.limit) * 100, 100)}%` }}
+                  />
+                </div>
+                <p className="text-xs text-text-tertiary mt-2">
+                  Resets on the 1st of each month
+                </p>
+              </>
+            )}
+            {usage.limit === Infinity && (
+              <p className="text-xs text-text-tertiary mt-2">
+                Unlimited quizzes
+              </p>
+            )}
+          </div>
+
+          {/* Subscription status for Pro users */}
+          {usage.plan === 'pro' && subscription && (
             <div className="p-4 rounded-lg bg-surface border border-border mb-6">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-text-secondary">Quizzes this month</span>
-                <span className="text-sm font-semibold text-text-primary">
-                  {usage.quizzesCreatedThisMonth} / {usage.limit}
+              <div className="flex items-center gap-2 mb-3">
+                {subscription.subscriptionStatus === 'active' && (
+                  <CheckCircle2 className="w-5 h-5 text-success" />
+                )}
+                {subscription.subscriptionStatus === 'cancelled' && (
+                  <AlertCircle className="w-5 h-5 text-warning" />
+                )}
+                {(subscription.subscriptionStatus === 'expired' || subscription.subscriptionStatus === 'past_due') && (
+                  <XCircle className="w-5 h-5 text-error" />
+                )}
+                <span className="text-sm font-medium text-text-primary">
+                  Subscription Status: {subscription.subscriptionStatus || 'Unknown'}
                 </span>
               </div>
-              <div className="w-full h-2 bg-bg-tertiary rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-gradient-to-r from-primary to-accent-violet rounded-full transition-all duration-500"
-                  style={{ width: `${Math.min((usage.quizzesCreatedThisMonth / usage.limit) * 100, 100)}%` }}
-                />
-              </div>
-              <p className="text-xs text-text-tertiary mt-2">
-                Resets on the 1st of each month
-              </p>
+              {subscription.subscriptionStatus === 'cancelled' && (
+                <p className="text-xs text-text-secondary">
+                  Your subscription is cancelled but remains active until the end of your billing period.
+                </p>
+              )}
+              {subscription.subscriptionStatus === 'past_due' && (
+                <p className="text-xs text-error">
+                  Payment failed. Please update your payment method to continue using Pro features.
+                </p>
+              )}
             </div>
           )}
 
+          {/* Upgrade CTA for Free users */}
           {usage.plan === 'free' && (
-            <div className="p-4 rounded-lg bg-gradient-to-r from-primary-subtle to-accent-violet/10 border border-primary/20">
+            <div className="p-4 rounded-lg bg-surface border border-primary/20">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-text-primary mb-1">Upgrade to Pro</p>
-                  <p className="text-xs text-text-secondary">Unlimited quizzes • Priority support</p>
+                  <p className="text-xs text-text-secondary">
+                    50 quizzes/month • Up to 100 questions per quiz • $10/month
+                  </p>
                 </div>
-                <Button icon={Zap}>
-                  Upgrade — $19/mo
+                <Button 
+                  icon={Zap} 
+                  onClick={handleUpgrade}
+                  loading={loading}
+                  disabled={loading}
+                >
+                  Upgrade
                 </Button>
               </div>
             </div>
@@ -122,6 +197,15 @@ export default function Settings() {
               <p className="text-sm text-text-tertiary">Total questions generated</p>
             </div>
           </div>
+          
+          {usage.maxQuestionsPerQuiz && (
+            <div className="mt-4 p-4 rounded-lg bg-surface border border-border">
+              <p className="text-sm text-text-secondary mb-1">Max questions per quiz</p>
+              <p className="text-lg font-semibold text-text-primary">
+                {usage.maxQuestionsPerQuiz === Infinity ? 'Unlimited' : usage.maxQuestionsPerQuiz}
+              </p>
+            </div>
+          )}
         </Card>
       )}
     </div>

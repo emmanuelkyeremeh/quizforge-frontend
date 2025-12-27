@@ -7,7 +7,9 @@ export const useQuizStore = create((set) => ({
   error: null,
   
   setCurrentQuiz: (quiz) => set({ currentQuiz: quiz }),
-  setQuizzes: (quizzes) => set({ quizzes }),
+  setQuizzes: (quizzes) => set((state) => ({ 
+    quizzes: typeof quizzes === 'function' ? quizzes(state.quizzes) : quizzes 
+  })),
   setLoading: (loading) => set({ loading }),
   setError: (error) => set({ error }),
   

@@ -107,8 +107,9 @@ export default function TakeQuiz() {
 
   const handleAutoSubmit = async () => {
     // Use refs to get current values (avoid stale closure)
-    if (submittingRef.current) return; // Prevent double submission
+    if (submittingRef.current || step === 'results') return; // Prevent double submission
     
+    submittingRef.current = true;
     setSubmitting(true);
     try {
       // Use refs to get the most current answers and studentInfo
@@ -129,6 +130,7 @@ export default function TakeQuiz() {
       toast.success('Time expired! Quiz auto-submitted with your responses.');
     } catch (error) {
       toast.error(error.message || 'Failed to submit quiz');
+      submittingRef.current = false; // Reset on error
     } finally {
       setSubmitting(false);
     }
@@ -136,6 +138,11 @@ export default function TakeQuiz() {
 
   const handleSubmitQuiz = async (e) => {
     e.preventDefault();
+    
+    // Prevent double submission
+    if (submitting || submittingRef.current || step === 'results') {
+      return;
+    }
     
     // Clear timer
     if (timerInterval) {
@@ -151,6 +158,7 @@ export default function TakeQuiz() {
       }
     }
     
+    submittingRef.current = true;
     setSubmitting(true);
     try {
       const result = await api.submitQuizResponse(shareId, studentInfo, answers);
@@ -158,6 +166,7 @@ export default function TakeQuiz() {
       setStep('results');
     } catch (error) {
       toast.error(error.message || 'Failed to submit quiz');
+      submittingRef.current = false; // Reset on error so user can retry
     } finally {
       setSubmitting(false);
     }

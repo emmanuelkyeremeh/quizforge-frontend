@@ -1,24 +1,23 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import { useParams, useNavigate, useLocation, Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth.js';
 import { useQuizzes } from '../hooks/useQuizzes.js';
 import { getAnonymousQuizzes } from '../lib/indexedDB.js';
 import QuestionCard from '../components/quiz/QuestionCard.jsx';
 import Button from '../components/ui/Button.jsx';
-import Input from '../components/ui/Input.jsx';
 import Spinner from '../components/ui/Spinner.jsx';
 import Badge from '../components/ui/Badge.jsx';
-import { Download, Save, FileText, ArrowLeft, Share2, Users } from 'lucide-react';
+import { Download, Save, FileText, ChevronLeft, Share2, Users, MoreHorizontal, Settings2 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { api } from '../lib/api.js';
-import { Link } from 'react-router-dom';
+import { Dropdown, DropdownItem, DropdownDivider } from '../components/ui/Dropdown.jsx';
 import ShareQuizModal from '../components/quiz/ShareQuizModal.jsx';
 
 export default function EditQuiz() {
   const { quizId } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
-  const { user } = useAuth();
+  const { user, loading: authLoading } = useAuth();
   const { fetchQuiz, updateQuiz } = useQuizzes();
   
   const [quiz, setQuiz] = useState(null);
@@ -28,36 +27,98 @@ export default function EditQuiz() {
   const [showShareModal, setShowShareModal] = useState(false);
 
   useEffect(() => {
+    // Don't load quiz until auth state is determined
+    if (authLoading) {
+      setLoading(true);
+      return; // Still loading auth state
+    }
+
     const loadQuiz = async () => {
       try {
-        if (quizId === 'anonymous' && location.state?.quiz) {
-          setQuiz(location.state.quiz);
-          setTitle(location.state.quiz.title || '');
-        } else if (!user && quizId !== 'anonymous') {
+        if (quizId === 'anonymous') {
+          // Anonymous quiz - try location state first, then IndexedDB
+          if (location.state?.quiz) {
+            setQuiz(location.state.quiz);
+            setTitle(location.state.quiz.title || '');
+            setLoading(false);
+            return;
+          } else {
+            const anonymousQuizzes = await getAnonymousQuizzes();
+            const found = anonymousQuizzes.find(q => q.localId === quizId || q.id === quizId);
+            if (found) {
+              setQuiz(found);
+              setTitle(found.title || '');
+              setLoading(false);
+              return;
+            } else {
+              toast.error('Quiz not found');
+              navigate('/dashboard');
+              return;
+            }
+          }
+        }
+        
+        // For non-anonymous quizzes, check if user is authenticated
+        if (user) {
+          // Authenticated user - fetch from API
+          try {
+            const data = await fetchQuiz(quizId);
+            if (data) {
+              setQuiz(data);
+              setTitle(data.title || '');
+              setLoading(false);
+              return;
+            } else {
+              toast.error('Quiz not found');
+              navigate('/dashboard');
+              return;
+            }
+          } catch (fetchError) {
+            // Check if it's a 404 (quiz doesn't exist) vs other errors
+            const errorMessage = fetchError.message || '';
+            const is404 = errorMessage.toLowerCase().includes('not found') || 
+                         errorMessage.includes('404') ||
+                         errorMessage.toLowerCase().includes('404');
+            
+            if (is404) {
+              // Quiz doesn't exist in database
+              toast.error('Quiz not found');
+              navigate('/dashboard');
+              return;
+            } else {
+              // Other errors (network, auth, etc.) - show error but don't redirect
+              console.error('Error fetching quiz:', fetchError);
+              toast.error('Failed to load quiz. Please try refreshing the page.');
+              setLoading(false);
+              return;
+            }
+          }
+        } else {
+          // Not logged in - try IndexedDB as fallback
           const anonymousQuizzes = await getAnonymousQuizzes();
-          const found = anonymousQuizzes.find(q => q.localId === quizId);
+          const found = anonymousQuizzes.find(q => q.localId === quizId || q.id === quizId);
           if (found) {
             setQuiz(found);
             setTitle(found.title || '');
+            setLoading(false);
+            return;
           } else {
-            toast.error('Quiz not found');
-            navigate('/dashboard');
+            // Quiz not found anywhere - show error but don't redirect to login
+            // User might be in the process of logging in
+            toast.error('Quiz not found. If you own this quiz, please sign in.');
+            setLoading(false);
+            return;
           }
-        } else if (user) {
-          const data = await fetchQuiz(quizId);
-          setQuiz(data);
-          setTitle(data.title || '');
         }
       } catch (error) {
-        toast.error('Failed to load quiz');
-        navigate('/dashboard');
-      } finally {
+        console.error('Error loading quiz:', error);
+        toast.error('Failed to load quiz. Please try refreshing the page.');
         setLoading(false);
       }
     };
 
     loadQuiz();
-  }, [quizId, user, location.state, fetchQuiz, navigate]);
+  }, [quizId, user, authLoading, location.state, fetchQuiz, navigate]);
 
   const handleUpdateQuestion = (index, updatedQuestion) => {
     const newQuestions = [...quiz.questions];
@@ -84,11 +145,6 @@ export default function EditQuiz() {
       return;
     }
 
-    if (!quiz.id && !quiz.quizId) {
-      toast.error('This quiz cannot be saved. Please generate a new one after signing up.');
-      return;
-    }
-
     setSaving(true);
     try {
       const updated = await updateQuiz(quiz.id || quiz.quizId, { title, questions: quiz.questions });
@@ -111,7 +167,7 @@ export default function EditQuiz() {
     try {
       const updated = await updateQuiz(quiz.id || quiz.quizId, settings);
       setQuiz(updated);
-      return updated; // Return updated quiz for ShareQuizModal
+      return updated;
     } catch (error) {
       toast.error('Failed to update share settings');
       throw error;
@@ -145,10 +201,7 @@ export default function EditQuiz() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
-        <div className="text-center">
-          <Spinner size="lg" className="mx-auto mb-4" />
-          <p className="text-sm text-text-secondary">Loading quiz...</p>
-        </div>
+        <Spinner size="lg" />
       </div>
     );
   }
@@ -156,91 +209,121 @@ export default function EditQuiz() {
   if (!quiz) return null;
 
   return (
-    <div className="max-w-4xl mx-auto">
-      {/* Header */}
-      <div className="flex items-center gap-4 mb-8">
-        <Link to="/dashboard">
-          <Button variant="ghost" size="icon">
-            <ArrowLeft className="w-4 h-4" />
+    <div className="max-w-[1000px] mx-auto animate-fade-in space-y-8">
+      {/* Editor Header */}
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-border">
+        <div className="flex-1 space-y-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            icon={ChevronLeft}
+            onClick={() => navigate(user ? '/dashboard' : '/create')}
+            className="w-fit -ml-2"
+          >
+            Back
           </Button>
-        </Link>
-        <div className="flex-1">
-          <input
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            className="text-2xl font-bold text-text-primary bg-transparent border-0 outline-none w-full placeholder:text-text-tertiary"
-            placeholder="Quiz Title"
-          />
-          <div className="flex items-center gap-3 mt-1">
-            <span className="text-sm text-text-tertiary">{quiz.questions?.length || 0} questions</span>
-            {quiz.metadata?.difficulty && (
-              <Badge variant="neutral" size="sm">{quiz.metadata.difficulty}</Badge>
-            )}
+          
+          <div className="space-y-2">
+            <input
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              className="text-3xl font-bold text-white bg-transparent border-none p-0 focus:outline-none w-full placeholder:text-text-tertiary"
+              placeholder="Untitled Quiz"
+            />
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-semibold text-text-tertiary uppercase tracking-wider">
+                {quiz.questions?.length || 0} questions
+              </span>
+              <span className="w-1 h-1 rounded-full bg-border" />
+              <Badge variant="neutral" className="bg-bg-accent text-[10px] py-0.5 px-1.5 uppercase font-bold tracking-tight">
+                {quiz.metadata?.difficulty || 'medium'}
+              </Badge>
+            </div>
           </div>
         </div>
-        <div className="flex items-center gap-2">
-          {user && (quiz.id || quiz.quizId) && (
+
+        <div className="flex items-center gap-2 flex-wrap">
+          {user && (quiz.id || quiz.quizId) ? (
             <>
               <Button 
                 variant="secondary" 
+                size="sm"
                 onClick={() => setShowShareModal(true)} 
                 icon={Share2}
+                className="h-9 px-4 font-semibold"
               >
                 Share
               </Button>
-              {quiz.isPublic && (
-                <Link to={`/quiz/${quiz.id || quiz.quizId}/responses`}>
-                  <Button variant="secondary" icon={Users}>
-                    Responses
+              
+              <Dropdown
+                trigger={
+                  <Button variant="secondary" size="sm" className="h-9 w-9 p-0">
+                    <MoreHorizontal className="w-4 h-4" />
                   </Button>
-                </Link>
-              )}
-              <Button variant="secondary" onClick={() => handleExport('pdf')} icon={Download}>
-                PDF
-              </Button>
-              <Button variant="secondary" onClick={() => handleExport('moodle')} icon={FileText}>
-                Moodle
-              </Button>
-              <Button onClick={handleSave} loading={saving} icon={Save}>
-                Save
+                }
+              >
+                <DropdownItem 
+                  icon={Users} 
+                  onClick={() => navigate(`/quiz/${quiz.id || quiz.quizId}/responses`)}
+                >
+                  View Responses
+                </DropdownItem>
+                <DropdownDivider />
+                <DropdownItem icon={Download} onClick={() => handleExport('pdf')}>
+                  Export as PDF
+                </DropdownItem>
+                <DropdownItem icon={FileText} onClick={() => handleExport('moodle')}>
+                  Export for Moodle
+                </DropdownItem>
+                <DropdownItem icon={FileText} onClick={() => handleExport('text')}>
+                  Export as Text
+                </DropdownItem>
+              </Dropdown>
+
+              <Button 
+                onClick={handleSave} 
+                loading={saving} 
+                icon={Save}
+                className="h-9 px-5 bg-white text-black hover:bg-white/90 border-none font-bold shadow-lg ml-2"
+              >
+                Save Changes
               </Button>
             </>
-          )}
-          {!user && (
-            <Button onClick={() => navigate('/signup')}>
+          ) : (
+            <Button onClick={() => navigate('/signup')} className="bg-white text-black hover:bg-white/90 border-none font-bold shadow-lg">
               Sign Up to Save
             </Button>
           )}
         </div>
       </div>
 
-      {/* Questions */}
-      <div className="space-y-4">
-        {quiz.questions?.map((question, index) => (
-          <QuestionCard
-            key={question.id || index}
-            question={question}
-            index={index}
-            onUpdate={(updated) => handleUpdateQuestion(index, updated)}
-            onDelete={handleDeleteQuestion}
-            onMove={(direction) => {
-              if (direction === 'up' && index > 0) {
-                handleReorderQuestions(index, index - 1);
-              } else if (direction === 'down' && index < quiz.questions.length - 1) {
-                handleReorderQuestions(index, index + 1);
-              }
-            }}
-            canMoveUp={index > 0}
-            canMoveDown={index < quiz.questions.length - 1}
-          />
-        ))}
+      {/* Editor Content */}
+      <div className="space-y-6">
+        {quiz.questions?.length > 0 ? (
+          quiz.questions.map((question, index) => (
+            <QuestionCard
+              key={question.id || index}
+              question={question}
+              index={index}
+              onUpdate={(updated) => handleUpdateQuestion(index, updated)}
+              onDelete={handleDeleteQuestion}
+              onMove={(direction) => {
+                if (direction === 'up' && index > 0) {
+                  handleReorderQuestions(index, index - 1);
+                } else if (direction === 'down' && index < quiz.questions.length - 1) {
+                  handleReorderQuestions(index, index + 1);
+                }
+              }}
+              canMoveUp={index > 0}
+              canMoveDown={index < quiz.questions.length - 1}
+            />
+          ))
+        ) : (
+          <div className="py-20 border border-dashed border-border rounded-xl flex flex-col items-center text-center">
+            <p className="text-text-tertiary">This quiz has no questions.</p>
+          </div>
+        )}
       </div>
-
-      {quiz.questions?.length === 0 && (
-        <div className="card p-12 text-center">
-          <p className="text-text-secondary">No questions in this quiz</p>
-        </div>
-      )}
 
       {/* Share Modal */}
       {user && (quiz.id || quiz.quizId) && (

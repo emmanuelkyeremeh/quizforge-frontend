@@ -17,6 +17,7 @@ import EditQuiz from './pages/EditQuiz.jsx';
 import TakeQuiz from './pages/TakeQuiz.jsx';
 import QuizResponses from './pages/QuizResponses.jsx';
 import Settings from './pages/Settings.jsx';
+import Pricing from './pages/Pricing.jsx';
 import AdminDashboard from './pages/AdminDashboard.jsx';
 import GoogleAnalytics from './components/GoogleAnalytics.jsx';
 
@@ -28,7 +29,12 @@ function App() {
   }, [init]);
 
   return (
-    <Router>
+    <Router
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
+    >
       <GoogleAnalytics />
       <div className="min-h-screen bg-bg-primary">
         <Routes>
@@ -36,10 +42,11 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/create" element={
             <div className="min-h-screen bg-bg-primary">
               <Header />
-              <div className="p-6 max-w-5xl mx-auto">
+              <div className="pt-20 px-6 max-w-5xl mx-auto">
                 <CreateQuiz />
               </div>
             </div>
@@ -85,7 +92,7 @@ function App() {
             element={
               <div className="min-h-screen bg-bg-primary">
                 <Header />
-                <div className="p-6 max-w-5xl mx-auto">
+                <div className="pt-20 px-6 max-w-5xl mx-auto">
                   <EditQuiz />
                 </div>
               </div>

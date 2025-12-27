@@ -37,8 +37,9 @@ describe('Button Component', () => {
     // When loading, button shows spinner instead of text
     const button = screen.getByRole('button');
     expect(button).toBeDisabled();
-    // Check for spinner element
-    expect(button.querySelector('.spinner')).toBeInTheDocument();
+    // Check for spinner element (div with animate-spin class)
+    const spinner = button.querySelector('div[class*="animate-spin"]');
+    expect(spinner).toBeInTheDocument();
   });
 
   it('renders with icon', () => {

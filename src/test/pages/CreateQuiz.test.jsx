@@ -37,7 +37,7 @@ describe('CreateQuiz Page', () => {
 
   it('allows entering content', () => {
     renderWithRouter(<CreateQuiz />);
-    const textarea = screen.getByPlaceholderText('Paste your content here...');
+    const textarea = screen.getByPlaceholderText('Paste your source text, transcript, or notes here...');
     fireEvent.change(textarea, { target: { value: 'Test content' } });
     expect(textarea.value).toBe('Test content');
   });

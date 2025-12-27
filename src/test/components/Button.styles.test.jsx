@@ -53,8 +53,8 @@ describe('Button Component - Styling', () => {
     const button = screen.getByRole('button');
     
     expect(button).toBeDisabled();
-    // Check that spinner is present
-    const spinner = container.querySelector('.spinner');
+    // Check that spinner is present (div with animate-spin class)
+    const spinner = button.querySelector('div[class*="animate-spin"]');
     expect(spinner).toBeInTheDocument();
   });
 
@@ -72,8 +72,8 @@ describe('Button Component - Styling', () => {
     const { container } = render(<Button variant="primary">Hover Test</Button>);
     const button = screen.getByText('Hover Test');
     
-    // Check for hover state classes
-    expect(hasClass(button, 'hover:bg-primary-light')).toBe(true);
+    // Check for hover state classes (primary variant uses hover:bg-primary/90)
+    expect(hasClass(button, 'hover:bg-primary/90')).toBe(true);
   });
 });
 

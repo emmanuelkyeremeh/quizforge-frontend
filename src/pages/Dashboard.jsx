@@ -7,10 +7,11 @@ import QuizCard from '../components/quiz/QuizCard.jsx';
 import Button from '../components/ui/Button.jsx';
 import EmptyState from '../components/ui/EmptyState.jsx';
 import Spinner from '../components/ui/Spinner.jsx';
-import { Plus, FileQuestion, Search, ArrowUpDown } from 'lucide-react';
+import { Plus, FileQuestion, Search, ArrowUpDown, SlidersHorizontal, ChevronDown } from 'lucide-react';
 import Input from '../components/ui/Input.jsx';
 import { api } from '../lib/api.js';
 import toast from 'react-hot-toast';
+import { Dropdown, DropdownItem, DropdownDivider } from '../components/ui/Dropdown.jsx';
 
 export default function Dashboard() {
   const { user } = useAuth();
@@ -33,7 +34,10 @@ export default function Dashboard() {
     }
   }, [user, fetchQuizzes]);
 
-  const allQuizzes = user ? quizzes : anonymousQuizzes;
+  // Ensure allQuizzes is always an array
+  const allQuizzes = Array.isArray(user ? quizzes : anonymousQuizzes) 
+    ? (user ? quizzes : anonymousQuizzes) 
+    : [];
   
   const filteredQuizzes = allQuizzes.filter(quiz => 
     quiz.title?.toLowerCase().includes(searchQuery.toLowerCase())
@@ -64,102 +68,100 @@ export default function Dashboard() {
       return;
     }
 
-    if (!quiz.id && !quiz.quizId) {
-      toast.error('Cannot duplicate anonymous quiz');
-      return;
-    }
-
     try {
-      await api.duplicateQuiz(quiz.id || quiz.quizId);
+      await api.duplicateQuiz(quiz.id);
       toast.success('Quiz duplicated successfully');
-      // Refresh quizzes list
       await fetchQuizzes();
     } catch (error) {
       toast.error('Failed to duplicate quiz');
-      console.error('Error duplicating quiz:', error);
     }
   };
 
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
-        <div className="text-center">
-          <Spinner size="lg" className="mx-auto mb-4" />
-          <p className="text-sm text-text-secondary">Loading quizzes...</p>
-        </div>
+        <Spinner size="lg" />
       </div>
     );
   }
 
+  const sortLabel = {
+    date: 'Recent',
+    name: 'Name',
+    questionCount: 'Count'
+  }[sortBy];
+
   return (
-    <div>
+    <div className="space-y-8">
       {/* Header */}
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-text-primary mb-1">My Quizzes</h1>
-          <p className="text-sm text-text-tertiary">
-            {allQuizzes.length} {allQuizzes.length === 1 ? 'quiz' : 'quizzes'}
+          <h1 className="text-2xl font-bold text-white tracking-tight">My Quizzes</h1>
+          <p className="text-xs text-text-tertiary mt-1">
+            {allQuizzes.length} total {allQuizzes.length === 1 ? 'quiz' : 'quizzes'}
           </p>
         </div>
         <Link to="/create">
-          <Button icon={Plus}>
+          <Button icon={Plus} variant="default" className="h-9 px-4 text-xs font-semibold">
             Create Quiz
           </Button>
         </Link>
       </div>
 
-      {/* Search and Sort (if has quizzes) */}
+      {/* Search and Sort */}
       {allQuizzes.length > 0 && (
-        <div className="mb-6 flex items-center gap-4 flex-wrap">
-          <Input
-            placeholder="Search quizzes..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            icon={Search}
-            className="max-w-sm"
-          />
-          <div className="flex items-center gap-2">
-            <ArrowUpDown className="w-4 h-4 text-text-tertiary" />
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="input text-sm py-1.5 px-3"
-            >
-              <option value="date">Date</option>
-              <option value="name">Name</option>
-              <option value="questionCount">Questions</option>
-            </select>
-            <button
-              onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-              className="px-3 py-1.5 text-sm bg-surface border border-border rounded-md hover:bg-surface-hover transition-colors"
-              aria-label={`Sort ${sortOrder === 'asc' ? 'descending' : 'ascending'}`}
-            >
-              {sortOrder === 'asc' ? '↑' : '↓'}
-            </button>
+        <div className="flex items-center gap-2">
+          <div className="relative flex-1 max-w-sm group">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-text-tertiary group-focus-within:text-primary transition-colors" />
+            <input
+              placeholder="Search your quizzes..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full h-9 pl-9 pr-3 bg-bg-secondary border border-border rounded-md text-xs text-white placeholder:text-text-tertiary focus:outline-none focus:border-primary/50 transition-colors"
+            />
           </div>
+          
+          <Dropdown
+            trigger={
+              <button className="h-9 px-3 flex items-center gap-2 bg-bg-secondary border border-border rounded-md text-xs text-text-secondary hover:text-white hover:bg-bg-tertiary transition-colors font-medium">
+                <SlidersHorizontal className="w-3.5 h-3.5" />
+                <span>Sort: {sortLabel}</span>
+                <ChevronDown className="w-3.5 h-3.5" />
+              </button>
+            }
+          >
+            <DropdownItem onClick={() => setSortBy('date')}>Recent</DropdownItem>
+            <DropdownItem onClick={() => setSortBy('name')}>Name</DropdownItem>
+            <DropdownItem onClick={() => setSortBy('questionCount')}>Question Count</DropdownItem>
+            <DropdownDivider />
+            <DropdownItem onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}>
+              {sortOrder === 'asc' ? 'Ascending' : 'Descending'}
+            </DropdownItem>
+          </Dropdown>
         </div>
       )}
 
       {/* Content */}
       {allQuizzes.length === 0 ? (
-        <EmptyState
-          icon={FileQuestion}
-          title="No quizzes yet"
-          description={user 
-            ? "Create your first quiz to get started"
-            : "Generate your first quiz to see it here"}
-          action={{
-            label: "Create Quiz",
-            icon: Plus,
-            onClick: () => window.location.href = '/create'
-          }}
-        />
+        <div className="py-16 border border-dashed border-border rounded-lg flex flex-col items-center text-center">
+          <div className="w-10 h-10 rounded-full bg-bg-secondary flex items-center justify-center mb-3 border border-border">
+            <FileQuestion className="w-5 h-5 text-text-tertiary" />
+          </div>
+          <h3 className="text-base font-semibold text-white mb-1.5">No quizzes yet</h3>
+          <p className="text-xs text-text-tertiary max-w-[240px] mb-6">
+            Create your first AI-powered quiz to get started.
+          </p>
+          <Link to="/create">
+            <Button icon={Plus} variant="default" size="sm" className="h-8 px-3 text-xs font-semibold">
+              Create Quiz
+            </Button>
+          </Link>
+        </div>
       ) : filteredQuizzes.length === 0 ? (
-        <EmptyState
-          icon={Search}
-          title="No results found"
-          description={`No quizzes match "${searchQuery}"`}
-        />
+        <div className="py-16 flex flex-col items-center text-center">
+          <Search className="w-6 h-6 text-text-tertiary mb-3 opacity-20" />
+          <p className="text-xs text-text-secondary font-medium">No results match your search</p>
+        </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {sortedQuizzes.map((quiz) => (

@@ -1,11 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/quiz-generator/:path*",
-      "destination": "/quiz-generator/:path*"
-    },
-    {
-      "source": "/(.*)",
+      "source": "/((?!quiz-generator/).*)",
       "destination": "/index.html"
     }
   ],

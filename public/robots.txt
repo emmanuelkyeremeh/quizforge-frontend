@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Sitemap: https://quizforge.pro/sitemap.xml
+
+# Disallow admin/dashboard pages from indexing
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /api
+Disallow: /quiz/*/edit
+Disallow: /quiz/*/responses
+

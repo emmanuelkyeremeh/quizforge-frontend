@@ -1,0 +1,3999 @@
+[
+  {
+    "slug": "biology",
+    "name": "Biology",
+    "description": "Biology quiz generator for creating comprehensive assessments covering cellular biology, genetics, evolution, ecology, and human anatomy. Perfect for AP Biology, IB Biology, and college-level courses.",
+    "targetAudience": "high school biology teachers, AP Biology instructors, college professors, and biology tutors",
+    "specificChallenges": [
+      "Creating questions that test application, not just memorization",
+      "Covering breadth of topics from molecular biology to ecosystems",
+      "Aligning questions with NGSS standards and AP Biology curriculum",
+      "Generating diagrams and visual questions for processes like mitosis"
+    ],
+    "useCases": [
+      "AP Biology teachers creating unit tests for cellular respiration and photosynthesis",
+      "College biology professors generating exam questions for BIO101 courses",
+      "High school teachers preparing students for state standardized biology exams",
+      "Tutors creating practice questions for struggling students"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Explain how the structure of mitochondria relates to its function in cellular respiration.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Which process converts light energy into chemical energy stored in glucose?",
+        "options": [
+          "Cellular respiration",
+          "Photosynthesis",
+          "Fermentation",
+          "Glycolysis"
+        ],
+        "correctAnswer": "Photosynthesis",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "A mutation in the p53 gene can lead to uncontrolled cell division. Explain the normal role of p53 in regulating the cell cycle and predict what would happen if this gene is non-functional.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "chemistry",
+      "anatomy",
+      "physiology",
+      "biochemistry",
+      "ap-biology"
+    ],
+    "certifications": [
+      "AP Biology",
+      "IB Biology",
+      "NGSS Standards"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about genetics and DNA?",
+        "answer": "Yes! QuizForge can generate questions covering all biology topics including molecular genetics, Mendelian genetics, DNA structure and replication, transcription, translation, and genetic disorders."
+      },
+      {
+        "question": "Does it align with AP Biology curriculum?",
+        "answer": "QuizForge generates questions aligned with AP Biology Big Ideas and can test scientific practices like data analysis, experimental design, and mathematical modeling as required by the College Board."
+      },
+      {
+        "question": "Can I upload my biology textbook chapter to generate questions?",
+        "answer": "Absolutely. Upload PDF chapters from Campbell Biology, Miller & Levine, or any biology textbook, and QuizForge will extract key concepts and generate aligned questions."
+      }
+    ],
+    "keyTopics": [
+      "Cell structure and function",
+      "Cellular respiration and photosynthesis",
+      "Genetics and heredity",
+      "Evolution and natural selection",
+      "Ecology and ecosystems",
+      "Human anatomy and physiology",
+      "Molecular biology and DNA"
+    ]
+  },
+  {
+    "slug": "chemistry",
+    "name": "Chemistry",
+    "description": "Chemistry quiz generator for creating assessments on atomic structure, chemical bonding, reactions, stoichiometry, and thermodynamics. Ideal for high school chemistry, AP Chemistry, and general chemistry courses.",
+    "targetAudience": "high school chemistry teachers, AP Chemistry instructors, college chemistry professors, and chemistry tutors",
+    "specificChallenges": [
+      "Creating questions that test problem-solving skills, not just formula memorization",
+      "Covering both theoretical concepts and practical calculations",
+      "Aligning with Next Generation Science Standards for chemistry",
+      "Generating questions that require dimensional analysis and unit conversions"
+    ],
+    "useCases": [
+      "AP Chemistry teachers creating practice exams for the AP test",
+      "General chemistry professors generating homework assignments and quizzes",
+      "High school teachers preparing students for state chemistry exams",
+      "Tutors helping students master stoichiometry and balancing equations"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Balance the following chemical equation: Fe + O₂ → Fe₂O₃",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "What is the molar mass of H₂SO₄?",
+        "options": [
+          "98.08 g/mol",
+          "96.08 g/mol",
+          "100.08 g/mol",
+          "94.08 g/mol"
+        ],
+        "correctAnswer": "98.08 g/mol",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "A 2.5 M solution of NaCl has a volume of 500 mL. How many moles of NaCl are present? Show your work.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      }
+    ],
+    "relatedSubjects": [
+      "biology",
+      "physics",
+      "organic-chemistry",
+      "biochemistry",
+      "ap-chemistry"
+    ],
+    "certifications": [
+      "AP Chemistry",
+      "IB Chemistry",
+      "NGSS Standards"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate stoichiometry problems?",
+        "answer": "Yes! QuizForge can create stoichiometry questions involving mole calculations, limiting reactants, percent yield, and reaction stoichiometry. It generates both conceptual and calculation-based questions."
+      },
+      {
+        "question": "Does it support organic chemistry topics?",
+        "answer": "QuizForge can generate questions on organic chemistry including nomenclature, functional groups, reaction mechanisms, and synthesis. For advanced organic chemistry, consider our dedicated organic chemistry quiz generator."
+      },
+      {
+        "question": "Can I generate questions from my chemistry lab manual?",
+        "answer": "Absolutely. Upload your lab manual PDFs and QuizForge will extract concepts about safety procedures, experimental techniques, and chemical principles to create relevant quiz questions."
+      }
+    ],
+    "keyTopics": [
+      "Atomic structure and periodic trends",
+      "Chemical bonding and molecular geometry",
+      "Stoichiometry and chemical equations",
+      "Thermodynamics and kinetics",
+      "Acids, bases, and pH",
+      "Oxidation-reduction reactions",
+      "Organic chemistry fundamentals"
+    ]
+  },
+  {
+    "slug": "physics",
+    "name": "Physics",
+    "description": "Physics quiz generator for creating assessments on mechanics, thermodynamics, electromagnetism, waves, and modern physics. Perfect for high school physics, AP Physics, and introductory college courses.",
+    "targetAudience": "high school physics teachers, AP Physics instructors, college physics professors, and physics tutors",
+    "specificChallenges": [
+      "Creating questions that test conceptual understanding alongside mathematical problem-solving",
+      "Covering both classical mechanics and modern physics topics",
+      "Aligning with physics standards and AP curriculum requirements",
+      "Generating questions that require multiple-step problem solving"
+    ],
+    "useCases": [
+      "AP Physics teachers creating practice problems for mechanics and electricity",
+      "College physics professors generating exam questions for Physics 101 courses",
+      "High school teachers preparing students for physics standardized tests",
+      "Tutors helping students master kinematics and force problems"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "A car accelerates from rest at 3 m/s² for 5 seconds. What is its final velocity?",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "Which of the following is a vector quantity?",
+        "options": [
+          "Speed",
+          "Mass",
+          "Velocity",
+          "Temperature"
+        ],
+        "correctAnswer": "Velocity",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "A 2 kg block slides down a frictionless incline at 30°. Calculate the acceleration of the block. Show your work including the free-body diagram.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "chemistry",
+      "mathematics",
+      "engineering",
+      "ap-physics",
+      "calculus"
+    ],
+    "certifications": [
+      "AP Physics 1",
+      "AP Physics 2",
+      "AP Physics C",
+      "NGSS Standards"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate physics problems with calculations?",
+        "answer": "Yes! QuizForge generates both conceptual questions and calculation-based problems. It can create questions requiring formulas, unit conversions, and multi-step problem solving across all physics topics."
+      },
+      {
+        "question": "Does it cover AP Physics curriculum?",
+        "answer": "QuizForge generates questions aligned with AP Physics 1, AP Physics 2, and AP Physics C curricula, covering mechanics, electricity, magnetism, waves, and modern physics as required by the College Board."
+      },
+      {
+        "question": "Can I generate questions from physics textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from Halliday & Resnick, Giancoli, or any physics textbook, and QuizForge will extract key concepts, formulas, and problem-solving strategies to create aligned questions."
+      }
+    ],
+    "keyTopics": [
+      "Mechanics and kinematics",
+      "Forces and Newton's laws",
+      "Energy and momentum",
+      "Waves and oscillations",
+      "Electricity and magnetism",
+      "Thermodynamics",
+      "Modern physics and quantum mechanics"
+    ]
+  },
+  {
+    "slug": "mathematics",
+    "name": "Mathematics",
+    "description": "Mathematics quiz generator for creating assessments on algebra, geometry, calculus, statistics, and trigonometry. Ideal for middle school through college-level math courses.",
+    "targetAudience": "math teachers, calculus instructors, algebra tutors, and statistics professors",
+    "specificChallenges": [
+      "Creating questions that test mathematical reasoning, not just computation",
+      "Covering both procedural skills and conceptual understanding",
+      "Aligning with Common Core math standards",
+      "Generating questions with appropriate difficulty progression"
+    ],
+    "useCases": [
+      "Algebra teachers creating unit tests on quadratic equations and functions",
+      "Calculus professors generating exam questions on derivatives and integrals",
+      "Statistics teachers preparing assessments on probability and data analysis",
+      "Geometry tutors creating practice problems for proofs and theorems"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Solve for x: 2x² - 5x + 3 = 0",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "What is the derivative of f(x) = 3x² + 2x - 1?",
+        "options": [
+          "6x + 2",
+          "3x + 2",
+          "6x - 1",
+          "3x² + 2"
+        ],
+        "correctAnswer": "6x + 2",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Prove that the sum of angles in a triangle equals 180°. Show your reasoning step by step.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "algebra",
+      "calculus",
+      "geometry",
+      "statistics",
+      "trigonometry"
+    ],
+    "certifications": [
+      "AP Calculus AB",
+      "AP Calculus BC",
+      "AP Statistics",
+      "Common Core"
+    ],
+    "gradeLevel": "middle-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate math problems with step-by-step solutions?",
+        "answer": "Yes! QuizForge generates math questions that require showing work and can include hints for multi-step problems. Questions cover computation, word problems, proofs, and conceptual understanding."
+      },
+      {
+        "question": "Does it support calculus and advanced math?",
+        "answer": "QuizForge can generate questions for algebra, geometry, trigonometry, pre-calculus, calculus, linear algebra, and statistics. Each topic includes appropriate question types from basic to advanced levels."
+      },
+      {
+        "question": "Can I generate questions aligned with Common Core standards?",
+        "answer": "Absolutely. QuizForge generates questions that align with Common Core math standards, focusing on mathematical practices like problem-solving, reasoning, and modeling."
+      }
+    ],
+    "keyTopics": [
+      "Algebra and equations",
+      "Geometry and proofs",
+      "Calculus and analysis",
+      "Statistics and probability",
+      "Trigonometry",
+      "Number theory",
+      "Linear algebra"
+    ]
+  },
+  {
+    "slug": "history",
+    "name": "History",
+    "description": "History quiz generator for creating assessments on world history, US history, European history, and historical analysis. Perfect for AP History courses and social studies classes.",
+    "targetAudience": "history teachers, AP History instructors, social studies educators, and history tutors",
+    "specificChallenges": [
+      "Creating questions that test historical thinking skills, not just date memorization",
+      "Covering chronological periods while emphasizing cause and effect",
+      "Aligning with AP History curriculum and historical thinking skills",
+      "Generating questions that require analysis of primary sources"
+    ],
+    "useCases": [
+      "AP US History teachers creating unit tests on the Civil War and Reconstruction",
+      "World history professors generating exam questions on ancient civilizations",
+      "European history teachers preparing assessments on the Renaissance and Reformation",
+      "Social studies educators creating quizzes on government and civics"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Analyze the causes of World War I. Which factor do you think was most significant and why?",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "The Declaration of Independence was signed in which year?",
+        "options": [
+          "1775",
+          "1776",
+          "1781",
+          "1783"
+        ],
+        "correctAnswer": "1776",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Compare and contrast the French Revolution and the American Revolution. What were the key similarities and differences in their causes and outcomes?",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "us-history",
+      "world-history",
+      "european-history",
+      "ap-us-history",
+      "government"
+    ],
+    "certifications": [
+      "AP US History",
+      "AP World History",
+      "AP European History"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about historical analysis and primary sources?",
+        "answer": "Yes! QuizForge generates questions that test historical thinking skills including sourcing, contextualization, corroboration, and argumentation. It can create questions about analyzing primary sources and historical documents."
+      },
+      {
+        "question": "Does it align with AP History curriculum?",
+        "answer": "QuizForge generates questions aligned with AP US History, AP World History, and AP European History curricula, covering all required time periods and historical thinking skills as specified by the College Board."
+      },
+      {
+        "question": "Can I generate questions from history textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from your history textbook, and QuizForge will extract key events, themes, and historical concepts to create questions that test both factual knowledge and analytical thinking."
+      }
+    ],
+    "keyTopics": [
+      "Ancient civilizations",
+      "Medieval and Renaissance periods",
+      "Age of Exploration",
+      "Revolutions and independence movements",
+      "World Wars and global conflicts",
+      "Cold War era",
+      "Modern world history"
+    ]
+  },
+  {
+    "slug": "spanish",
+    "name": "Spanish",
+    "description": "Spanish quiz generator for creating assessments on vocabulary, grammar, verb conjugations, and cultural knowledge. Perfect for Spanish language teachers, AP Spanish instructors, and language tutors.",
+    "targetAudience": "Spanish language teachers, AP Spanish instructors, language tutors, and Spanish professors",
+    "specificChallenges": [
+      "Creating questions that test language proficiency, not just translation",
+      "Covering verb conjugations across different tenses and moods",
+      "Testing cultural knowledge alongside linguistic skills",
+      "Generating questions that require understanding context and nuance"
+    ],
+    "useCases": [
+      "AP Spanish teachers creating practice exams for the AP test",
+      "Spanish professors generating vocabulary quizzes for intermediate students",
+      "Language tutors creating conjugation practice for irregular verbs",
+      "High school teachers preparing students for Spanish proficiency exams"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Conjugate the verb 'hablar' in the present subjunctive for 'nosotros'.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "Which of the following means 'library' in Spanish?",
+        "options": [
+          "libro",
+          "biblioteca",
+          "librería",
+          "libreta"
+        ],
+        "correctAnswer": "biblioteca",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Explain the difference between 'ser' and 'estar' and provide examples of when to use each.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      }
+    ],
+    "relatedSubjects": [
+      "french",
+      "languages",
+      "ap-spanish",
+      "spanish-literature",
+      "latin"
+    ],
+    "certifications": [
+      "AP Spanish Language",
+      "AP Spanish Literature",
+      "DELE"
+    ],
+    "gradeLevel": "middle-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about Spanish verb conjugations?",
+        "answer": "Yes! QuizForge can create questions covering all verb tenses including present, preterite, imperfect, future, conditional, subjunctive, and imperative moods. It generates questions for regular and irregular verbs."
+      },
+      {
+        "question": "Does it support AP Spanish curriculum?",
+        "answer": "QuizForge generates questions aligned with AP Spanish Language and AP Spanish Literature curricula, covering grammar, vocabulary, reading comprehension, and cultural knowledge as required by the College Board."
+      },
+      {
+        "question": "Can I generate questions from Spanish textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from your Spanish textbook, and QuizForge will extract vocabulary, grammar concepts, and cultural information to create questions that test both linguistic skills and cultural understanding."
+      }
+    ],
+    "keyTopics": [
+      "Verb conjugations and tenses",
+      "Vocabulary and expressions",
+      "Grammar and syntax",
+      "Reading comprehension",
+      "Cultural knowledge",
+      "Writing and composition",
+      "Listening comprehension"
+    ]
+  },
+  {
+    "slug": "english-literature",
+    "name": "English Literature",
+    "description": "English literature quiz generator for creating assessments on literary analysis, themes, character development, and literary devices. Ideal for high school English teachers, AP Literature instructors, and college professors.",
+    "targetAudience": "English literature teachers, AP Literature instructors, college English professors, and literature tutors",
+    "specificChallenges": [
+      "Creating questions that test literary analysis, not just plot recall",
+      "Covering themes, symbolism, and author's craft",
+      "Aligning with AP Literature curriculum and literary analysis skills",
+      "Generating questions that require textual evidence and interpretation"
+    ],
+    "useCases": [
+      "AP Literature teachers creating unit tests on Shakespeare and poetry",
+      "English professors generating exam questions on American literature",
+      "High school teachers preparing students for literature standardized tests",
+      "Tutors helping students analyze complex literary works"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Analyze the symbolism of the green light in 'The Great Gatsby'. What does it represent and how does it develop throughout the novel?",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Which literary device is used in the phrase 'the wind whispered through the trees'?",
+        "options": [
+          "Metaphor",
+          "Personification",
+          "Simile",
+          "Alliteration"
+        ],
+        "correctAnswer": "Personification",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Compare the themes of isolation in 'Frankenstein' and 'The Metamorphosis'. How do the authors use different literary techniques to explore this theme?",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "english",
+      "writing",
+      "ap-literature",
+      "poetry",
+      "drama"
+    ],
+    "certifications": [
+      "AP English Literature",
+      "IB English Literature"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about literary analysis and themes?",
+        "answer": "Yes! QuizForge generates questions that test literary analysis skills including theme identification, character development, symbolism, figurative language, and author's craft. It creates questions requiring textual evidence and interpretation."
+      },
+      {
+        "question": "Does it align with AP Literature curriculum?",
+        "answer": "QuizForge generates questions aligned with AP English Literature curriculum, covering poetry, prose, and drama analysis as required by the College Board. Questions test skills in reading, analyzing, and writing about literature."
+      },
+      {
+        "question": "Can I generate questions from literary texts and novels?",
+        "answer": "Absolutely. Upload PDFs of novels, short stories, poems, or plays, and QuizForge will extract key themes, literary devices, and character developments to create questions that test deep understanding of the text."
+      }
+    ],
+    "keyTopics": [
+      "Literary analysis and interpretation",
+      "Theme identification and development",
+      "Character analysis and development",
+      "Literary devices and figurative language",
+      "Poetry analysis and meter",
+      "Drama and theatrical elements",
+      "Historical and cultural context"
+    ]
+  },
+  {
+    "slug": "nclex",
+    "name": "NCLEX",
+    "description": "NCLEX quiz generator for creating practice questions for the National Council Licensure Examination. Perfect for nursing students preparing for the NCLEX-RN or NCLEX-PN exams.",
+    "targetAudience": "nursing students, NCLEX test prep instructors, nursing tutors, and nursing school faculty",
+    "specificChallenges": [
+      "Creating questions that mirror NCLEX format and difficulty",
+      "Covering all NCLEX content areas including safety, pharmacology, and patient care",
+      "Aligning with NCLEX test plan and content areas",
+      "Generating questions that test clinical judgment and prioritization"
+    ],
+    "useCases": [
+      "Nursing students creating practice question sets for NCLEX-RN preparation",
+      "NCLEX prep instructors generating mock exams for their classes",
+      "Nursing tutors creating focused practice on weak areas",
+      "Nursing school faculty preparing students for the licensing exam"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "A patient with type 1 diabetes is experiencing hypoglycemia. What is the nurse's priority action?",
+        "type": "multiple-choice",
+        "difficulty": "medium",
+        "bloomsLevel": "application",
+        "options": [
+          "Administer insulin",
+          "Give oral glucose",
+          "Check blood pressure",
+          "Obtain EKG"
+        ],
+        "correctAnswer": "Give oral glucose"
+      },
+      {
+        "question": "Which medication requires monitoring of therapeutic drug levels?",
+        "options": [
+          "Aspirin",
+          "Digoxin",
+          "Ibuprofen",
+          "Acetaminophen"
+        ],
+        "correctAnswer": "Digoxin",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "A patient is scheduled for surgery. The nurse knows that informed consent must be obtained. Who is legally responsible for obtaining this consent?",
+        "type": "multiple-choice",
+        "difficulty": "medium",
+        "bloomsLevel": "application",
+        "options": [
+          "The nurse",
+          "The surgeon",
+          "The anesthesiologist",
+          "The patient's family"
+        ],
+        "correctAnswer": "The surgeon"
+      }
+    ],
+    "relatedSubjects": [
+      "nursing",
+      "pharmacology",
+      "medical-terminology",
+      "anatomy",
+      "physiology"
+    ],
+    "certifications": [
+      "NCLEX-RN",
+      "NCLEX-PN"
+    ],
+    "gradeLevel": "professional",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate NCLEX-style questions?",
+        "answer": "Yes! QuizForge can create questions in NCLEX format covering all content areas including safe and effective care environment, health promotion and maintenance, psychosocial integrity, and physiological integrity. Questions test clinical judgment and prioritization skills."
+      },
+      {
+        "question": "Does it cover all NCLEX test plan areas?",
+        "answer": "QuizForge generates questions across all NCLEX content areas including management of care, safety and infection control, health promotion, basic care and comfort, pharmacological therapies, reduction of risk potential, and physiological adaptation."
+      },
+      {
+        "question": "Can I generate questions from nursing textbooks and study guides?",
+        "answer": "Absolutely. Upload PDFs from Saunders, Lippincott, or any NCLEX prep materials, and QuizForge will extract key nursing concepts, medications, procedures, and patient care scenarios to create practice questions aligned with NCLEX format."
+      }
+    ],
+    "keyTopics": [
+      "Safe and effective care environment",
+      "Health promotion and maintenance",
+      "Psychosocial integrity",
+      "Physiological integrity",
+      "Pharmacological and parenteral therapies",
+      "Reduction of risk potential",
+      "Basic care and comfort"
+    ]
+  },
+  {
+    "slug": "pdf-to-quiz",
+    "name": "PDF to Quiz",
+    "description": "Convert PDF documents into quiz questions instantly. Upload any PDF document and generate comprehensive quiz questions from the content. Perfect for educators, trainers, and content creators.",
+    "targetAudience": "educators, corporate trainers, content creators, and anyone who needs to create quizzes from PDF documents",
+    "specificChallenges": [
+      "Extracting meaningful content from PDF documents with various formats",
+      "Identifying key concepts and important information in dense text",
+      "Creating questions that test understanding, not just information extraction",
+      "Handling PDFs with images, tables, and complex layouts"
+    ],
+    "useCases": [
+      "Teachers converting textbook PDF chapters into quiz questions",
+      "Corporate trainers creating assessments from training materials",
+      "Professors generating exam questions from research papers",
+      "Content creators building quizzes from educational PDFs"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Based on the PDF content, what is the main argument presented in the document?",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "According to the PDF, which of the following statements is true?",
+        "options": [
+          "Option A from PDF",
+          "Option B from PDF",
+          "Option C from PDF",
+          "Option D from PDF"
+        ],
+        "correctAnswer": "Option B from PDF",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Analyze the data presented in the PDF and explain its significance.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "youtube-to-quiz",
+      "text-to-quiz",
+      "document-to-quiz",
+      "powerpoint-to-quiz",
+      "word-to-quiz"
+    ],
+    "certifications": [],
+    "gradeLevel": "all-levels",
+    "faqs": [
+      {
+        "question": "What types of PDFs can QuizForge process?",
+        "answer": "QuizForge can process PDFs containing text, including textbooks, research papers, training manuals, lecture notes, and study guides. The system extracts text content and generates questions based on the key concepts and information found in the document."
+      },
+      {
+        "question": "Can it handle PDFs with images and tables?",
+        "answer": "QuizForge extracts text content from PDFs. While it can process text within tables, it currently focuses on textual content. For best results, use PDFs with substantial text content rather than image-heavy documents."
+      },
+      {
+        "question": "How accurate are the questions generated from PDFs?",
+        "answer": "QuizForge uses advanced AI to analyze PDF content and identify key concepts, important facts, and relationships. The questions are designed to test understanding of the material, and you can review and edit them before using them in assessments."
+      }
+    ],
+    "keyTopics": [
+      "Text extraction and analysis",
+      "Key concept identification",
+      "Question generation from documents",
+      "Content summarization",
+      "Multi-document processing",
+      "Format preservation",
+      "Quality assessment"
+    ]
+  },
+  {
+    "slug": "french",
+    "name": "French",
+    "description": "French quiz generator for creating assessments on vocabulary, grammar, verb conjugations, and cultural knowledge. Perfect for French language teachers, AP French instructors, and language tutors.",
+    "targetAudience": "French language teachers, AP French instructors, language tutors, and French professors",
+    "specificChallenges": [
+      "Creating questions that test language proficiency across different skill levels",
+      "Covering complex verb conjugations including irregular verbs and subjunctive mood",
+      "Testing cultural knowledge of French-speaking countries",
+      "Generating questions that require understanding of formal vs informal language"
+    ],
+    "useCases": [
+      "AP French teachers creating practice exams for the AP test",
+      "French professors generating vocabulary quizzes for intermediate students",
+      "Language tutors creating conjugation practice for irregular verbs",
+      "High school teachers preparing students for French proficiency exams"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Conjugate the verb 'être' in the passé composé for 'ils'.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "Which of the following means 'library' in French?",
+        "options": [
+          "livre",
+          "bibliothèque",
+          "librairie",
+          "cahier"
+        ],
+        "correctAnswer": "bibliothèque",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Explain when to use 'savoir' versus 'connaître' and provide examples.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      }
+    ],
+    "relatedSubjects": [
+      "spanish",
+      "languages",
+      "ap-french",
+      "french-literature",
+      "italian"
+    ],
+    "certifications": [
+      "AP French Language",
+      "AP French Literature",
+      "DELF"
+    ],
+    "gradeLevel": "middle-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about French verb conjugations?",
+        "answer": "Yes! QuizForge can create questions covering all verb tenses including present, passé composé, imparfait, future, conditional, subjunctive, and imperative moods. It generates questions for regular and irregular verbs."
+      },
+      {
+        "question": "Does it support AP French curriculum?",
+        "answer": "QuizForge generates questions aligned with AP French Language and AP French Literature curricula, covering grammar, vocabulary, reading comprehension, and cultural knowledge as required by the College Board."
+      },
+      {
+        "question": "Can I generate questions from French textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from your French textbook, and QuizForge will extract vocabulary, grammar concepts, and cultural information to create questions that test both linguistic skills and cultural understanding."
+      }
+    ],
+    "keyTopics": [
+      "Verb conjugations and tenses",
+      "Vocabulary and expressions",
+      "Grammar and syntax",
+      "Reading comprehension",
+      "Cultural knowledge",
+      "Writing and composition",
+      "Listening comprehension"
+    ]
+  },
+  {
+    "slug": "geography",
+    "name": "Geography",
+    "description": "Geography quiz generator for creating assessments on physical geography, human geography, maps, and geographic concepts. Ideal for geography teachers, AP Human Geography instructors, and social studies educators.",
+    "targetAudience": "geography teachers, AP Human Geography instructors, social studies educators, and geography tutors",
+    "specificChallenges": [
+      "Creating questions that test spatial thinking and map interpretation",
+      "Covering both physical and human geography concepts",
+      "Aligning with AP Human Geography curriculum and geographic thinking skills",
+      "Generating questions that require analysis of geographic data and patterns"
+    ],
+    "useCases": [
+      "AP Human Geography teachers creating unit tests on population and migration",
+      "Geography professors generating exam questions on climate and weather patterns",
+      "Social studies teachers preparing assessments on world regions and cultures",
+      "Tutors helping students master map reading and geographic analysis"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Analyze the factors that influence population distribution. How do physical geography and economic opportunities affect where people live?",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Which type of map projection preserves area but distorts shape?",
+        "options": [
+          "Mercator",
+          "Robinson",
+          "Equal-area",
+          "Azimuthal"
+        ],
+        "correctAnswer": "Equal-area",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Explain the difference between weather and climate, and describe how latitude affects climate patterns.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "analysis"
+      }
+    ],
+    "relatedSubjects": [
+      "history",
+      "environmental-science",
+      "ap-human-geography",
+      "world-cultures",
+      "earth-science"
+    ],
+    "certifications": [
+      "AP Human Geography",
+      "IB Geography"
+    ],
+    "gradeLevel": "middle-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about map reading and spatial analysis?",
+        "answer": "Yes! QuizForge can create questions covering map interpretation, spatial patterns, geographic data analysis, and understanding of physical and human geographic features. Questions test both factual knowledge and analytical skills."
+      },
+      {
+        "question": "Does it align with AP Human Geography curriculum?",
+        "answer": "QuizForge generates questions aligned with AP Human Geography curriculum, covering all units including population, migration, culture, political geography, agriculture, and urban geography as required by the College Board."
+      },
+      {
+        "question": "Can I generate questions from geography textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from your geography textbook, and QuizForge will extract key concepts about physical features, human patterns, and geographic processes to create questions that test understanding of geographic principles."
+      }
+    ],
+    "keyTopics": [
+      "Physical geography and landforms",
+      "Human geography and population",
+      "Map reading and interpretation",
+      "Climate and weather patterns",
+      "Cultural geography",
+      "Economic geography",
+      "Political geography"
+    ]
+  },
+  {
+    "slug": "anatomy",
+    "name": "Anatomy",
+    "description": "Anatomy quiz generator for creating assessments on human anatomy, body systems, organs, and anatomical structures. Perfect for anatomy and physiology courses, medical students, and nursing programs.",
+    "targetAudience": "anatomy teachers, medical school instructors, nursing professors, and anatomy tutors",
+    "specificChallenges": [
+      "Creating questions that test knowledge of anatomical structures and relationships",
+      "Covering all body systems from skeletal to nervous systems",
+      "Aligning with medical and nursing curriculum requirements",
+      "Generating questions that require understanding of anatomical terminology"
+    ],
+    "useCases": [
+      "Medical school professors creating exam questions on human anatomy",
+      "Nursing instructors generating quizzes on body systems and organs",
+      "Anatomy teachers preparing students for standardized anatomy exams",
+      "Tutors helping students master anatomical terminology and structures"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Which bone forms the anterior portion of the pelvic girdle?",
+        "options": [
+          "Ilium",
+          "Ischium",
+          "Pubis",
+          "Sacrum"
+        ],
+        "correctAnswer": "Pubis",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Describe the pathway of blood through the heart, naming all four chambers and the major vessels involved.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      },
+      {
+        "question": "What is the function of the medulla oblongata?",
+        "options": [
+          "Memory storage",
+          "Voluntary movement",
+          "Breathing and heart rate control",
+          "Visual processing"
+        ],
+        "correctAnswer": "Breathing and heart rate control",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      }
+    ],
+    "relatedSubjects": [
+      "physiology",
+      "biology",
+      "medical-terminology",
+      "nursing",
+      "nclex"
+    ],
+    "certifications": [
+      "Medical School",
+      "Nursing Programs"
+    ],
+    "gradeLevel": "college-professional",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about all body systems?",
+        "answer": "Yes! QuizForge can create questions covering all major body systems including skeletal, muscular, cardiovascular, respiratory, digestive, nervous, endocrine, reproductive, and urinary systems. Questions test knowledge of structures, functions, and relationships."
+      },
+      {
+        "question": "Does it support medical school and nursing curriculum?",
+        "answer": "QuizForge generates questions aligned with medical school and nursing anatomy curricula, covering anatomical structures, terminology, and relationships as required for healthcare education programs."
+      },
+      {
+        "question": "Can I generate questions from anatomy textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from Gray's Anatomy, Netter's Atlas, or any anatomy textbook, and QuizForge will extract key anatomical structures, systems, and terminology to create questions that test comprehensive understanding."
+      }
+    ],
+    "keyTopics": [
+      "Skeletal system",
+      "Muscular system",
+      "Cardiovascular system",
+      "Respiratory system",
+      "Nervous system",
+      "Digestive system",
+      "Endocrine system"
+    ]
+  },
+  {
+    "slug": "algebra",
+    "name": "Algebra",
+    "description": "Algebra quiz generator for creating assessments on equations, functions, polynomials, and algebraic concepts. Ideal for middle school through high school algebra courses.",
+    "targetAudience": "algebra teachers, math tutors, middle school math instructors, and high school math educators",
+    "specificChallenges": [
+      "Creating questions that test algebraic reasoning, not just computation",
+      "Covering both procedural skills and conceptual understanding",
+      "Aligning with Common Core algebra standards",
+      "Generating questions with appropriate difficulty progression from basic to advanced"
+    ],
+    "useCases": [
+      "Algebra teachers creating unit tests on linear equations and functions",
+      "Math tutors generating practice problems for quadratic equations",
+      "Middle school teachers preparing assessments on basic algebraic concepts",
+      "High school teachers creating exams on polynomial functions and factoring"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Solve for x: 3x + 7 = 22",
+        "type": "short-answer",
+        "difficulty": "easy",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "What is the slope of the line passing through points (2, 5) and (6, 13)?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correctAnswer": "2",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Factor completely: 2x² - 8x + 6",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      }
+    ],
+    "relatedSubjects": [
+      "mathematics",
+      "geometry",
+      "pre-calculus",
+      "calculus",
+      "statistics"
+    ],
+    "certifications": [
+      "Common Core",
+      "Algebra I",
+      "Algebra II"
+    ],
+    "gradeLevel": "middle-school-high-school",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate algebra problems with step-by-step solutions?",
+        "answer": "Yes! QuizForge generates algebra questions that require showing work and can include hints for multi-step problems. Questions cover equations, inequalities, functions, polynomials, and word problems."
+      },
+      {
+        "question": "Does it support Common Core algebra standards?",
+        "answer": "QuizForge generates questions that align with Common Core algebra standards, focusing on mathematical practices like problem-solving, reasoning, and modeling as specified in the standards."
+      },
+      {
+        "question": "Can I generate questions from algebra textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from your algebra textbook, and QuizForge will extract key concepts, formulas, and problem-solving strategies to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Linear equations and inequalities",
+      "Quadratic equations and functions",
+      "Polynomials and factoring",
+      "Rational expressions",
+      "Exponential and logarithmic functions",
+      "Systems of equations",
+      "Functions and relations"
+    ]
+  },
+  {
+    "slug": "calculus",
+    "name": "Calculus",
+    "description": "Calculus quiz generator for creating assessments on derivatives, integrals, limits, and calculus applications. Perfect for AP Calculus, college calculus, and advanced math courses.",
+    "targetAudience": "calculus teachers, AP Calculus instructors, college math professors, and calculus tutors",
+    "specificChallenges": [
+      "Creating questions that test both computational skills and conceptual understanding",
+      "Covering both differential and integral calculus topics",
+      "Aligning with AP Calculus curriculum and college calculus standards",
+      "Generating questions that require multiple-step problem solving"
+    ],
+    "useCases": [
+      "AP Calculus teachers creating practice problems for the AP exam",
+      "College calculus professors generating exam questions on derivatives and integrals",
+      "Math tutors helping students master limit concepts and applications",
+      "High school teachers preparing students for calculus standardized tests"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Find the derivative of f(x) = x³ + 2x² - 5x + 1",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "What is the limit as x approaches 0 of (sin x)/x?",
+        "options": [
+          "0",
+          "1",
+          "∞",
+          "Does not exist"
+        ],
+        "correctAnswer": "1",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Evaluate the definite integral: ∫₀² (3x² + 2x) dx",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      }
+    ],
+    "relatedSubjects": [
+      "mathematics",
+      "algebra",
+      "pre-calculus",
+      "ap-calculus",
+      "statistics"
+    ],
+    "certifications": [
+      "AP Calculus AB",
+      "AP Calculus BC"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate calculus problems with calculations?",
+        "answer": "Yes! QuizForge generates both conceptual questions and calculation-based problems. It can create questions requiring derivatives, integrals, limits, and applications of calculus including optimization and related rates."
+      },
+      {
+        "question": "Does it cover AP Calculus curriculum?",
+        "answer": "QuizForge generates questions aligned with AP Calculus AB and AP Calculus BC curricula, covering limits, derivatives, integrals, and applications as required by the College Board."
+      },
+      {
+        "question": "Can I generate questions from calculus textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from Stewart, Larson, or any calculus textbook, and QuizForge will extract key concepts, formulas, and problem-solving strategies to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Limits and continuity",
+      "Derivatives and differentiation",
+      "Applications of derivatives",
+      "Integrals and integration",
+      "Applications of integrals",
+      "Differential equations",
+      "Sequences and series"
+    ]
+  },
+  {
+    "slug": "geometry",
+    "name": "Geometry",
+    "description": "Geometry quiz generator for creating assessments on shapes, angles, proofs, and geometric concepts. Perfect for high school geometry courses and math teachers.",
+    "targetAudience": "geometry teachers, math instructors, high school math educators, and geometry tutors",
+    "specificChallenges": [
+      "Creating questions that test geometric reasoning and proof skills",
+      "Covering both plane and solid geometry concepts",
+      "Aligning with Common Core geometry standards",
+      "Generating questions that require spatial visualization"
+    ],
+    "useCases": [
+      "Geometry teachers creating unit tests on triangles and quadrilaterals",
+      "Math tutors generating practice problems for geometric proofs",
+      "High school teachers preparing assessments on circles and polygons",
+      "Educators creating quizzes on coordinate geometry and transformations"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is the sum of interior angles in a pentagon?",
+        "options": [
+          "360°",
+          "540°",
+          "720°",
+          "900°"
+        ],
+        "correctAnswer": "540°",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Prove that the diagonals of a rectangle are congruent.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      },
+      {
+        "question": "A triangle has sides of length 5, 12, and 13. Is this a right triangle?",
+        "options": [
+          "Yes",
+          "No",
+          "Cannot be determined",
+          "Only if it's isosceles"
+        ],
+        "correctAnswer": "Yes",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      }
+    ],
+    "relatedSubjects": [
+      "mathematics",
+      "algebra",
+      "trigonometry",
+      "pre-calculus",
+      "calculus"
+    ],
+    "certifications": [
+      "Common Core",
+      "Geometry"
+    ],
+    "gradeLevel": "high-school",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate geometry proof questions?",
+        "answer": "Yes! QuizForge can create questions requiring geometric proofs, including two-column proofs, paragraph proofs, and coordinate proofs. Questions test logical reasoning and understanding of geometric theorems."
+      },
+      {
+        "question": "Does it cover all geometry topics?",
+        "answer": "QuizForge generates questions covering plane geometry, solid geometry, coordinate geometry, transformations, circles, polygons, and geometric constructions as specified in Common Core standards."
+      },
+      {
+        "question": "Can I generate questions from geometry textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from your geometry textbook, and QuizForge will extract key theorems, postulates, and problem-solving strategies to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Triangles and congruence",
+      "Quadrilaterals and polygons",
+      "Circles and arcs",
+      "Geometric proofs",
+      "Coordinate geometry",
+      "Transformations",
+      "Solid geometry"
+    ]
+  },
+  {
+    "slug": "statistics",
+    "name": "Statistics",
+    "description": "Statistics quiz generator for creating assessments on probability, data analysis, hypothesis testing, and statistical concepts. Ideal for AP Statistics, college statistics, and data science courses.",
+    "targetAudience": "statistics teachers, AP Statistics instructors, college statistics professors, and statistics tutors",
+    "specificChallenges": [
+      "Creating questions that test statistical reasoning, not just formula memorization",
+      "Covering both descriptive and inferential statistics",
+      "Aligning with AP Statistics curriculum and statistical practices",
+      "Generating questions that require interpretation of data and results"
+    ],
+    "useCases": [
+      "AP Statistics teachers creating practice exams for the AP test",
+      "College statistics professors generating exam questions on hypothesis testing",
+      "Data science instructors preparing assessments on probability distributions",
+      "Tutors helping students master statistical analysis and interpretation"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is the mean of the data set: 5, 8, 12, 15, 20?",
+        "options": [
+          "10",
+          "12",
+          "14",
+          "15"
+        ],
+        "correctAnswer": "12",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "A researcher conducts a hypothesis test and obtains a p-value of 0.03. What conclusion should be drawn at α = 0.05?",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "Explain the difference between correlation and causation, providing examples.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      }
+    ],
+    "relatedSubjects": [
+      "mathematics",
+      "probability",
+      "data-science",
+      "ap-statistics",
+      "calculus"
+    ],
+    "certifications": [
+      "AP Statistics",
+      "IB Statistics"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about statistical analysis?",
+        "answer": "Yes! QuizForge can create questions covering descriptive statistics, probability, hypothesis testing, confidence intervals, regression analysis, and interpretation of statistical results."
+      },
+      {
+        "question": "Does it align with AP Statistics curriculum?",
+        "answer": "QuizForge generates questions aligned with AP Statistics curriculum, covering all four units including exploring data, sampling and experimentation, anticipating patterns, and statistical inference as required by the College Board."
+      },
+      {
+        "question": "Can I generate questions from statistics textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from your statistics textbook, and QuizForge will extract key concepts, formulas, and problem-solving strategies to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Descriptive statistics",
+      "Probability and distributions",
+      "Sampling and experimental design",
+      "Hypothesis testing",
+      "Confidence intervals",
+      "Regression analysis",
+      "Statistical inference"
+    ]
+  },
+  {
+    "slug": "us-history",
+    "name": "US History",
+    "description": "US History quiz generator for creating assessments on American history, from colonial times to the present. Perfect for AP US History, high school US history, and college American history courses.",
+    "targetAudience": "US history teachers, AP US History instructors, college history professors, and history tutors",
+    "specificChallenges": [
+      "Creating questions that test historical thinking skills, not just date memorization",
+      "Covering chronological periods while emphasizing cause and effect",
+      "Aligning with AP US History curriculum and historical thinking skills",
+      "Generating questions that require analysis of primary sources and historical documents"
+    ],
+    "useCases": [
+      "AP US History teachers creating unit tests on the Civil War and Reconstruction",
+      "College history professors generating exam questions on the American Revolution",
+      "High school teachers preparing students for US history standardized tests",
+      "Tutors helping students analyze historical documents and primary sources"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "The Declaration of Independence was primarily written by which Founding Father?",
+        "options": [
+          "George Washington",
+          "Thomas Jefferson",
+          "Benjamin Franklin",
+          "John Adams"
+        ],
+        "correctAnswer": "Thomas Jefferson",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Analyze the causes of the American Civil War. Which factor do you think was most significant and why?",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Compare and contrast the New Deal and Great Society programs. What were their goals and impacts?",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "history",
+      "world-history",
+      "government",
+      "ap-us-history",
+      "civics"
+    ],
+    "certifications": [
+      "AP US History"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about US historical analysis?",
+        "answer": "Yes! QuizForge generates questions that test historical thinking skills including sourcing, contextualization, corroboration, and argumentation. It can create questions about analyzing primary sources and historical documents from US history."
+      },
+      {
+        "question": "Does it align with AP US History curriculum?",
+        "answer": "QuizForge generates questions aligned with AP US History curriculum, covering all nine time periods from 1491 to the present and historical thinking skills as specified by the College Board."
+      },
+      {
+        "question": "Can I generate questions from US history textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from your US history textbook, and QuizForge will extract key events, themes, and historical concepts to create questions that test both factual knowledge and analytical thinking."
+      }
+    ],
+    "keyTopics": [
+      "Colonial America",
+      "American Revolution",
+      "Constitution and early republic",
+      "Civil War and Reconstruction",
+      "Industrialization and Gilded Age",
+      "World Wars and Cold War",
+      "Modern America"
+    ]
+  },
+  {
+    "slug": "world-history",
+    "name": "World History",
+    "description": "World History quiz generator for creating assessments on global history from ancient civilizations to the modern era. Perfect for AP World History, high school world history, and college world history courses.",
+    "targetAudience": "world history teachers, AP World History instructors, college history professors, and history tutors",
+    "specificChallenges": [
+      "Creating questions that test global perspective and cross-cultural understanding",
+      "Covering diverse civilizations and historical periods across continents",
+      "Aligning with AP World History curriculum and historical thinking skills",
+      "Generating questions that require comparison of different civilizations and time periods"
+    ],
+    "useCases": [
+      "AP World History teachers creating unit tests on ancient civilizations",
+      "World history professors generating exam questions on the Renaissance and Reformation",
+      "High school teachers preparing students for world history standardized tests",
+      "Tutors helping students understand global historical connections"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Which ancient civilization developed the first system of writing known as cuneiform?",
+        "options": [
+          "Egyptians",
+          "Sumerians",
+          "Greeks",
+          "Chinese"
+        ],
+        "correctAnswer": "Sumerians",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Compare the political systems of ancient Athens and ancient Rome. What were the key similarities and differences?",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Analyze the causes and effects of the Industrial Revolution. How did it transform societies globally?",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "history",
+      "us-history",
+      "european-history",
+      "ap-world-history",
+      "geography"
+    ],
+    "certifications": [
+      "AP World History",
+      "IB History"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about global historical analysis?",
+        "answer": "Yes! QuizForge generates questions that test historical thinking skills including comparison, causation, continuity and change over time, and periodization. It can create questions about analyzing primary sources from different civilizations and time periods."
+      },
+      {
+        "question": "Does it align with AP World History curriculum?",
+        "answer": "QuizForge generates questions aligned with AP World History curriculum, covering all six time periods from 1200 BCE to the present and all geographic regions as specified by the College Board."
+      },
+      {
+        "question": "Can I generate questions from world history textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from your world history textbook, and QuizForge will extract key events, themes, and historical concepts to create questions that test both factual knowledge and global historical thinking."
+      }
+    ],
+    "keyTopics": [
+      "Ancient civilizations",
+      "Classical empires",
+      "Post-classical era",
+      "Early modern period",
+      "Age of revolutions",
+      "World Wars and global conflicts",
+      "Contemporary world"
+    ]
+  },
+  {
+    "slug": "nursing",
+    "name": "Nursing",
+    "description": "Nursing quiz generator for creating assessments on nursing fundamentals, patient care, medical procedures, and nursing concepts. Perfect for nursing students, NCLEX preparation, and nursing education programs.",
+    "targetAudience": "nursing students, nursing instructors, NCLEX prep instructors, and nursing tutors",
+    "specificChallenges": [
+      "Creating questions that test clinical judgment and critical thinking",
+      "Covering all nursing fundamentals and specialty areas",
+      "Aligning with NCLEX test plan and nursing curriculum",
+      "Generating questions that require prioritization and decision-making"
+    ],
+    "useCases": [
+      "Nursing instructors creating quizzes on patient care and safety",
+      "NCLEX prep instructors generating practice questions for exam preparation",
+      "Nursing students creating study guides for nursing fundamentals",
+      "Nursing tutors helping students master medication administration and procedures"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is the correct order of the nursing process?",
+        "options": [
+          "Assessment, Planning, Implementation, Evaluation, Diagnosis",
+          "Assessment, Diagnosis, Planning, Implementation, Evaluation",
+          "Diagnosis, Assessment, Planning, Implementation, Evaluation",
+          "Planning, Assessment, Diagnosis, Implementation, Evaluation"
+        ],
+        "correctAnswer": "Assessment, Diagnosis, Planning, Implementation, Evaluation",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "A patient is experiencing chest pain. What is the nurse's priority action?",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "Explain the five rights of medication administration and why each is important for patient safety.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      }
+    ],
+    "relatedSubjects": [
+      "nclex",
+      "anatomy",
+      "physiology",
+      "pharmacology",
+      "medical-terminology"
+    ],
+    "certifications": [
+      "NCLEX-RN",
+      "NCLEX-PN"
+    ],
+    "gradeLevel": "college-professional",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate NCLEX-style nursing questions?",
+        "answer": "Yes! QuizForge can create questions in NCLEX format covering all content areas including safe and effective care environment, health promotion, psychosocial integrity, and physiological integrity. Questions test clinical judgment and prioritization."
+      },
+      {
+        "question": "Does it cover all nursing fundamentals?",
+        "answer": "QuizForge generates questions covering nursing fundamentals including patient care, safety, infection control, medication administration, documentation, and nursing procedures as required for nursing education programs."
+      },
+      {
+        "question": "Can I generate questions from nursing textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from nursing textbooks like Fundamentals of Nursing or Medical-Surgical Nursing, and QuizForge will extract key nursing concepts, procedures, and patient care scenarios to create practice questions."
+      }
+    ],
+    "keyTopics": [
+      "Nursing fundamentals",
+      "Patient care and safety",
+      "Medication administration",
+      "Infection control",
+      "Documentation",
+      "Nursing procedures",
+      "Clinical judgment"
+    ]
+  },
+  {
+    "slug": "pharmacology",
+    "name": "Pharmacology",
+    "description": "Pharmacology quiz generator for creating assessments on medications, drug classifications, mechanisms of action, and pharmacotherapy. Perfect for nursing students, pharmacy students, and medical students.",
+    "targetAudience": "pharmacology students, nursing students, pharmacy students, medical students, and pharmacology instructors",
+    "specificChallenges": [
+      "Creating questions that test understanding of drug mechanisms, not just memorization",
+      "Covering drug classifications, interactions, and adverse effects",
+      "Aligning with pharmacology curriculum and clinical applications",
+      "Generating questions that require understanding of pharmacokinetics and pharmacodynamics"
+    ],
+    "useCases": [
+      "Pharmacology instructors creating quizzes on drug classifications",
+      "Nursing students generating study questions for pharmacology exams",
+      "Pharmacy students preparing for medication knowledge assessments",
+      "Medical students creating practice questions on drug mechanisms"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Which class of medications is used to treat hypertension by blocking angiotensin II receptors?",
+        "options": [
+          "ACE inhibitors",
+          "ARBs",
+          "Beta blockers",
+          "Calcium channel blockers"
+        ],
+        "correctAnswer": "ARBs",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Explain the difference between pharmacokinetics and pharmacodynamics.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "A patient is taking warfarin. Which medication interaction should the nurse be most concerned about?",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "application"
+      }
+    ],
+    "relatedSubjects": [
+      "nursing",
+      "nclex",
+      "medical-terminology",
+      "anatomy",
+      "physiology"
+    ],
+    "certifications": [
+      "Nursing Programs",
+      "Pharmacy Programs",
+      "Medical School"
+    ],
+    "gradeLevel": "college-professional",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about drug mechanisms and classifications?",
+        "answer": "Yes! QuizForge can create questions covering drug classifications, mechanisms of action, pharmacokinetics, pharmacodynamics, drug interactions, adverse effects, and clinical applications of medications."
+      },
+      {
+        "question": "Does it cover all major drug classes?",
+        "answer": "QuizForge generates questions covering all major drug classes including antibiotics, cardiovascular medications, CNS drugs, endocrine medications, and more as required for pharmacology education programs."
+      },
+      {
+        "question": "Can I generate questions from pharmacology textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from pharmacology textbooks, and QuizForge will extract key drug information, mechanisms, and clinical applications to create questions that test comprehensive understanding."
+      }
+    ],
+    "keyTopics": [
+      "Drug classifications",
+      "Mechanisms of action",
+      "Pharmacokinetics",
+      "Pharmacodynamics",
+      "Drug interactions",
+      "Adverse effects",
+      "Clinical applications"
+    ]
+  },
+  {
+    "slug": "trigonometry",
+    "name": "Trigonometry",
+    "description": "Trigonometry quiz generator for creating assessments on angles, triangles, trigonometric functions, and identities. Perfect for high school trigonometry and pre-calculus courses.",
+    "targetAudience": "trigonometry teachers, pre-calculus instructors, math tutors, and high school math educators",
+    "specificChallenges": [
+      "Creating questions that test understanding of trigonometric relationships",
+      "Covering unit circle, identities, and applications",
+      "Aligning with Common Core trigonometry standards",
+      "Generating questions that require visualization of angles and triangles"
+    ],
+    "useCases": [
+      "Trigonometry teachers creating unit tests on trigonometric functions",
+      "Pre-calculus instructors generating quizzes on identities and equations",
+      "Math tutors helping students master the unit circle",
+      "High school teachers preparing assessments on right triangle trigonometry"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is sin(30°)?",
+        "options": [
+          "1/2",
+          "√3/2",
+          "1",
+          "0"
+        ],
+        "correctAnswer": "1/2",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Prove the Pythagorean identity: sin²θ + cos²θ = 1",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "synthesis"
+      },
+      {
+        "question": "A ladder leans against a wall at a 60° angle. If the ladder is 10 feet long, how high up the wall does it reach?",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      }
+    ],
+    "relatedSubjects": [
+      "mathematics",
+      "algebra",
+      "geometry",
+      "pre-calculus",
+      "calculus"
+    ],
+    "certifications": [
+      "Common Core",
+      "Pre-Calculus"
+    ],
+    "gradeLevel": "high-school",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate trigonometry problems with applications?",
+        "answer": "Yes! QuizForge generates questions covering trigonometric functions, identities, equations, and real-world applications including right triangle problems, periodic functions, and wave analysis."
+      },
+      {
+        "question": "Does it cover the unit circle?",
+        "answer": "QuizForge generates questions covering the unit circle, special angles, trigonometric values, and how to use the unit circle to find sine, cosine, and tangent values."
+      },
+      {
+        "question": "Can I generate questions from trigonometry textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from your trigonometry textbook, and QuizForge will extract key concepts, formulas, and problem-solving strategies to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Right triangle trigonometry",
+      "Unit circle",
+      "Trigonometric functions",
+      "Trigonometric identities",
+      "Trigonometric equations",
+      "Graphs of trigonometric functions",
+      "Applications of trigonometry"
+    ]
+  },
+  {
+    "slug": "physiology",
+    "name": "Physiology",
+    "description": "Physiology quiz generator for creating assessments on body systems, organ function, and physiological processes. Perfect for anatomy and physiology courses, medical students, and nursing programs.",
+    "targetAudience": "physiology teachers, medical school instructors, nursing professors, and physiology tutors",
+    "specificChallenges": [
+      "Creating questions that test understanding of physiological mechanisms",
+      "Covering all body systems and their interactions",
+      "Aligning with medical and nursing curriculum requirements",
+      "Generating questions that require understanding of homeostasis and feedback loops"
+    ],
+    "useCases": [
+      "Medical school professors creating exam questions on cardiovascular physiology",
+      "Nursing instructors generating quizzes on respiratory and renal systems",
+      "Physiology teachers preparing students for standardized physiology exams",
+      "Tutors helping students master complex physiological concepts"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is the primary function of the kidneys?",
+        "options": [
+          "Digestion",
+          "Filtration and waste removal",
+          "Oxygen transport",
+          "Hormone production"
+        ],
+        "correctAnswer": "Filtration and waste removal",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Explain how the body maintains blood glucose homeostasis through negative feedback.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      },
+      {
+        "question": "Describe the process of action potential generation in a neuron.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      }
+    ],
+    "relatedSubjects": [
+      "anatomy",
+      "biology",
+      "medical-terminology",
+      "nursing",
+      "nclex"
+    ],
+    "certifications": [
+      "Medical School",
+      "Nursing Programs"
+    ],
+    "gradeLevel": "college-professional",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about all body systems?",
+        "answer": "Yes! QuizForge can create questions covering all major body systems including cardiovascular, respiratory, digestive, nervous, endocrine, renal, and reproductive systems. Questions test understanding of functions, mechanisms, and interactions."
+      },
+      {
+        "question": "Does it cover physiological mechanisms and processes?",
+        "answer": "QuizForge generates questions covering physiological mechanisms including homeostasis, feedback loops, cellular processes, organ function, and system interactions as required for physiology education programs."
+      },
+      {
+        "question": "Can I generate questions from physiology textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from physiology textbooks, and QuizForge will extract key concepts, mechanisms, and processes to create questions that test comprehensive understanding of physiological principles."
+      }
+    ],
+    "keyTopics": [
+      "Cardiovascular physiology",
+      "Respiratory physiology",
+      "Renal physiology",
+      "Nervous system physiology",
+      "Endocrine physiology",
+      "Digestive physiology",
+      "Homeostasis and feedback"
+    ]
+  },
+  {
+    "slug": "medical-terminology",
+    "name": "Medical Terminology",
+    "description": "Medical terminology quiz generator for creating assessments on medical terms, prefixes, suffixes, and root words. Perfect for medical students, nursing students, and healthcare professionals.",
+    "targetAudience": "medical students, nursing students, healthcare professionals, and medical terminology instructors",
+    "specificChallenges": [
+      "Creating questions that test understanding of word construction, not just memorization",
+      "Covering prefixes, suffixes, and root words across body systems",
+      "Aligning with medical and nursing curriculum requirements",
+      "Generating questions that require breaking down and building medical terms"
+    ],
+    "useCases": [
+      "Medical terminology instructors creating quizzes on prefixes and suffixes",
+      "Nursing students generating study questions for medical terminology exams",
+      "Healthcare professionals preparing for certification exams",
+      "Medical students creating practice questions on body system terminology"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What does the prefix 'cardio-' mean?",
+        "options": [
+          "Heart",
+          "Lung",
+          "Brain",
+          "Liver"
+        ],
+        "correctAnswer": "Heart",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Break down the medical term 'cardiomyopathy' and explain its meaning.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "What is the medical term for 'inflammation of the liver'?",
+        "options": [
+          "Hepatitis",
+          "Hepatomegaly",
+          "Hepatectomy",
+          "Hepatology"
+        ],
+        "correctAnswer": "Hepatitis",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      }
+    ],
+    "relatedSubjects": [
+      "anatomy",
+      "physiology",
+      "nursing",
+      "nclex",
+      "pharmacology"
+    ],
+    "certifications": [
+      "Medical School",
+      "Nursing Programs"
+    ],
+    "gradeLevel": "college-professional",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about medical word construction?",
+        "answer": "Yes! QuizForge can create questions covering prefixes, suffixes, root words, combining forms, and how to build and break down medical terms. Questions test understanding of word construction and meaning."
+      },
+      {
+        "question": "Does it cover terminology for all body systems?",
+        "answer": "QuizForge generates questions covering medical terminology for all body systems including cardiovascular, respiratory, digestive, nervous, musculoskeletal, and integumentary systems."
+      },
+      {
+        "question": "Can I generate questions from medical terminology textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from medical terminology textbooks, and QuizForge will extract key terms, prefixes, suffixes, and root words to create questions that test comprehensive understanding."
+      }
+    ],
+    "keyTopics": [
+      "Prefixes and suffixes",
+      "Root words",
+      "Combining forms",
+      "Body system terminology",
+      "Anatomical terminology",
+      "Pathological terminology",
+      "Word construction and analysis"
+    ]
+  },
+  {
+    "slug": "sat-math",
+    "name": "SAT Math",
+    "description": "SAT Math quiz generator for creating practice questions for the SAT Math section. Perfect for SAT test prep, high school students, and SAT tutors.",
+    "targetAudience": "SAT test prep instructors, high school students, SAT tutors, and college counselors",
+    "specificChallenges": [
+      "Creating questions that mirror SAT Math format and difficulty",
+      "Covering all SAT Math content areas including algebra, geometry, and data analysis",
+      "Aligning with SAT Math test specifications",
+      "Generating questions that test problem-solving and reasoning skills"
+    ],
+    "useCases": [
+      "SAT prep instructors creating practice tests for the Math section",
+      "High school students generating study questions for SAT preparation",
+      "SAT tutors creating focused practice on weak areas",
+      "College counselors preparing students for the SAT exam"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "If 3x + 5 = 20, what is the value of x?",
+        "options": [
+          "3",
+          "5",
+          "15",
+          "25"
+        ],
+        "correctAnswer": "5",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "A circle has a radius of 5. What is its area?",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "The function f(x) = 2x² - 3x + 1. What is f(3)?",
+        "options": [
+          "10",
+          "12",
+          "14",
+          "16"
+        ],
+        "correctAnswer": "10",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      }
+    ],
+    "relatedSubjects": [
+      "mathematics",
+      "algebra",
+      "geometry",
+      "sat",
+      "test-prep"
+    ],
+    "certifications": [
+      "SAT"
+    ],
+    "gradeLevel": "high-school",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate SAT Math practice questions?",
+        "answer": "Yes! QuizForge can create questions in SAT Math format covering algebra, problem solving and data analysis, advanced math, and geometry and trigonometry as specified in the SAT test specifications."
+      },
+      {
+        "question": "Does it cover all SAT Math content areas?",
+        "answer": "QuizForge generates questions covering all SAT Math content areas including heart of algebra, problem solving and data analysis, passport to advanced math, and additional topics in math as required for SAT preparation."
+      },
+      {
+        "question": "Can I generate questions from SAT prep materials?",
+        "answer": "Absolutely. Upload PDF chapters from SAT prep books or study guides, and QuizForge will extract key concepts and problem types to create practice questions aligned with SAT Math format."
+      }
+    ],
+    "keyTopics": [
+      "Heart of algebra",
+      "Problem solving and data analysis",
+      "Passport to advanced math",
+      "Additional topics in math",
+      "Geometry and trigonometry",
+      "Functions and equations",
+      "Statistics and probability"
+    ]
+  },
+  {
+    "slug": "gre-verbal",
+    "name": "GRE Verbal",
+    "description": "GRE Verbal quiz generator for creating practice questions for the GRE Verbal Reasoning section. Perfect for GRE test prep, graduate school applicants, and GRE tutors.",
+    "targetAudience": "GRE test prep instructors, graduate school applicants, GRE tutors, and college counselors",
+    "specificChallenges": [
+      "Creating questions that mirror GRE Verbal format and difficulty",
+      "Covering reading comprehension, text completion, and sentence equivalence",
+      "Aligning with GRE Verbal test specifications",
+      "Generating questions that test vocabulary and critical reasoning"
+    ],
+    "useCases": [
+      "GRE prep instructors creating practice tests for the Verbal section",
+      "Graduate school applicants generating study questions for GRE preparation",
+      "GRE tutors creating focused practice on vocabulary and reading comprehension",
+      "College counselors preparing students for the GRE exam"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "The author's tone in the passage can best be described as:",
+        "options": [
+          "Skeptical",
+          "Enthusiastic",
+          "Neutral",
+          "Critical"
+        ],
+        "correctAnswer": "Skeptical",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Select the two words that best complete the sentence: The scientist's findings were _____, challenging long-held assumptions about the phenomenon.",
+        "options": [
+          "revolutionary",
+          "mundane",
+          "groundbreaking",
+          "conventional"
+        ],
+        "correctAnswer": "revolutionary, groundbreaking",
+        "type": "multiple-choice",
+        "difficulty": "hard"
+      },
+      {
+        "question": "What is the main idea of the passage?",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "analysis"
+      }
+    ],
+    "relatedSubjects": [
+      "gre",
+      "test-prep",
+      "reading-comprehension",
+      "vocabulary",
+      "english"
+    ],
+    "certifications": [
+      "GRE"
+    ],
+    "gradeLevel": "college-graduate",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate GRE Verbal practice questions?",
+        "answer": "Yes! QuizForge can create questions in GRE Verbal format covering reading comprehension, text completion, and sentence equivalence questions as specified in the GRE test specifications."
+      },
+      {
+        "question": "Does it cover vocabulary and critical reasoning?",
+        "answer": "QuizForge generates questions that test vocabulary knowledge, reading comprehension skills, critical reasoning, and ability to understand complex texts as required for GRE Verbal preparation."
+      },
+      {
+        "question": "Can I generate questions from GRE prep materials?",
+        "answer": "Absolutely. Upload PDF chapters from GRE prep books or study guides, and QuizForge will extract key concepts, vocabulary, and question types to create practice questions aligned with GRE Verbal format."
+      }
+    ],
+    "keyTopics": [
+      "Reading comprehension",
+      "Text completion",
+      "Sentence equivalence",
+      "Vocabulary",
+      "Critical reasoning",
+      "Argument analysis",
+      "Passage analysis"
+    ]
+  },
+  {
+    "slug": "mcat-biology",
+    "name": "MCAT Biology",
+    "description": "MCAT Biology quiz generator for creating practice questions for the MCAT Biological and Biochemical Foundations section. Perfect for MCAT test prep, pre-med students, and MCAT tutors.",
+    "targetAudience": "MCAT test prep instructors, pre-med students, MCAT tutors, and medical school applicants",
+    "specificChallenges": [
+      "Creating questions that mirror MCAT Biology format and difficulty",
+      "Covering biology, biochemistry, and organic chemistry concepts",
+      "Aligning with MCAT test specifications and scientific reasoning",
+      "Generating questions that test application of biological concepts"
+    ],
+    "useCases": [
+      "MCAT prep instructors creating practice tests for the Biology section",
+      "Pre-med students generating study questions for MCAT preparation",
+      "MCAT tutors creating focused practice on weak areas",
+      "Medical school applicants preparing for the MCAT exam"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Which organelle is responsible for protein synthesis?",
+        "options": [
+          "Mitochondria",
+          "Ribosome",
+          "Nucleus",
+          "Golgi apparatus"
+        ],
+        "correctAnswer": "Ribosome",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Explain how enzymes lower activation energy in biochemical reactions.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "A mutation in the DNA sequence results in a premature stop codon. What type of mutation is this?",
+        "options": [
+          "Silent",
+          "Missense",
+          "Nonsense",
+          "Frameshift"
+        ],
+        "correctAnswer": "Nonsense",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      }
+    ],
+    "relatedSubjects": [
+      "mcat",
+      "biology",
+      "biochemistry",
+      "test-prep",
+      "medical-school"
+    ],
+    "certifications": [
+      "MCAT"
+    ],
+    "gradeLevel": "college-graduate",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate MCAT Biology practice questions?",
+        "answer": "Yes! QuizForge can create questions in MCAT format covering biology, biochemistry, organic chemistry, and scientific reasoning as specified in the MCAT Biological and Biochemical Foundations section."
+      },
+      {
+        "question": "Does it cover all MCAT Biology content areas?",
+        "answer": "QuizForge generates questions covering all MCAT Biology content areas including biomolecules, cells, genetics, evolution, and organ systems as required for MCAT preparation."
+      },
+      {
+        "question": "Can I generate questions from MCAT prep materials?",
+        "answer": "Absolutely. Upload PDF chapters from MCAT prep books or study guides, and QuizForge will extract key concepts and question types to create practice questions aligned with MCAT format."
+      }
+    ],
+    "keyTopics": [
+      "Biomolecules",
+      "Cells and organelles",
+      "Genetics and heredity",
+      "Evolution",
+      "Organ systems",
+      "Biochemistry",
+      "Scientific reasoning"
+    ]
+  },
+  {
+    "slug": "youtube-to-quiz",
+    "name": "YouTube to Quiz",
+    "description": "Convert YouTube video transcripts into quiz questions instantly. Generate comprehensive quiz questions from educational YouTube videos and video content. Perfect for educators and content creators.",
+    "targetAudience": "educators, content creators, trainers, and anyone who needs to create quizzes from YouTube video content",
+    "specificChallenges": [
+      "Extracting meaningful content from video transcripts",
+      "Identifying key concepts and important information in spoken content",
+      "Creating questions that test understanding, not just transcription",
+      "Handling various video formats and transcript quality"
+    ],
+    "useCases": [
+      "Teachers converting educational YouTube videos into quiz questions",
+      "Content creators building quizzes from their video tutorials",
+      "Trainers creating assessments from training videos",
+      "Educators generating questions from lecture recordings"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "According to the video, what is the main topic discussed?",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Which concept was emphasized most in the video?",
+        "options": [
+          "Concept A",
+          "Concept B",
+          "Concept C",
+          "Concept D"
+        ],
+        "correctAnswer": "Concept B",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Summarize the key points made in the video and explain their significance.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "pdf-to-quiz",
+      "text-to-quiz",
+      "document-to-quiz",
+      "video-to-quiz",
+      "content-to-quiz"
+    ],
+    "certifications": [],
+    "gradeLevel": "all-levels",
+    "faqs": [
+      {
+        "question": "What types of YouTube videos can QuizForge process?",
+        "answer": "QuizForge can process YouTube videos with available transcripts, including educational videos, tutorials, lectures, and training content. The system extracts text from transcripts and generates questions based on key concepts."
+      },
+      {
+        "question": "How do I get the transcript from a YouTube video?",
+        "answer": "Many YouTube videos have automatic captions/transcripts available. You can copy the transcript text and paste it into QuizForge, or use the video URL if transcript extraction is supported."
+      },
+      {
+        "question": "How accurate are the questions generated from video transcripts?",
+        "answer": "QuizForge uses advanced AI to analyze transcript content and identify key concepts, important facts, and relationships. The questions are designed to test understanding of the material, and you can review and edit them before using."
+      }
+    ],
+    "keyTopics": [
+      "Transcript extraction",
+      "Content analysis",
+      "Key concept identification",
+      "Question generation from video",
+      "Educational video processing",
+      "Tutorial content analysis",
+      "Lecture content extraction"
+    ]
+  },
+  {
+    "slug": "ap-biology",
+    "name": "AP Biology",
+    "description": "AP Biology quiz generator for creating practice questions aligned with the AP Biology curriculum. Perfect for AP Biology teachers, students preparing for the AP exam, and AP Biology tutors.",
+    "targetAudience": "AP Biology teachers, high school students preparing for AP Biology, AP Biology tutors, and AP Biology instructors",
+    "specificChallenges": [
+      "Creating questions aligned with AP Biology Big Ideas and scientific practices",
+      "Covering all AP Biology units and required content",
+      "Testing scientific practices like data analysis and experimental design",
+      "Generating questions that mirror AP exam format and difficulty"
+    ],
+    "useCases": [
+      "AP Biology teachers creating unit tests aligned with AP curriculum",
+      "Students generating practice questions for AP Biology exam preparation",
+      "AP Biology tutors creating focused practice on specific units",
+      "AP Biology instructors preparing students for the AP exam"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Which of the following is a characteristic of all living organisms?",
+        "options": [
+          "Ability to photosynthesize",
+          "Presence of a nucleus",
+          "Ability to maintain homeostasis",
+          "Multicellular structure"
+        ],
+        "correctAnswer": "Ability to maintain homeostasis",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Analyze the data from the experiment and explain what it suggests about the relationship between enzyme concentration and reaction rate.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Design an experiment to test the effect of temperature on cellular respiration rate.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "biology",
+      "ap-exams",
+      "test-prep",
+      "science",
+      "college-prep"
+    ],
+    "certifications": [
+      "AP Biology"
+    ],
+    "gradeLevel": "high-school",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate AP Biology practice questions?",
+        "answer": "Yes! QuizForge can create questions aligned with AP Biology curriculum, covering all eight units and testing scientific practices including data analysis, experimental design, and mathematical modeling as required by the College Board."
+      },
+      {
+        "question": "Does it cover all AP Biology Big Ideas?",
+        "answer": "QuizForge generates questions covering all four AP Biology Big Ideas: evolution, energy, information storage and transmission, and systems interactions, as well as all required scientific practices."
+      },
+      {
+        "question": "Can I generate questions from AP Biology textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from AP Biology textbooks like Campbell Biology or other AP-aligned resources, and QuizForge will extract key concepts to create questions aligned with AP curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Chemistry of life",
+      "Cell structure and function",
+      "Cellular energetics",
+      "Cell communication and cell cycle",
+      "Heredity",
+      "Gene expression and regulation",
+      "Natural selection"
+    ]
+  },
+  {
+    "slug": "ap-chemistry",
+    "name": "AP Chemistry",
+    "description": "AP Chemistry quiz generator for creating practice questions aligned with the AP Chemistry curriculum. Perfect for AP Chemistry teachers, students preparing for the AP exam, and AP Chemistry tutors.",
+    "targetAudience": "AP Chemistry teachers, high school students preparing for AP Chemistry, AP Chemistry tutors, and AP Chemistry instructors",
+    "specificChallenges": [
+      "Creating questions aligned with AP Chemistry curriculum and learning objectives",
+      "Covering all AP Chemistry units and required content",
+      "Testing both conceptual understanding and calculation skills",
+      "Generating questions that mirror AP exam format and difficulty"
+    ],
+    "useCases": [
+      "AP Chemistry teachers creating unit tests aligned with AP curriculum",
+      "Students generating practice questions for AP Chemistry exam preparation",
+      "AP Chemistry tutors creating focused practice on specific units",
+      "AP Chemistry instructors preparing students for the AP exam"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is the electron configuration of iron (Fe)?",
+        "options": [
+          "[Ar] 4s² 3d⁶",
+          "[Ar] 4s² 3d⁵",
+          "[Ar] 4s¹ 3d⁷",
+          "[Ar] 4s² 3d⁴"
+        ],
+        "correctAnswer": "[Ar] 4s² 3d⁶",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Calculate the pH of a 0.1 M solution of HCl.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "Explain how Le Chatelier's principle applies to the following equilibrium reaction when temperature is increased.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      }
+    ],
+    "relatedSubjects": [
+      "chemistry",
+      "ap-exams",
+      "test-prep",
+      "science",
+      "college-prep"
+    ],
+    "certifications": [
+      "AP Chemistry"
+    ],
+    "gradeLevel": "high-school",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate AP Chemistry practice questions?",
+        "answer": "Yes! QuizForge can create questions aligned with AP Chemistry curriculum, covering all nine units and testing both conceptual understanding and calculation skills as required by the College Board."
+      },
+      {
+        "question": "Does it cover all AP Chemistry content areas?",
+        "answer": "QuizForge generates questions covering all AP Chemistry content areas including atomic structure, bonding, reactions, thermodynamics, kinetics, equilibrium, and acids and bases."
+      },
+      {
+        "question": "Can I generate questions from AP Chemistry textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from AP Chemistry textbooks or other AP-aligned resources, and QuizForge will extract key concepts to create questions aligned with AP curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Atomic structure and properties",
+      "Molecular and ionic compound structure",
+      "Intermolecular forces and properties",
+      "Chemical reactions",
+      "Kinetics",
+      "Thermodynamics",
+      "Equilibrium"
+    ]
+  },
+  {
+    "slug": "ap-us-history",
+    "name": "AP US History",
+    "description": "AP US History quiz generator for creating practice questions aligned with the AP US History curriculum. Perfect for AP US History teachers, students preparing for the AP exam, and AP US History tutors.",
+    "targetAudience": "AP US History teachers, high school students preparing for AP US History, AP US History tutors, and AP US History instructors",
+    "specificChallenges": [
+      "Creating questions aligned with AP US History curriculum and historical thinking skills",
+      "Covering all nine AP US History time periods",
+      "Testing historical thinking skills including sourcing and argumentation",
+      "Generating questions that mirror AP exam format and difficulty"
+    ],
+    "useCases": [
+      "AP US History teachers creating unit tests aligned with AP curriculum",
+      "Students generating practice questions for AP US History exam preparation",
+      "AP US History tutors creating focused practice on specific time periods",
+      "AP US History instructors preparing students for the AP exam"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "The Declaration of Independence was primarily influenced by which Enlightenment philosopher?",
+        "options": [
+          "John Locke",
+          "Thomas Hobbes",
+          "Jean-Jacques Rousseau",
+          "Voltaire"
+        ],
+        "correctAnswer": "John Locke",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Analyze the causes of the American Civil War. Use specific historical evidence to support your argument.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Compare the New Deal and Great Society programs. What were their goals and impacts?",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "us-history",
+      "history",
+      "ap-exams",
+      "test-prep",
+      "college-prep"
+    ],
+    "certifications": [
+      "AP US History"
+    ],
+    "gradeLevel": "high-school",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate AP US History practice questions?",
+        "answer": "Yes! QuizForge can create questions aligned with AP US History curriculum, covering all nine time periods from 1491 to the present and testing historical thinking skills as required by the College Board."
+      },
+      {
+        "question": "Does it test historical thinking skills?",
+        "answer": "QuizForge generates questions that test historical thinking skills including sourcing, contextualization, corroboration, and argumentation, as well as the ability to analyze primary and secondary sources."
+      },
+      {
+        "question": "Can I generate questions from AP US History textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from AP US History textbooks or other AP-aligned resources, and QuizForge will extract key events and concepts to create questions aligned with AP curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Period 1: 1491-1607",
+      "Period 2: 1607-1754",
+      "Period 3: 1754-1800",
+      "Period 4: 1800-1848",
+      "Period 5: 1844-1877",
+      "Period 6: 1865-1898",
+      "Period 7: 1890-1945"
+    ]
+  },
+  {
+    "slug": "organic-chemistry",
+    "name": "Organic Chemistry",
+    "description": "Organic chemistry quiz generator for creating assessments on organic compounds, reactions, mechanisms, and synthesis. Perfect for organic chemistry courses, MCAT preparation, and chemistry majors.",
+    "targetAudience": "organic chemistry teachers, chemistry professors, MCAT prep instructors, and organic chemistry tutors",
+    "specificChallenges": [
+      "Creating questions that test understanding of reaction mechanisms, not just memorization",
+      "Covering functional groups, reactions, and synthesis strategies",
+      "Aligning with organic chemistry curriculum and MCAT requirements",
+      "Generating questions that require understanding of electron flow and stereochemistry"
+    ],
+    "useCases": [
+      "Organic chemistry professors creating exam questions on reaction mechanisms",
+      "MCAT prep instructors generating practice questions for organic chemistry",
+      "Chemistry majors creating study questions for organic chemistry courses",
+      "Organic chemistry tutors helping students master synthesis problems"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is the IUPAC name for CH₃CH₂CH₂OH?",
+        "options": [
+          "1-propanol",
+          "2-propanol",
+          "propanal",
+          "propanoic acid"
+        ],
+        "correctAnswer": "1-propanol",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Draw the mechanism for the SN2 reaction between bromoethane and hydroxide ion.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      },
+      {
+        "question": "Which functional group is present in a ketone?",
+        "options": [
+          "-OH",
+          "-CHO",
+          "-CO-",
+          "-COOH"
+        ],
+        "correctAnswer": "-CO-",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      }
+    ],
+    "relatedSubjects": [
+      "chemistry",
+      "biochemistry",
+      "mcat-biology",
+      "ap-chemistry",
+      "pharmacology"
+    ],
+    "certifications": [
+      "MCAT",
+      "Chemistry Major"
+    ],
+    "gradeLevel": "college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about organic reaction mechanisms?",
+        "answer": "Yes! QuizForge can create questions covering reaction mechanisms, functional groups, stereochemistry, synthesis strategies, and organic transformations as required for organic chemistry courses."
+      },
+      {
+        "question": "Does it cover all major functional groups?",
+        "answer": "QuizForge generates questions covering all major functional groups including alkanes, alkenes, alkynes, alcohols, ethers, aldehydes, ketones, carboxylic acids, esters, and amines."
+      },
+      {
+        "question": "Can I generate questions from organic chemistry textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from organic chemistry textbooks, and QuizForge will extract key concepts, reactions, and mechanisms to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Functional groups",
+      "Reaction mechanisms",
+      "Stereochemistry",
+      "Synthesis strategies",
+      "Spectroscopy",
+      "Aromatic compounds",
+      "Biomolecules"
+    ]
+  },
+  {
+    "slug": "biochemistry",
+    "name": "Biochemistry",
+    "description": "Biochemistry quiz generator for creating assessments on biomolecules, metabolic pathways, enzyme kinetics, and biochemical processes. Perfect for biochemistry courses, medical school, and MCAT preparation.",
+    "targetAudience": "biochemistry teachers, medical school instructors, MCAT prep instructors, and biochemistry tutors",
+    "specificChallenges": [
+      "Creating questions that test understanding of metabolic pathways and enzyme mechanisms",
+      "Covering biomolecules, metabolism, and biochemical processes",
+      "Aligning with biochemistry curriculum and MCAT requirements",
+      "Generating questions that require understanding of biochemical pathways and regulation"
+    ],
+    "useCases": [
+      "Biochemistry professors creating exam questions on metabolic pathways",
+      "Medical school instructors generating quizzes on enzyme kinetics",
+      "MCAT prep instructors creating practice questions for biochemistry",
+      "Biochemistry tutors helping students master complex pathways"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Which enzyme catalyzes the first step of glycolysis?",
+        "options": [
+          "Hexokinase",
+          "Phosphofructokinase",
+          "Pyruvate kinase",
+          "Aldolase"
+        ],
+        "correctAnswer": "Hexokinase",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Explain how ATP is produced in the electron transport chain.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "What is the primary function of DNA polymerase?",
+        "options": [
+          "Transcription",
+          "Translation",
+          "DNA replication",
+          "RNA synthesis"
+        ],
+        "correctAnswer": "DNA replication",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      }
+    ],
+    "relatedSubjects": [
+      "biology",
+      "chemistry",
+      "organic-chemistry",
+      "mcat-biology",
+      "medical-school"
+    ],
+    "certifications": [
+      "MCAT",
+      "Medical School"
+    ],
+    "gradeLevel": "college-professional",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about metabolic pathways?",
+        "answer": "Yes! QuizForge can create questions covering all major metabolic pathways including glycolysis, Krebs cycle, electron transport chain, fatty acid metabolism, and amino acid metabolism."
+      },
+      {
+        "question": "Does it cover enzyme kinetics and mechanisms?",
+        "answer": "QuizForge generates questions covering enzyme kinetics, enzyme mechanisms, regulation of enzyme activity, and how enzymes function in metabolic pathways."
+      },
+      {
+        "question": "Can I generate questions from biochemistry textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from biochemistry textbooks, and QuizForge will extract key concepts, pathways, and mechanisms to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Biomolecules",
+      "Enzyme kinetics",
+      "Metabolic pathways",
+      "Cellular respiration",
+      "Photosynthesis",
+      "DNA and RNA",
+      "Protein synthesis"
+    ]
+  },
+  {
+    "slug": "english",
+    "name": "English",
+    "description": "English quiz generator for creating assessments on grammar, vocabulary, writing, and language skills. Perfect for English teachers, ESL instructors, and language arts educators.",
+    "targetAudience": "English teachers, ESL instructors, language arts educators, and English tutors",
+    "specificChallenges": [
+      "Creating questions that test language skills, not just grammar rules",
+      "Covering grammar, vocabulary, writing, and reading comprehension",
+      "Aligning with English language arts standards",
+      "Generating questions that require understanding of context and usage"
+    ],
+    "useCases": [
+      "English teachers creating grammar quizzes for their classes",
+      "ESL instructors generating vocabulary and comprehension questions",
+      "Language arts educators preparing assessments on writing skills",
+      "English tutors helping students improve language proficiency"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Which sentence is grammatically correct?",
+        "options": [
+          "The team are playing well.",
+          "The team is playing well.",
+          "The team were playing well.",
+          "The team be playing well."
+        ],
+        "correctAnswer": "The team is playing well.",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Identify the type of sentence: 'Although it was raining, we decided to go for a walk.'",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "Explain the difference between 'affect' and 'effect' and provide examples of each.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "analysis"
+      }
+    ],
+    "relatedSubjects": [
+      "english-literature",
+      "writing",
+      "grammar",
+      "vocabulary",
+      "esl"
+    ],
+    "certifications": [
+      "Common Core"
+    ],
+    "gradeLevel": "all-levels",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about grammar and language?",
+        "answer": "Yes! QuizForge can create questions covering grammar rules, sentence structure, punctuation, vocabulary, and language usage as required for English language arts education."
+      },
+      {
+        "question": "Does it support ESL and language learning?",
+        "answer": "QuizForge generates questions suitable for ESL learners, covering grammar, vocabulary, reading comprehension, and language skills at various proficiency levels."
+      },
+      {
+        "question": "Can I generate questions from English textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from English textbooks or language learning materials, and QuizForge will extract key concepts to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Grammar and syntax",
+      "Vocabulary",
+      "Reading comprehension",
+      "Writing skills",
+      "Punctuation",
+      "Sentence structure",
+      "Language usage"
+    ]
+  },
+  {
+    "slug": "writing",
+    "name": "Writing",
+    "description": "Writing quiz generator for creating assessments on writing skills, composition, essay structure, and writing techniques. Perfect for English teachers, writing instructors, and composition courses.",
+    "targetAudience": "writing teachers, English teachers, composition instructors, and writing tutors",
+    "specificChallenges": [
+      "Creating questions that test writing skills and techniques",
+      "Covering essay structure, grammar, and composition",
+      "Aligning with writing standards and curriculum",
+      "Generating questions that require understanding of writing process and style"
+    ],
+    "useCases": [
+      "Writing teachers creating quizzes on essay structure and organization",
+      "English teachers generating questions on writing techniques and style",
+      "Composition instructors preparing assessments on the writing process",
+      "Writing tutors helping students improve their writing skills"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is the purpose of a thesis statement in an essay?",
+        "options": [
+          "To provide evidence",
+          "To state the main argument",
+          "To conclude the essay",
+          "To introduce sources"
+        ],
+        "correctAnswer": "To state the main argument",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Explain the difference between expository and persuasive writing.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "What are the key components of a well-structured paragraph?",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      }
+    ],
+    "relatedSubjects": [
+      "english",
+      "english-literature",
+      "grammar",
+      "composition",
+      "essay-writing"
+    ],
+    "certifications": [
+      "Common Core"
+    ],
+    "gradeLevel": "all-levels",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about writing skills?",
+        "answer": "Yes! QuizForge can create questions covering essay structure, writing techniques, grammar, style, organization, and the writing process as required for writing education."
+      },
+      {
+        "question": "Does it cover different types of writing?",
+        "answer": "QuizForge generates questions covering various types of writing including narrative, expository, persuasive, descriptive, and argumentative writing."
+      },
+      {
+        "question": "Can I generate questions from writing textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from writing textbooks or composition guides, and QuizForge will extract key concepts to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Essay structure",
+      "Writing process",
+      "Grammar and style",
+      "Organization and coherence",
+      "Research and citation",
+      "Revision and editing",
+      "Writing techniques"
+    ]
+  },
+  {
+    "slug": "pre-calculus",
+    "name": "Pre-Calculus",
+    "description": "Pre-calculus quiz generator for creating assessments on functions, trigonometry, and advanced algebra. Perfect for pre-calculus courses and students preparing for calculus.",
+    "targetAudience": "pre-calculus teachers, high school math instructors, pre-calculus tutors, and math educators",
+    "specificChallenges": [
+      "Creating questions that test understanding of functions and advanced algebra",
+      "Covering trigonometry, functions, and mathematical modeling",
+      "Aligning with pre-calculus curriculum and Common Core standards",
+      "Generating questions that prepare students for calculus"
+    ],
+    "useCases": [
+      "Pre-calculus teachers creating unit tests on functions and trigonometry",
+      "Math tutors generating practice problems for pre-calculus exams",
+      "High school teachers preparing students for calculus courses",
+      "Math educators creating assessments on mathematical modeling"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is the domain of the function f(x) = √(x - 3)?",
+        "options": [
+          "x ≥ 0",
+          "x ≥ 3",
+          "x > 3",
+          "All real numbers"
+        ],
+        "correctAnswer": "x ≥ 3",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Graph the function f(x) = 2sin(x) and identify its amplitude and period.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "Solve the logarithmic equation: log₂(x + 3) = 4",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      }
+    ],
+    "relatedSubjects": [
+      "mathematics",
+      "algebra",
+      "trigonometry",
+      "calculus",
+      "functions"
+    ],
+    "certifications": [
+      "Common Core",
+      "Pre-Calculus"
+    ],
+    "gradeLevel": "high-school",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate pre-calculus problems?",
+        "answer": "Yes! QuizForge generates questions covering functions, trigonometry, logarithms, exponential functions, and mathematical modeling as required for pre-calculus courses."
+      },
+      {
+        "question": "Does it prepare students for calculus?",
+        "answer": "QuizForge generates questions that build foundational skills needed for calculus, including function analysis, limits concepts, and advanced algebraic manipulation."
+      },
+      {
+        "question": "Can I generate questions from pre-calculus textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from pre-calculus textbooks, and QuizForge will extract key concepts and problem-solving strategies to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Functions and graphs",
+      "Trigonometric functions",
+      "Exponential and logarithmic functions",
+      "Polynomial and rational functions",
+      "Sequences and series",
+      "Conic sections",
+      "Mathematical modeling"
+    ]
+  },
+  {
+    "slug": "european-history",
+    "name": "European History",
+    "description": "European History quiz generator for creating assessments on European history from ancient times to the present. Perfect for AP European History, high school European history, and college European history courses.",
+    "targetAudience": "European history teachers, AP European History instructors, college history professors, and history tutors",
+    "specificChallenges": [
+      "Creating questions that test understanding of European historical developments",
+      "Covering diverse periods and regions across European history",
+      "Aligning with AP European History curriculum and historical thinking skills",
+      "Generating questions that require analysis of European historical documents"
+    ],
+    "useCases": [
+      "AP European History teachers creating unit tests on the Renaissance and Reformation",
+      "European history professors generating exam questions on the French Revolution",
+      "High school teachers preparing students for European history standardized tests",
+      "History tutors helping students understand European historical connections"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "The Renaissance began in which Italian city?",
+        "options": [
+          "Rome",
+          "Venice",
+          "Florence",
+          "Milan"
+        ],
+        "correctAnswer": "Florence",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Analyze the causes of the French Revolution. Which factor was most significant?",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Compare the Industrial Revolution in Britain and Germany. What were the key differences?",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "history",
+      "world-history",
+      "ap-european-history",
+      "renaissance",
+      "enlightenment"
+    ],
+    "certifications": [
+      "AP European History"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about European historical analysis?",
+        "answer": "Yes! QuizForge generates questions that test historical thinking skills including sourcing, contextualization, and argumentation. It can create questions about analyzing European primary sources and historical documents."
+      },
+      {
+        "question": "Does it align with AP European History curriculum?",
+        "answer": "QuizForge generates questions aligned with AP European History curriculum, covering all required time periods and historical thinking skills as specified by the College Board."
+      },
+      {
+        "question": "Can I generate questions from European history textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from European history textbooks, and QuizForge will extract key events and concepts to create questions that test both factual knowledge and analytical thinking."
+      }
+    ],
+    "keyTopics": [
+      "Renaissance and Reformation",
+      "Age of Exploration",
+      "Scientific Revolution",
+      "Enlightenment",
+      "French Revolution",
+      "Industrial Revolution",
+      "World Wars"
+    ]
+  },
+  {
+    "slug": "environmental-science",
+    "name": "Environmental Science",
+    "description": "Environmental science quiz generator for creating assessments on ecosystems, environmental issues, sustainability, and environmental concepts. Perfect for AP Environmental Science, high school environmental science, and college environmental courses.",
+    "targetAudience": "environmental science teachers, AP Environmental Science instructors, college environmental professors, and environmental science tutors",
+    "specificChallenges": [
+      "Creating questions that test understanding of environmental systems and interactions",
+      "Covering ecosystems, environmental issues, and sustainability",
+      "Aligning with AP Environmental Science curriculum",
+      "Generating questions that require analysis of environmental data and case studies"
+    ],
+    "useCases": [
+      "AP Environmental Science teachers creating unit tests on ecosystems",
+      "Environmental science professors generating exam questions on climate change",
+      "High school teachers preparing students for environmental science standardized tests",
+      "Environmental science tutors helping students understand environmental systems"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is the primary cause of the greenhouse effect?",
+        "options": [
+          "Ozone depletion",
+          "Carbon dioxide in the atmosphere",
+          "Ocean acidification",
+          "Deforestation"
+        ],
+        "correctAnswer": "Carbon dioxide in the atmosphere",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Explain how deforestation affects the carbon cycle.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Compare renewable and non-renewable energy sources. What are the advantages and disadvantages of each?",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "biology",
+      "geography",
+      "ap-environmental-science",
+      "ecology",
+      "sustainability"
+    ],
+    "certifications": [
+      "AP Environmental Science"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about environmental systems?",
+        "answer": "Yes! QuizForge can create questions covering ecosystems, environmental issues, sustainability, climate change, pollution, and conservation as required for environmental science courses."
+      },
+      {
+        "question": "Does it align with AP Environmental Science curriculum?",
+        "answer": "QuizForge generates questions aligned with AP Environmental Science curriculum, covering all units including ecosystems, biodiversity, populations, earth systems, and global change as required by the College Board."
+      },
+      {
+        "question": "Can I generate questions from environmental science textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from environmental science textbooks, and QuizForge will extract key concepts about ecosystems, environmental issues, and sustainability to create aligned questions."
+      }
+    ],
+    "keyTopics": [
+      "Ecosystems and biodiversity",
+      "Climate change",
+      "Pollution and waste",
+      "Energy resources",
+      "Water resources",
+      "Land use",
+      "Sustainability"
+    ]
+  },
+  {
+    "slug": "psychology",
+    "name": "Psychology",
+    "description": "Psychology quiz generator for creating assessments on psychological concepts, theories, research methods, and human behavior. Perfect for AP Psychology, high school psychology, and college psychology courses.",
+    "targetAudience": "psychology teachers, AP Psychology instructors, college psychology professors, and psychology tutors",
+    "specificChallenges": [
+      "Creating questions that test understanding of psychological theories and concepts",
+      "Covering all major areas of psychology including cognitive, social, and clinical",
+      "Aligning with AP Psychology curriculum and psychological research methods",
+      "Generating questions that require understanding of research design and data interpretation"
+    ],
+    "useCases": [
+      "AP Psychology teachers creating unit tests on cognitive psychology",
+      "Psychology professors generating exam questions on research methods",
+      "High school teachers preparing students for psychology standardized tests",
+      "Psychology tutors helping students understand psychological theories"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Which psychological perspective emphasizes the role of unconscious conflicts?",
+        "options": [
+          "Behavioral",
+          "Psychoanalytic",
+          "Cognitive",
+          "Humanistic"
+        ],
+        "correctAnswer": "Psychoanalytic",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Explain the difference between classical and operant conditioning.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Design an experiment to test the effect of sleep deprivation on memory.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "ap-psychology",
+      "social-studies",
+      "biology",
+      "research-methods",
+      "cognitive-science"
+    ],
+    "certifications": [
+      "AP Psychology"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about psychological theories?",
+        "answer": "Yes! QuizForge can create questions covering all major areas of psychology including biological, cognitive, developmental, social, and clinical psychology as required for psychology courses."
+      },
+      {
+        "question": "Does it cover research methods?",
+        "answer": "QuizForge generates questions covering psychological research methods including experiments, surveys, case studies, and observational studies, as well as data analysis and interpretation."
+      },
+      {
+        "question": "Can I generate questions from psychology textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from psychology textbooks, and QuizForge will extract key concepts, theories, and research findings to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Biological psychology",
+      "Cognitive psychology",
+      "Developmental psychology",
+      "Social psychology",
+      "Clinical psychology",
+      "Research methods",
+      "Psychological disorders"
+    ]
+  },
+  {
+    "slug": "economics",
+    "name": "Economics",
+    "description": "Economics quiz generator for creating assessments on economic principles, microeconomics, macroeconomics, and economic analysis. Perfect for AP Economics, high school economics, and college economics courses.",
+    "targetAudience": "economics teachers, AP Economics instructors, college economics professors, and economics tutors",
+    "specificChallenges": [
+      "Creating questions that test understanding of economic principles and analysis",
+      "Covering both microeconomics and macroeconomics",
+      "Aligning with AP Economics curriculum and economic thinking",
+      "Generating questions that require analysis of economic data and graphs"
+    ],
+    "useCases": [
+      "AP Economics teachers creating unit tests on supply and demand",
+      "Economics professors generating exam questions on market structures",
+      "High school teachers preparing students for economics standardized tests",
+      "Economics tutors helping students understand economic principles"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What happens to the equilibrium price when demand increases and supply remains constant?",
+        "options": [
+          "Price increases",
+          "Price decreases",
+          "Price stays the same",
+          "Cannot be determined"
+        ],
+        "correctAnswer": "Price increases",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Explain the difference between fiscal and monetary policy.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Analyze the impact of a minimum wage increase on employment levels.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "ap-economics",
+      "microeconomics",
+      "macroeconomics",
+      "business",
+      "social-studies"
+    ],
+    "certifications": [
+      "AP Microeconomics",
+      "AP Macroeconomics"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about economic principles?",
+        "answer": "Yes! QuizForge can create questions covering microeconomics, macroeconomics, market structures, economic policy, and economic analysis as required for economics courses."
+      },
+      {
+        "question": "Does it cover both micro and macroeconomics?",
+        "answer": "QuizForge generates questions covering both microeconomics (individual markets, consumer behavior) and macroeconomics (national economy, inflation, unemployment) as required for economics education."
+      },
+      {
+        "question": "Can I generate questions from economics textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from economics textbooks, and QuizForge will extract key concepts, principles, and economic models to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Supply and demand",
+      "Market structures",
+      "Consumer behavior",
+      "National income",
+      "Inflation and unemployment",
+      "Fiscal policy",
+      "Monetary policy"
+    ]
+  },
+  {
+    "slug": "government",
+    "name": "Government",
+    "description": "Government quiz generator for creating assessments on government systems, political processes, civics, and political science. Perfect for AP Government, high school government, and college political science courses.",
+    "targetAudience": "government teachers, AP Government instructors, political science professors, and government tutors",
+    "specificChallenges": [
+      "Creating questions that test understanding of government systems and processes",
+      "Covering political institutions, processes, and civic engagement",
+      "Aligning with AP Government curriculum and political thinking skills",
+      "Generating questions that require analysis of political documents and data"
+    ],
+    "useCases": [
+      "AP Government teachers creating unit tests on the Constitution",
+      "Government professors generating exam questions on political processes",
+      "High school teachers preparing students for government standardized tests",
+      "Government tutors helping students understand political systems"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "How many members are in the US House of Representatives?",
+        "options": [
+          "100",
+          "435",
+          "538",
+          "50"
+        ],
+        "correctAnswer": "435",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Explain the system of checks and balances in the US government.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Compare the powers of the federal government and state governments in the US system.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "us-history",
+      "civics",
+      "ap-government",
+      "political-science",
+      "social-studies"
+    ],
+    "certifications": [
+      "AP US Government",
+      "AP Comparative Government"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about government systems?",
+        "answer": "Yes! QuizForge can create questions covering government institutions, political processes, constitutional principles, and civic engagement as required for government courses."
+      },
+      {
+        "question": "Does it align with AP Government curriculum?",
+        "answer": "QuizForge generates questions aligned with AP US Government and AP Comparative Government curricula, covering all required units and political thinking skills as specified by the College Board."
+      },
+      {
+        "question": "Can I generate questions from government textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from government textbooks, and QuizForge will extract key concepts about political systems, institutions, and processes to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Constitutional principles",
+      "Federalism",
+      "Political institutions",
+      "Political processes",
+      "Civil rights and liberties",
+      "Public policy",
+      "Civic engagement"
+    ]
+  },
+  {
+    "slug": "computer-science",
+    "name": "Computer Science",
+    "description": "Computer science quiz generator for creating assessments on programming, algorithms, data structures, and computer science concepts. Perfect for computer science courses, AP Computer Science, and coding bootcamps.",
+    "targetAudience": "computer science teachers, AP Computer Science instructors, coding bootcamp instructors, and computer science tutors",
+    "specificChallenges": [
+      "Creating questions that test programming logic and problem-solving",
+      "Covering algorithms, data structures, and software engineering",
+      "Aligning with computer science curriculum and AP standards",
+      "Generating questions that require understanding of code and algorithms"
+    ],
+    "useCases": [
+      "AP Computer Science teachers creating unit tests on algorithms",
+      "Computer science professors generating exam questions on data structures",
+      "Coding bootcamp instructors preparing assessments on programming concepts",
+      "Computer science tutors helping students master coding skills"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is the time complexity of binary search?",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(n²)",
+          "O(1)"
+        ],
+        "correctAnswer": "O(log n)",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Explain the difference between a stack and a queue data structure.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Write pseudocode for a function that finds the maximum value in an array.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      }
+    ],
+    "relatedSubjects": [
+      "programming",
+      "ap-computer-science",
+      "algorithms",
+      "data-structures",
+      "coding"
+    ],
+    "certifications": [
+      "AP Computer Science A",
+      "AP Computer Science Principles"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about programming and algorithms?",
+        "answer": "Yes! QuizForge can create questions covering programming concepts, algorithms, data structures, software engineering, and computer science theory as required for computer science courses."
+      },
+      {
+        "question": "Does it align with AP Computer Science curriculum?",
+        "answer": "QuizForge generates questions aligned with AP Computer Science A and AP Computer Science Principles curricula, covering programming, algorithms, and computer science concepts as required by the College Board."
+      },
+      {
+        "question": "Can I generate questions from computer science textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from computer science textbooks, and QuizForge will extract key concepts, algorithms, and programming principles to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Programming fundamentals",
+      "Algorithms and complexity",
+      "Data structures",
+      "Object-oriented programming",
+      "Software engineering",
+      "Computer systems",
+      "Networking and security"
+    ]
+  },
+  {
+    "slug": "art-history",
+    "name": "Art History",
+    "description": "Art history quiz generator for creating assessments on art movements, artists, artworks, and art historical analysis. Perfect for AP Art History, college art history, and art appreciation courses.",
+    "targetAudience": "art history teachers, AP Art History instructors, college art history professors, and art history tutors",
+    "specificChallenges": [
+      "Creating questions that test art historical analysis, not just memorization",
+      "Covering diverse art movements, periods, and cultures",
+      "Aligning with AP Art History curriculum and art historical thinking",
+      "Generating questions that require analysis of artworks and artistic techniques"
+    ],
+    "useCases": [
+      "AP Art History teachers creating unit tests on Renaissance art",
+      "Art history professors generating exam questions on modern art movements",
+      "Art appreciation instructors preparing assessments on art analysis",
+      "Art history tutors helping students understand art historical context"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Which art movement is characterized by bold colors and expressive brushstrokes?",
+        "options": [
+          "Impressionism",
+          "Expressionism",
+          "Realism",
+          "Neoclassicism"
+        ],
+        "correctAnswer": "Expressionism",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Analyze how the use of perspective in Renaissance art differs from medieval art.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Compare the artistic techniques used in Impressionism and Post-Impressionism.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "ap-art-history",
+      "art",
+      "history",
+      "culture",
+      "humanities"
+    ],
+    "certifications": [
+      "AP Art History"
+    ],
+    "gradeLevel": "high-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about art historical analysis?",
+        "answer": "Yes! QuizForge can create questions covering art movements, artists, artworks, artistic techniques, and art historical analysis as required for art history courses."
+      },
+      {
+        "question": "Does it align with AP Art History curriculum?",
+        "answer": "QuizForge generates questions aligned with AP Art History curriculum, covering all required art historical periods and cultures as specified by the College Board."
+      },
+      {
+        "question": "Can I generate questions from art history textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from art history textbooks, and QuizForge will extract key concepts about art movements, artists, and artworks to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Ancient art",
+      "Medieval art",
+      "Renaissance art",
+      "Baroque and Rococo",
+      "Modern art movements",
+      "Contemporary art",
+      "Non-Western art"
+    ]
+  },
+  {
+    "slug": "world-cultures",
+    "name": "World Cultures",
+    "description": "World cultures quiz generator for creating assessments on global cultures, traditions, customs, and cultural diversity. Perfect for social studies, anthropology, and cultural studies courses.",
+    "targetAudience": "social studies teachers, anthropology instructors, cultural studies professors, and world cultures tutors",
+    "specificChallenges": [
+      "Creating questions that test understanding of cultural diversity and global perspectives",
+      "Covering diverse cultures, traditions, and customs from around the world",
+      "Aligning with social studies and anthropology curriculum",
+      "Generating questions that require cultural sensitivity and understanding"
+    ],
+    "useCases": [
+      "Social studies teachers creating quizzes on world cultures",
+      "Anthropology instructors generating exam questions on cultural practices",
+      "Cultural studies professors preparing assessments on global diversity",
+      "World cultures tutors helping students understand cultural perspectives"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Which cultural practice is common in many Asian countries?",
+        "options": [
+          "Removing shoes indoors",
+          "Eating with hands only",
+          "No greeting customs",
+          "Same traditions everywhere"
+        ],
+        "correctAnswer": "Removing shoes indoors",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Explain how cultural values influence social behavior in different societies.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Compare the role of family in collectivist versus individualist cultures.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "geography",
+      "anthropology",
+      "social-studies",
+      "world-history",
+      "sociology"
+    ],
+    "certifications": [],
+    "gradeLevel": "middle-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about world cultures?",
+        "answer": "Yes! QuizForge can create questions covering cultural traditions, customs, values, social practices, and cultural diversity from around the world as required for cultural studies courses."
+      },
+      {
+        "question": "Does it cover diverse cultural perspectives?",
+        "answer": "QuizForge generates questions covering diverse cultures, traditions, and perspectives from different regions and societies, promoting understanding of global cultural diversity."
+      },
+      {
+        "question": "Can I generate questions from cultural studies textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from cultural studies or anthropology textbooks, and QuizForge will extract key concepts about cultures, traditions, and social practices to create questions."
+      }
+    ],
+    "keyTopics": [
+      "Cultural traditions",
+      "Social customs",
+      "Religious practices",
+      "Language and communication",
+      "Family structures",
+      "Economic systems",
+      "Political systems"
+    ]
+  },
+  {
+    "slug": "earth-science",
+    "name": "Earth Science",
+    "description": "Earth science quiz generator for creating assessments on geology, meteorology, oceanography, and astronomy. Perfect for earth science courses, environmental science, and geology programs.",
+    "targetAudience": "earth science teachers, geology instructors, environmental science professors, and earth science tutors",
+    "specificChallenges": [
+      "Creating questions that test understanding of earth processes and systems",
+      "Covering geology, meteorology, oceanography, and astronomy",
+      "Aligning with earth science curriculum and NGSS standards",
+      "Generating questions that require understanding of earth systems interactions"
+    ],
+    "useCases": [
+      "Earth science teachers creating unit tests on plate tectonics",
+      "Geology professors generating exam questions on rock formations",
+      "Environmental science instructors preparing assessments on weather patterns",
+      "Earth science tutors helping students understand earth processes"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What type of rock is formed from cooled magma?",
+        "options": [
+          "Sedimentary",
+          "Metamorphic",
+          "Igneous",
+          "Limestone"
+        ],
+        "correctAnswer": "Igneous",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Explain how plate tectonics causes earthquakes.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Describe the water cycle and explain how it connects different earth systems.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "geography",
+      "environmental-science",
+      "geology",
+      "meteorology",
+      "astronomy"
+    ],
+    "certifications": [
+      "NGSS Standards"
+    ],
+    "gradeLevel": "middle-school-college",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate questions about earth processes?",
+        "answer": "Yes! QuizForge can create questions covering geology, meteorology, oceanography, astronomy, and earth systems as required for earth science courses."
+      },
+      {
+        "question": "Does it align with NGSS standards?",
+        "answer": "QuizForge generates questions aligned with Next Generation Science Standards for earth science, covering earth systems, processes, and interactions."
+      },
+      {
+        "question": "Can I generate questions from earth science textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from earth science textbooks, and QuizForge will extract key concepts about earth processes, systems, and phenomena to create aligned questions."
+      }
+    ],
+    "keyTopics": [
+      "Geology and rocks",
+      "Plate tectonics",
+      "Weather and climate",
+      "Oceanography",
+      "Astronomy",
+      "Earth systems",
+      "Natural resources"
+    ]
+  },
+  {
+    "slug": "ap-physics",
+    "name": "AP Physics",
+    "description": "AP Physics quiz generator for creating practice questions aligned with the AP Physics curriculum. Perfect for AP Physics teachers, students preparing for the AP exam, and AP Physics tutors.",
+    "targetAudience": "AP Physics teachers, high school students preparing for AP Physics, AP Physics tutors, and AP Physics instructors",
+    "specificChallenges": [
+      "Creating questions aligned with AP Physics curriculum and learning objectives",
+      "Covering all AP Physics units and required content",
+      "Testing both conceptual understanding and mathematical problem-solving",
+      "Generating questions that mirror AP exam format and difficulty"
+    ],
+    "useCases": [
+      "AP Physics teachers creating unit tests aligned with AP curriculum",
+      "Students generating practice questions for AP Physics exam preparation",
+      "AP Physics tutors creating focused practice on specific units",
+      "AP Physics instructors preparing students for the AP exam"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is the acceleration due to gravity on Earth?",
+        "options": [
+          "9.8 m/s²",
+          "10 m/s²",
+          "8.9 m/s²",
+          "11 m/s²"
+        ],
+        "correctAnswer": "9.8 m/s²",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "A 5 kg object is pushed with a force of 20 N. What is its acceleration?",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "Explain how conservation of energy applies to a pendulum system.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      }
+    ],
+    "relatedSubjects": [
+      "physics",
+      "ap-exams",
+      "test-prep",
+      "science",
+      "college-prep"
+    ],
+    "certifications": [
+      "AP Physics 1",
+      "AP Physics 2",
+      "AP Physics C"
+    ],
+    "gradeLevel": "high-school",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate AP Physics practice questions?",
+        "answer": "Yes! QuizForge can create questions aligned with AP Physics 1, AP Physics 2, and AP Physics C curricula, covering mechanics, electricity, magnetism, waves, and modern physics as required by the College Board."
+      },
+      {
+        "question": "Does it cover all AP Physics content areas?",
+        "answer": "QuizForge generates questions covering all AP Physics content areas including kinematics, dynamics, energy, momentum, rotation, oscillations, electricity, magnetism, and waves."
+      },
+      {
+        "question": "Can I generate questions from AP Physics textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from AP Physics textbooks or other AP-aligned resources, and QuizForge will extract key concepts to create questions aligned with AP curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Mechanics",
+      "Electricity and magnetism",
+      "Waves and oscillations",
+      "Thermodynamics",
+      "Modern physics",
+      "Rotational motion",
+      "Oscillations"
+    ]
+  },
+  {
+    "slug": "ap-world-history",
+    "name": "AP World History",
+    "description": "AP World History quiz generator for creating practice questions aligned with the AP World History curriculum. Perfect for AP World History teachers, students preparing for the AP exam, and AP World History tutors.",
+    "targetAudience": "AP World History teachers, high school students preparing for AP World History, AP World History tutors, and AP World History instructors",
+    "specificChallenges": [
+      "Creating questions aligned with AP World History curriculum and historical thinking skills",
+      "Covering all six AP World History time periods and all geographic regions",
+      "Testing historical thinking skills including comparison and causation",
+      "Generating questions that mirror AP exam format and difficulty"
+    ],
+    "useCases": [
+      "AP World History teachers creating unit tests aligned with AP curriculum",
+      "Students generating practice questions for AP World History exam preparation",
+      "AP World History tutors creating focused practice on specific time periods",
+      "AP World History instructors preparing students for the AP exam"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "Which ancient civilization developed the first system of writing?",
+        "options": [
+          "Egyptians",
+          "Sumerians",
+          "Greeks",
+          "Chinese"
+        ],
+        "correctAnswer": "Sumerians",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Compare the political systems of ancient Athens and ancient Rome.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Analyze the causes and effects of the Industrial Revolution on global societies.",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "world-history",
+      "history",
+      "ap-exams",
+      "test-prep",
+      "college-prep"
+    ],
+    "certifications": [
+      "AP World History"
+    ],
+    "gradeLevel": "high-school",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate AP World History practice questions?",
+        "answer": "Yes! QuizForge can create questions aligned with AP World History curriculum, covering all six time periods from 1200 BCE to the present and all geographic regions as required by the College Board."
+      },
+      {
+        "question": "Does it test historical thinking skills?",
+        "answer": "QuizForge generates questions that test historical thinking skills including comparison, causation, continuity and change over time, and periodization, as well as the ability to analyze primary and secondary sources."
+      },
+      {
+        "question": "Can I generate questions from AP World History textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from AP World History textbooks or other AP-aligned resources, and QuizForge will extract key events and concepts to create questions aligned with AP curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Period 1: 1200-1450",
+      "Period 2: 1450-1750",
+      "Period 3: 1750-1900",
+      "Period 4: 1900-present",
+      "Global interactions",
+      "Cultural developments",
+      "Economic systems"
+    ]
+  },
+  {
+    "slug": "ap-calculus",
+    "name": "AP Calculus",
+    "description": "AP Calculus quiz generator for creating practice questions aligned with the AP Calculus curriculum. Perfect for AP Calculus teachers, students preparing for the AP exam, and AP Calculus tutors.",
+    "targetAudience": "AP Calculus teachers, high school students preparing for AP Calculus, AP Calculus tutors, and AP Calculus instructors",
+    "specificChallenges": [
+      "Creating questions aligned with AP Calculus curriculum and learning objectives",
+      "Covering both AP Calculus AB and BC content",
+      "Testing both computational skills and conceptual understanding",
+      "Generating questions that mirror AP exam format and difficulty"
+    ],
+    "useCases": [
+      "AP Calculus teachers creating unit tests aligned with AP curriculum",
+      "Students generating practice questions for AP Calculus exam preparation",
+      "AP Calculus tutors creating focused practice on specific topics",
+      "AP Calculus instructors preparing students for the AP exam"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is the derivative of f(x) = x³ + 2x² - 5x?",
+        "options": [
+          "3x² + 4x - 5",
+          "x² + 2x - 5",
+          "3x² + 2x",
+          "x³ + 2x²"
+        ],
+        "correctAnswer": "3x² + 4x - 5",
+        "type": "multiple-choice",
+        "difficulty": "medium"
+      },
+      {
+        "question": "Evaluate the definite integral: ∫₀² (3x² + 2x) dx",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "Use the Mean Value Theorem to show that there exists a point c where f'(c) = 0 for the function f(x) = x² - 4x + 3 on [1, 3].",
+        "type": "short-answer",
+        "difficulty": "hard",
+        "bloomsLevel": "synthesis"
+      }
+    ],
+    "relatedSubjects": [
+      "calculus",
+      "mathematics",
+      "ap-exams",
+      "test-prep",
+      "college-prep"
+    ],
+    "certifications": [
+      "AP Calculus AB",
+      "AP Calculus BC"
+    ],
+    "gradeLevel": "high-school",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate AP Calculus practice questions?",
+        "answer": "Yes! QuizForge can create questions aligned with AP Calculus AB and AP Calculus BC curricula, covering limits, derivatives, integrals, and applications as required by the College Board."
+      },
+      {
+        "question": "Does it cover both AB and BC content?",
+        "answer": "QuizForge generates questions covering AP Calculus AB content (limits, derivatives, integrals) and can also create BC-specific questions (sequences, series, parametric equations) as needed."
+      },
+      {
+        "question": "Can I generate questions from AP Calculus textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from AP Calculus textbooks or other AP-aligned resources, and QuizForge will extract key concepts to create questions aligned with AP curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Limits and continuity",
+      "Derivatives",
+      "Applications of derivatives",
+      "Integrals",
+      "Applications of integrals",
+      "Differential equations",
+      "Sequences and series"
+    ]
+  },
+  {
+    "slug": "5th-grade-math",
+    "name": "5th Grade Math",
+    "description": "5th grade math quiz generator for creating assessments on fractions, decimals, geometry, and basic algebra. Perfect for 5th grade math teachers, elementary math educators, and math tutors.",
+    "targetAudience": "5th grade math teachers, elementary math educators, math tutors, and 5th grade math instructors",
+    "specificChallenges": [
+      "Creating questions appropriate for 5th grade level and Common Core standards",
+      "Covering fractions, decimals, geometry, and basic operations",
+      "Aligning with 5th grade math curriculum and learning objectives",
+      "Generating questions that are engaging and age-appropriate"
+    ],
+    "useCases": [
+      "5th grade math teachers creating quizzes on fractions and decimals",
+      "Elementary math educators generating practice problems for 5th grade students",
+      "Math tutors helping 5th grade students master math concepts",
+      "5th grade math instructors preparing assessments aligned with curriculum"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is 3/4 + 1/4?",
+        "options": [
+          "4/8",
+          "1",
+          "2/4",
+          "4/4"
+        ],
+        "correctAnswer": "1",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Convert 0.75 to a fraction in simplest form.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "A rectangle has a length of 8 cm and a width of 5 cm. What is its area?",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      }
+    ],
+    "relatedSubjects": [
+      "mathematics",
+      "elementary-math",
+      "4th-grade-math",
+      "6th-grade-math",
+      "fractions"
+    ],
+    "certifications": [
+      "Common Core"
+    ],
+    "gradeLevel": "elementary",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate 5th grade math questions?",
+        "answer": "Yes! QuizForge can create questions appropriate for 5th grade level, covering fractions, decimals, geometry, measurement, and basic operations as required for 5th grade math curriculum."
+      },
+      {
+        "question": "Does it align with Common Core standards?",
+        "answer": "QuizForge generates questions aligned with Common Core math standards for 5th grade, focusing on number operations, fractions, decimals, geometry, and measurement."
+      },
+      {
+        "question": "Can I generate questions from 5th grade math textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from 5th grade math textbooks, and QuizForge will extract key concepts appropriate for 5th grade level to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Fractions and decimals",
+      "Operations with whole numbers",
+      "Geometry and measurement",
+      "Data and graphs",
+      "Problem solving",
+      "Number patterns",
+      "Basic algebra concepts"
+    ]
+  },
+  {
+    "slug": "8th-grade-science",
+    "name": "8th Grade Science",
+    "description": "8th grade science quiz generator for creating assessments on physical science, life science, and earth science. Perfect for 8th grade science teachers, middle school science educators, and science tutors.",
+    "targetAudience": "8th grade science teachers, middle school science educators, science tutors, and 8th grade science instructors",
+    "specificChallenges": [
+      "Creating questions appropriate for 8th grade level and NGSS standards",
+      "Covering physical science, life science, and earth science concepts",
+      "Aligning with 8th grade science curriculum and learning objectives",
+      "Generating questions that are engaging and age-appropriate"
+    ],
+    "useCases": [
+      "8th grade science teachers creating quizzes on physical science",
+      "Middle school science educators generating practice problems for 8th grade students",
+      "Science tutors helping 8th grade students master science concepts",
+      "8th grade science instructors preparing assessments aligned with curriculum"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is the process by which plants make their own food?",
+        "options": [
+          "Respiration",
+          "Photosynthesis",
+          "Digestion",
+          "Transpiration"
+        ],
+        "correctAnswer": "Photosynthesis",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Explain the difference between a physical change and a chemical change.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "analysis"
+      },
+      {
+        "question": "Describe how the water cycle works.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      }
+    ],
+    "relatedSubjects": [
+      "science",
+      "middle-school-science",
+      "7th-grade-science",
+      "9th-grade-science",
+      "physical-science"
+    ],
+    "certifications": [
+      "NGSS Standards"
+    ],
+    "gradeLevel": "middle-school",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate 8th grade science questions?",
+        "answer": "Yes! QuizForge can create questions appropriate for 8th grade level, covering physical science, life science, and earth science concepts as required for 8th grade science curriculum."
+      },
+      {
+        "question": "Does it align with NGSS standards?",
+        "answer": "QuizForge generates questions aligned with Next Generation Science Standards for 8th grade, covering physical science, life science, and earth science as specified in the standards."
+      },
+      {
+        "question": "Can I generate questions from 8th grade science textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from 8th grade science textbooks, and QuizForge will extract key concepts appropriate for 8th grade level to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Physical science",
+      "Life science",
+      "Earth science",
+      "Scientific method",
+      "Energy and matter",
+      "Ecosystems",
+      "Earth systems"
+    ]
+  },
+  {
+    "slug": "high-school-chemistry",
+    "name": "High School Chemistry",
+    "description": "High school chemistry quiz generator for creating assessments on chemical principles, reactions, and chemistry concepts. Perfect for high school chemistry teachers, chemistry educators, and chemistry tutors.",
+    "targetAudience": "high school chemistry teachers, chemistry educators, chemistry tutors, and high school chemistry instructors",
+    "specificChallenges": [
+      "Creating questions appropriate for high school level and NGSS standards",
+      "Covering chemical principles, reactions, and laboratory concepts",
+      "Aligning with high school chemistry curriculum and learning objectives",
+      "Generating questions that test both conceptual understanding and problem-solving"
+    ],
+    "useCases": [
+      "High school chemistry teachers creating quizzes on chemical reactions",
+      "Chemistry educators generating practice problems for high school students",
+      "Chemistry tutors helping high school students master chemistry concepts",
+      "High school chemistry instructors preparing assessments aligned with curriculum"
+    ],
+    "exampleQuestions": [
+      {
+        "question": "What is the chemical formula for water?",
+        "options": [
+          "H₂O",
+          "CO₂",
+          "NaCl",
+          "O₂"
+        ],
+        "correctAnswer": "H₂O",
+        "type": "multiple-choice",
+        "difficulty": "easy"
+      },
+      {
+        "question": "Balance the following equation: H₂ + O₂ → H₂O",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "application"
+      },
+      {
+        "question": "Explain the difference between an element and a compound.",
+        "type": "short-answer",
+        "difficulty": "medium",
+        "bloomsLevel": "analysis"
+      }
+    ],
+    "relatedSubjects": [
+      "chemistry",
+      "ap-chemistry",
+      "science",
+      "high-school-science",
+      "chemical-reactions"
+    ],
+    "certifications": [
+      "NGSS Standards"
+    ],
+    "gradeLevel": "high-school",
+    "faqs": [
+      {
+        "question": "Can QuizForge generate high school chemistry questions?",
+        "answer": "Yes! QuizForge can create questions appropriate for high school level, covering chemical principles, reactions, stoichiometry, and laboratory concepts as required for high school chemistry curriculum."
+      },
+      {
+        "question": "Does it align with NGSS standards?",
+        "answer": "QuizForge generates questions aligned with Next Generation Science Standards for chemistry, covering chemical principles, reactions, and matter as specified in the standards."
+      },
+      {
+        "question": "Can I generate questions from high school chemistry textbook chapters?",
+        "answer": "Absolutely. Upload PDF chapters from high school chemistry textbooks, and QuizForge will extract key concepts appropriate for high school level to create questions aligned with your curriculum."
+      }
+    ],
+    "keyTopics": [
+      "Atomic structure",
+      "Chemical bonding",
+      "Chemical reactions",
+      "Stoichiometry",
+      "Acids and bases",
+      "Thermodynamics",
+      "Laboratory safety"
+    ]
+  }
+]

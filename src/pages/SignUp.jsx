@@ -69,6 +69,11 @@ export default function SignUp() {
 
   return (
     <div className="min-h-screen bg-bg-primary">
+      <SEO 
+        title="Sign Up"
+        description="Create your free QuizForge account and start generating AI-powered quiz questions instantly. Upload documents and create professional assessments in minutes."
+        canonical="https://quizforge.pro/signup"
+      />
       <Header />
       
       {/* Background */}

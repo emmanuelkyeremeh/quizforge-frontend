@@ -29,6 +29,11 @@ export default function ForgotPassword() {
 
   return (
     <div className="min-h-screen bg-bg-primary">
+      <SEO 
+        title="Forgot Password"
+        description="Reset your QuizForge account password. Enter your email address and we'll send you a link to reset your password."
+        canonical="https://quizforge.pro/forgot-password"
+      />
       <Header />
       
       {/* Background */}

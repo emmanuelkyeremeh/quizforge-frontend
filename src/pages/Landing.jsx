@@ -105,7 +105,7 @@ export default function Landing() {
               className="relative w-full max-w-6xl"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {/* Image 1 */}
+                {/* Image 1 - Always visible */}
                 <motion.div 
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.2 }}
@@ -133,11 +133,11 @@ export default function Landing() {
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 rounded-xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300 -z-10" />
                 </motion.div>
 
-                {/* Image 2 */}
+                {/* Image 2 - Hidden on smaller screens, visible on lg+ */}
                 <motion.div 
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
-                  className="relative group"
+                  className="relative group hidden lg:block"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl" />
                   <div className="relative rounded-xl border border-border bg-bg-secondary overflow-hidden shadow-xl">

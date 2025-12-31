@@ -11,6 +11,7 @@ import AdminRoute from './components/AdminRoute.jsx';
 import Landing from './pages/Landing.jsx';
 import Login from './pages/Login.jsx';
 import SignUp from './pages/SignUp.jsx';
+import ForgotPassword from './pages/ForgotPassword.jsx';
 import Dashboard from './pages/Dashboard.jsx';
 import CreateQuiz from './pages/CreateQuiz.jsx';
 import EditQuiz from './pages/EditQuiz.jsx';
@@ -42,6 +43,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/create" element={
             <div className="min-h-screen bg-bg-primary">

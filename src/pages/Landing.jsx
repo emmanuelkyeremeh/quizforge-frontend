@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Button from '../components/ui/Button.jsx';
 import Header from '../components/layout/Header.jsx';
 import Logo from '../components/ui/Logo.jsx';
+import SEO from '../components/SEO.jsx';
 import screenshot1 from '../assets/screenshot_1.png';
 import screenshot2 from '../assets/screenshot_2.png';
 
@@ -27,6 +28,11 @@ export default function Landing() {
 
   return (
     <div className="min-h-screen bg-bg-primary">
+      <SEO 
+        title="AI-Powered Quiz Generator"
+        description="Generate professional quiz questions instantly with AI. Upload documents, create assessments, and export to your LMS. Perfect for educators and trainers."
+        canonical="https://quizforge.pro"
+      />
       <Header />
       
       {/* Hero Section */}

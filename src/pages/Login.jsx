@@ -5,6 +5,7 @@ import Button from '../components/ui/Button.jsx';
 import Input from '../components/ui/Input.jsx';
 import Card from '../components/ui/Card.jsx';
 import Header from '../components/layout/Header.jsx';
+import SEO from '../components/SEO.jsx';
 import { Mail, Lock } from 'lucide-react';
 
 const GoogleIcon = ({ className }) => (
@@ -67,6 +68,11 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-bg-primary">
+      <SEO 
+        title="Login"
+        description="Sign in to your QuizForge account to create AI-powered quizzes, manage your assessments, and export to your LMS."
+        canonical="https://quizforge.pro/login"
+      />
       <Header />
       
       {/* Background */}

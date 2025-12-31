@@ -4,6 +4,7 @@ import { useAuth } from '../hooks/useAuth.js';
 import Card from '../components/ui/Card.jsx';
 import Button from '../components/ui/Button.jsx';
 import Badge from '../components/ui/Badge.jsx';
+import SEO from '../components/SEO.jsx';
 import { Check, Zap, Sparkles, ArrowLeft } from 'lucide-react';
 import { api } from '../lib/api.js';
 import toast from 'react-hot-toast';
@@ -80,7 +81,13 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="min-h-screen bg-bg-primary py-20 px-6">
+    <>
+      <SEO 
+        title="Pricing"
+        description="Choose the perfect plan for your quiz generation needs. Free tier includes 3 quizzes per month. Pro tier offers 50 quizzes per month with up to 100 questions per quiz."
+        canonical="https://quizforge.pro/pricing"
+      />
+      <div className="min-h-screen bg-bg-primary py-20 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Back Button */}
         <div className="mb-8">
@@ -223,6 +230,7 @@ export default function Pricing() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

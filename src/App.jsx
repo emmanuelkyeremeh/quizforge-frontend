@@ -19,6 +19,7 @@ import TakeQuiz from './pages/TakeQuiz.jsx';
 import QuizResponses from './pages/QuizResponses.jsx';
 import Settings from './pages/Settings.jsx';
 import Pricing from './pages/Pricing.jsx';
+import SubscriptionManagement from './pages/SubscriptionManagement.jsx';
 import AdminDashboard from './pages/AdminDashboard.jsx';
 import GoogleAnalytics from './components/GoogleAnalytics.jsx';
 
@@ -75,6 +76,17 @@ function App() {
             }
           >
             <Route index element={<Settings />} />
+          </Route>
+
+          <Route
+            path="/subscription"
+            element={
+              <ProtectedRoute>
+                <DashboardLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<SubscriptionManagement />} />
           </Route>
 
           <Route

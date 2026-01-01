@@ -36,6 +36,28 @@ export default function Settings() {
     navigate('/pricing');
   };
 
+  const handleDowngrade = async () => {
+    if (usage?.plan !== 'pro') {
+      return;
+    }
+
+    if (!confirm('Are you sure you want to downgrade to Free? Your subscription will be cancelled and you will lose access to Pro features at the end of your billing period.')) {
+      return;
+    }
+
+    try {
+      setLoading(true);
+      await api.cancelSubscription();
+      toast.success('Subscription cancelled. You will be downgraded to Free at the end of your billing period.');
+      await loadSubscriptionStatus();
+      await refreshUsage();
+    } catch (error) {
+      toast.error(error.message || 'Failed to cancel subscription');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="max-w-2xl mx-auto">
       <div className="mb-8">
@@ -134,15 +156,52 @@ export default function Settings() {
                 </span>
               </div>
               {subscription.subscriptionStatus === 'cancelled' && (
-                <p className="text-xs text-text-secondary">
+                <p className="text-xs text-text-secondary mb-3">
                   Your subscription is cancelled but remains active until the end of your billing period.
                 </p>
               )}
               {subscription.subscriptionStatus === 'past_due' && (
-                <p className="text-xs text-error">
+                <p className="text-xs text-error mb-3">
                   Payment failed. Please update your payment method to continue using Pro features.
                 </p>
               )}
+              <div className="flex gap-3">
+                <Button
+                  variant="secondary"
+                  onClick={() => navigate('/subscription')}
+                  className="flex-1"
+                >
+                  Manage Subscription
+                </Button>
+                <Button
+                  variant="danger"
+                  onClick={handleDowngrade}
+                  disabled={loading}
+                  loading={loading}
+                  className="flex-1"
+                >
+                  Downgrade to Free
+                </Button>
+              </div>
+            </div>
+          )}
+
+          {/* Usage tracking for Admin users */}
+          {(usage.plan === 'pro' || usage.plan === 'developer') && (
+            <div className="p-4 rounded-lg bg-surface border border-border mb-6">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-sm font-medium text-text-primary">Usage Tracking</span>
+                <Button
+                  variant="secondary"
+                  onClick={() => navigate('/subscription')}
+                  size="sm"
+                >
+                  View Details
+                </Button>
+              </div>
+              <p className="text-xs text-text-secondary">
+                Track your quiz generation usage and subscription details.
+              </p>
             </div>
           )}
 

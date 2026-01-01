@@ -183,5 +183,8 @@ export const api = {
     method: 'POST',
   }),
   getSubscriptionStatus: () => apiRequest('/api/subscription/status'),
+  cancelSubscription: () => apiRequest('/api/subscription/cancel', {
+    method: 'DELETE',
+  }),
 };
 

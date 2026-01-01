@@ -10,7 +10,7 @@ import { api } from '../lib/api.js';
 import toast from 'react-hot-toast';
 
 export default function Pricing() {
-  const { user, usage } = useAuth();
+  const { user, usage, refreshUsage } = useAuth();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
@@ -26,6 +26,29 @@ export default function Pricing() {
       window.location.href = checkoutUrl;
     } catch (error) {
       toast.error(error.message || 'Failed to create checkout session');
+      setLoading(false);
+    }
+  };
+
+  const handleDowngrade = async () => {
+    if (!user) {
+      navigate('/login');
+      return;
+    }
+
+    if (usage?.plan !== 'pro') {
+      return;
+    }
+
+    try {
+      setLoading(true);
+      await api.cancelSubscription();
+      toast.success('Subscription cancelled. You will be downgraded to Free at the end of your billing period.');
+      // Refresh usage to update plan status
+      await refreshUsage();
+    } catch (error) {
+      toast.error(error.message || 'Failed to cancel subscription');
+    } finally {
       setLoading(false);
     }
   };
@@ -51,8 +74,8 @@ export default function Pricing() {
       ],
       cta: user ? (usage?.plan === 'free' ? 'Current Plan' : 'Downgrade') : 'Get Started',
       variant: 'neutral',
-      disabled: !user || usage?.plan !== 'free',
-      onClick: user && usage?.plan === 'free' ? undefined : () => navigate('/signup'),
+      disabled: !user || (usage?.plan === 'free'),
+      onClick: user && usage?.plan === 'free' ? undefined : (user && usage?.plan === 'pro' ? handleDowngrade : () => navigate('/signup')),
     },
     {
       name: 'Pro',
@@ -179,7 +202,7 @@ export default function Pricing() {
                 className="w-full"
                 onClick={plan.onClick}
                 disabled={plan.disabled || loading}
-                loading={loading && plan.name === 'Pro'}
+                loading={loading && (plan.name === 'Pro' || (plan.name === 'Free' && usage?.plan === 'pro'))}
                 icon={plan.name === 'Pro' ? Zap : undefined}
               >
                 {plan.cta}

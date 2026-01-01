@@ -151,7 +151,15 @@ export default function TakeQuiz() {
     }
     
     // Check if all questions are answered
-    const unanswered = answers.filter(a => a === null || a === undefined);
+    // For fill-in-the-blank, empty strings count as unanswered
+    const unanswered = answers.filter((a, index) => {
+      const question = quiz.questions[index];
+      const isTextAnswer = question.type === 'fill_in_the_blank' || question.type === 'short_answer';
+      if (isTextAnswer) {
+        return a === null || a === undefined || (typeof a === 'string' && a.trim() === '');
+      }
+      return a === null || a === undefined;
+    });
     if (unanswered.length > 0) {
       if (!confirm(`You have ${unanswered.length} unanswered question(s). Submit anyway?`)) {
         return;
@@ -317,7 +325,8 @@ export default function TakeQuiz() {
                 </div>
 
                 <div className="space-y-2">
-                  {question.options && question.options.map((option, optIndex) => (
+                  {/* Multiple Choice Questions */}
+                  {question.type === 'multiple_choice' && question.options && question.options.map((option, optIndex) => (
                     <label
                       key={optIndex}
                       className={`
@@ -341,13 +350,65 @@ export default function TakeQuiz() {
                       </span>
                     </label>
                   ))}
+
+                  {/* True/False Questions */}
+                  {question.type === 'true_false' && (
+                    <div className="space-y-2">
+                      {[
+                        { value: true, label: 'True' },
+                        { value: false, label: 'False' }
+                      ].map((option) => (
+                        <label
+                          key={option.value.toString()}
+                          className={`
+                            flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-colors
+                            ${String(answers[index]) === String(option.value)
+                              ? 'bg-primary-subtle border border-primary'
+                              : 'bg-surface border border-transparent hover:bg-surface-hover'}
+                          `}
+                        >
+                          <input
+                            type="radio"
+                            name={`question-${index}`}
+                            value={option.value.toString()}
+                            checked={String(answers[index]) === String(option.value)}
+                            onChange={() => handleAnswerChange(index, option.value)}
+                            className="w-4 h-4 text-primary border-border focus:ring-primary focus:ring-offset-bg-primary"
+                          />
+                          <span className="text-sm text-text-primary flex-1">
+                            {option.label}
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Fill-in-the-Blank and Short Answer Questions */}
+                  {(question.type === 'fill_in_the_blank' || question.type === 'short_answer') && (
+                    <div>
+                      <Input
+                        type="text"
+                        value={answers[index] || ''}
+                        onChange={(e) => handleAnswerChange(index, e.target.value)}
+                        placeholder="Enter your answer"
+                        className="w-full"
+                      />
+                    </div>
+                  )}
                 </div>
               </Card>
             ))}
 
             <div className="flex items-center justify-between pt-6 border-t border-border">
               <p className="text-sm text-text-secondary">
-                {answers.filter(a => a !== null && a !== undefined).length} of {quiz.questions.length} answered
+                {answers.filter((a, index) => {
+                  const question = quiz.questions[index];
+                  const isTextAnswer = question.type === 'fill_in_the_blank' || question.type === 'short_answer';
+                  if (isTextAnswer) {
+                    return a !== null && a !== undefined && typeof a === 'string' && a.trim() !== '';
+                  }
+                  return a !== null && a !== undefined;
+                }).length} of {quiz.questions.length} answered
               </p>
               <Button type="submit" size="lg" loading={submitting}>
                 Submit Quiz
@@ -407,9 +468,17 @@ export default function TakeQuiz() {
                         )}
                       </div>
                       <p className="text-sm text-text-secondary">
-                        Your answer: <span className="font-medium">{String.fromCharCode(65 + result.userAnswer)}</span>
+                        Your answer: <span className="font-medium">
+                          {typeof result.userAnswer === 'number' 
+                            ? String.fromCharCode(65 + result.userAnswer)
+                            : result.userAnswer || '(no answer)'}
+                        </span>
                         {showAnswers && !result.isCorrect && result.correctAnswer !== undefined && (
-                          <> • Correct answer: <span className="font-medium text-success-text">{String.fromCharCode(65 + result.correctAnswer)}</span></>
+                          <> • Correct answer: <span className="font-medium text-success-text">
+                            {typeof result.correctAnswer === 'number'
+                              ? String.fromCharCode(65 + result.correctAnswer)
+                              : result.correctAnswer}
+                          </span></>
                         )}
                       </p>
                       {showAnswers && result.explanation && (

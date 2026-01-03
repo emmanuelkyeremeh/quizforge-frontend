@@ -14,7 +14,7 @@ const Input = forwardRef(({
     placeholder:text-text-tertiary
     transition-colors duration-150
     hover:border-border-hover
-    focus:border-primary focus:ring-1 focus:ring-primary/50 focus:outline-none
+    focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none
     disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-bg-tertiary
   `;
 

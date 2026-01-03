@@ -16,7 +16,7 @@ const Button = forwardRef(({
     inline-flex items-center justify-center font-medium rounded-md
     transition-colors duration-150
     disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none
-    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2
   `;
   
   const variants = {

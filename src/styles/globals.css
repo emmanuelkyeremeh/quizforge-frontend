@@ -91,7 +91,7 @@
   }
 
   select:focus {
-    @apply border-primary ring-1 ring-primary/50;
+    @apply border-primary ring-1 ring-primary;
   }
 
   /* Remove number input arrows */

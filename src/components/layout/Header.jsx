@@ -5,6 +5,7 @@ import { LogOut, Settings, LayoutDashboard, ChevronDown, Shield, User } from 'lu
 import { Dropdown, DropdownItem, DropdownDivider } from '../ui/Dropdown.jsx';
 import Button from '../ui/Button.jsx';
 import Logo from '../ui/Logo.jsx';
+import ThemeToggle from '../ThemeToggle.jsx';
 
 export default function Header() {
   const { user, signOut, usage, userData } = useAuth();
@@ -23,14 +24,15 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <Logo size="default" />
-          <span className="text-sm font-semibold text-white tracking-tight">QuizForge</span>
+          <span className="text-sm font-semibold text-text-primary tracking-tight">QuizForge</span>
         </Link>
 
         {/* Right side */}
         <div className="flex items-center gap-3">
+          <ThemeToggle />
           {user ? (
             <>
-              <Link to="/pricing" className="hidden sm:block text-xs font-medium text-text-secondary hover:text-white transition-colors">
+              <Link to="/pricing" className="hidden sm:block text-xs font-medium text-text-secondary hover:text-text-primary transition-colors">
                 Pricing
               </Link>
               <Link to="/create" className="hidden sm:block">
@@ -51,7 +53,7 @@ export default function Header() {
               >
                 <div className="px-3 py-2">
                   <p className="text-[10px] font-semibold text-text-tertiary uppercase tracking-wider">Account</p>
-                  <p className="text-xs text-white truncate font-medium mt-0.5">{user.email}</p>
+                  <p className="text-xs text-text-primary truncate font-medium mt-0.5">{user.email}</p>
                 </div>
                 <DropdownDivider />
                 <DropdownItem icon={LayoutDashboard} onClick={() => navigate('/dashboard')}>
@@ -73,7 +75,7 @@ export default function Header() {
             </>
           ) : (
             <>
-              <Link to="/login" className="text-xs font-medium text-text-secondary hover:text-white transition-colors">
+              <Link to="/login" className="text-xs font-medium text-text-secondary hover:text-text-primary transition-colors">
                 Log in
               </Link>
               <Link to="/signup">

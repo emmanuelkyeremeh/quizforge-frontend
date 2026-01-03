@@ -9,7 +9,7 @@ const Input = forwardRef(({
   ...props 
 }, ref) => {
   const baseClasses = `
-    w-full text-white
+    w-full text-text-primary
     bg-bg-secondary border rounded-md
     placeholder:text-text-tertiary
     transition-colors duration-150

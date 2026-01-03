@@ -4,33 +4,33 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class', // Enable class-based dark mode
   theme: {
     extend: {
       colors: {
-        // Linear-inspired palette
+        // Linear-inspired palette - using CSS variables for theme support
         bg: {
-          primary: '#08090a',   // Deepest black
-          secondary: '#111214', // Card background
-          tertiary: '#16171a',  // Hover background
-          accent: '#1a1b1e',    // Subtle elevation
+          primary: 'var(--bg-primary)',
+          secondary: 'var(--bg-secondary)',
+          tertiary: 'var(--bg-tertiary)',
+          accent: 'var(--bg-accent)',
         },
         border: {
-          DEFAULT: 'rgba(255, 255, 255, 0.08)',
-          hover: 'rgba(255, 255, 255, 0.15)',
-          active: 'rgba(255, 255, 255, 0.2)',
+          DEFAULT: 'var(--border-color)',
+          hover: 'var(--border-hover)',
+          active: 'var(--border-active)',
         },
         text: {
-          primary: '#ffffff',
-          secondary: '#a1a1aa', // Muted text
-          tertiary: '#71717a',  // Metadata text
+          primary: 'var(--text-primary)',
+          secondary: 'var(--text-secondary)',
+          tertiary: 'var(--text-tertiary)',
         },
         primary: {
-          DEFAULT: '#5e6ad2',   // Linear Blue
-          hover: '#6d78d9',
-          active: '#4f5abd',
-          subtle: 'rgba(94, 106, 210, 0.1)',
+          DEFAULT: 'var(--primary)',
+          hover: 'var(--primary-hover)',
+          active: 'var(--primary-active)',
+          subtle: 'var(--primary-subtle)',
         },
-        // ... (rest of the palette simplified)
         success: '#10b981',
         warning: '#f59e0b',
         error: '#ef4444',

@@ -56,7 +56,7 @@ export default function Landing() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 max-w-5xl leading-[1.05]"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-text-primary mb-6 max-w-5xl leading-[1.05]"
             >
               The system for professional <br className="hidden md:block" />
               <span className="text-text-secondary">AI quiz generation.</span>
@@ -182,7 +182,7 @@ export default function Landing() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4 tracking-tight">
               Everything you need to create professional quizzes
             </h2>
             <p className="text-base text-text-secondary max-w-2xl mx-auto">
@@ -256,7 +256,7 @@ export default function Landing() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4 tracking-tight">
               How it works
             </h2>
             <p className="text-base text-text-secondary max-w-2xl mx-auto">
@@ -321,7 +321,7 @@ export default function Landing() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-4 tracking-tight">
               Ready to transform your quiz creation?
             </h2>
             <p className="text-lg text-text-secondary mb-10 max-w-2xl mx-auto">
@@ -360,7 +360,7 @@ export default function Landing() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
               <Logo size="sm" />
-              <span className="text-sm font-semibold text-white tracking-tight">QuizForge</span>
+              <span className="text-sm font-semibold text-text-primary tracking-tight">QuizForge</span>
             </div>
             <p className="text-[10px] text-text-tertiary">
               © {new Date().getFullYear()} QuizForge. All rights reserved.
@@ -381,7 +381,7 @@ function FeatureCard({ icon, title, description }) {
       <div className="mb-4 p-3 rounded-lg bg-bg-primary border border-border inline-block group-hover:border-primary/30 transition-colors">
         {icon}
       </div>
-      <h3 className="text-base font-semibold text-white mb-2 tracking-tight">{title}</h3>
+      <h3 className="text-base font-semibold text-text-primary mb-2 tracking-tight">{title}</h3>
       <p className="text-sm text-text-secondary leading-relaxed">{description}</p>
     </motion.div>
   );
@@ -397,7 +397,7 @@ function StepCard({ number, title, description, icon }) {
         {icon}
       </div>
       <div className="text-5xl font-bold text-text-tertiary mb-4">{number}</div>
-      <h3 className="text-lg font-semibold text-white mb-3 tracking-tight">{title}</h3>
+      <h3 className="text-lg font-semibold text-text-primary mb-3 tracking-tight">{title}</h3>
       <p className="text-sm text-text-secondary leading-relaxed max-w-sm mx-auto">{description}</p>
     </motion.div>
   );
@@ -409,7 +409,7 @@ function StatCard({ number, label }) {
       variants={fadeInUp}
       className="text-center"
     >
-      <div className="text-4xl md:text-5xl font-bold text-white mb-2">{number}</div>
+      <div className="text-4xl md:text-5xl font-bold text-text-primary mb-2">{number}</div>
       <div className="text-xs text-text-tertiary uppercase tracking-wider font-semibold">{label}</div>
     </motion.div>
   );

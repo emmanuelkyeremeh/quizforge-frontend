@@ -34,8 +34,8 @@ export default function Sidebar() {
                 flex items-center gap-2.5 px-2.5 py-1.5 rounded text-sm font-medium
                 transition-colors duration-100
                 ${active
-                  ? 'bg-bg-secondary text-white'
-                  : 'text-text-secondary hover:bg-bg-secondary hover:text-white'
+                  ? 'bg-bg-secondary text-text-primary'
+                  : 'text-text-secondary hover:bg-bg-secondary hover:text-text-primary'
                 }
               `}
             >
@@ -64,7 +64,7 @@ export default function Sidebar() {
                 <div className="space-y-1">
                   <div className="flex items-center justify-between text-[10px]">
                     <span className="text-text-tertiary font-medium">Quizzes used</span>
-                    <span className="text-white font-semibold">
+                    <span className="text-text-primary font-semibold">
                       {usage.quizzesCreatedThisMonth} / {usage.limit}
                     </span>
                   </div>

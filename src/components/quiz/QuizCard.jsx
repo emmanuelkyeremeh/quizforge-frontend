@@ -59,7 +59,7 @@ export default function QuizCard({ quiz, onDelete, onDuplicate }) {
 
         {/* Content */}
         <Link to={`/quiz/${quizId}/edit`} className="flex-1">
-          <h3 className="text-sm font-semibold text-white mb-2 line-clamp-2 leading-snug group-hover:text-primary transition-colors">
+          <h3 className="text-sm font-semibold text-text-primary mb-2 line-clamp-2 leading-snug group-hover:text-primary transition-colors">
             {title || 'Untitled Quiz'}
           </h3>
           

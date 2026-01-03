@@ -21,12 +21,12 @@ const Button = forwardRef(({
   
   const variants = {
     default: `
-      bg-white text-black border border-transparent
-      hover:bg-white/90
+      bg-white dark:bg-bg-secondary text-black dark:text-white border border-transparent
+      hover:bg-gray-100 dark:hover:bg-bg-tertiary
     `,
     primary: `
       bg-primary text-white border border-transparent
-      hover:bg-primary/90
+      hover:bg-primary-hover
     `,
     secondary: `
       bg-bg-secondary text-text-primary border border-border

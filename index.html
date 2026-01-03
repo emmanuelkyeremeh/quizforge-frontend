@@ -5,6 +5,26 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate icon" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Initialize theme before React loads to prevent flash
+      // Dark mode is default, so we always add .dark class unless user explicitly chose light
+      (function() {
+        try {
+          // next-themes stores theme as a simple string in localStorage
+          const stored = localStorage.getItem('quizforge-theme');
+          // Default to dark mode if nothing is stored
+          if (stored === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else {
+            // Default: dark mode
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {
+          // Default: dark mode
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">

@@ -1,6 +1,18 @@
 {
   "rewrites": [
     {
+      "source": "/quiz-generator/:slug.html",
+      "destination": "/quiz-generator/:slug.html"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

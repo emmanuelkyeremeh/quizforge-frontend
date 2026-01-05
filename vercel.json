@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/quiz-generator/:slug",
+      "destination": "/quiz-generator/:slug.html"
+    },
+    {
       "source": "/quiz-generator/:slug.html",
       "destination": "/quiz-generator/:slug.html"
     },

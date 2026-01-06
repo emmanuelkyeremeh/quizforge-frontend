@@ -81,6 +81,15 @@
     opacity: 0.3;
   }
 
+  /* Input fields - ensure text color works in both modes */
+  input {
+    color: var(--text-primary) !important;
+  }
+  
+  input::placeholder {
+    color: var(--text-tertiary);
+  }
+
   /* Select dropdowns */
   select {
     @apply bg-bg-secondary text-text-primary border-border;
@@ -153,4 +162,13 @@
 /* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Hide header when modal is open */
+body.modal-open header.header-with-modal {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
 }

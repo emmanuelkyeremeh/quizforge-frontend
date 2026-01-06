@@ -9,15 +9,28 @@ export function Modal({
   size = 'default',
   className = '' 
 }) {
-  // Lock body scroll when modal is open
+  // Lock body scroll when modal is open and add class for styling
   useEffect(() => {
+    const header = document.querySelector('header.header-with-modal');
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      document.body.classList.add('modal-open');
+      if (header) {
+        header.style.display = 'none';
+      }
     } else {
       document.body.style.overflow = 'unset';
+      document.body.classList.remove('modal-open');
+      if (header) {
+        header.style.display = '';
+      }
     }
     return () => {
       document.body.style.overflow = 'unset';
+      document.body.classList.remove('modal-open');
+      if (header) {
+        header.style.display = '';
+      }
     };
   }, [isOpen]);
 
@@ -44,23 +57,29 @@ export function Modal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto">
-      {/* Backdrop */}
+    <>
+      {/* Backdrop - fixed to cover entire screen */}
       <div 
-        className="absolute inset-0 bg-black/60 dark:bg-black/60 backdrop-blur-sm animate-fade-in"
+        className="fixed inset-0 z-[100] bg-black/60 dark:bg-black/60 backdrop-blur-md animate-fade-in"
         onClick={onClose}
       />
       
-      {/* Modal content */}
-      <div className={`
-        relative w-full ${sizes[size]} my-auto
-        bg-white dark:bg-bg-secondary/95 backdrop-blur-sm dark:backdrop-blur-md border border-border rounded-xl shadow-xl
-        animate-scale-in max-h-[90vh] flex flex-col overflow-hidden
-        ${className}
-      `}>
-        {children}
+      {/* Modal container */}
+      <div className="fixed inset-0 z-[101] flex items-center justify-center p-4 overflow-y-auto pointer-events-none">
+        {/* Modal content */}
+        <div 
+          className={`
+            relative w-full ${sizes[size]} my-auto pointer-events-auto
+            bg-white dark:bg-bg-tertiary border border-border rounded-xl shadow-xl
+            animate-scale-in max-h-[90vh] flex flex-col overflow-hidden
+            ${className}
+          `}
+          onClick={(e) => e.stopPropagation()}
+        >
+          {children}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

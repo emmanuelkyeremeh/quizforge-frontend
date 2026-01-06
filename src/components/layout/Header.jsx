@@ -19,8 +19,8 @@ export default function Header() {
   const isAdmin = usage?.isAdmin || userData?.isAdmin;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-14 bg-bg-primary border-b border-border">
-      <div className="max-w-[1440px] mx-auto px-6 h-full flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 min-h-14 bg-bg-primary border-b border-border header-with-modal">
+      <div className="max-w-[1440px] mx-auto px-6 py-3.5 flex items-center justify-between header-content">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <Logo size="default" />
